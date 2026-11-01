@@ -1,0 +1,85 @@
+{
+  "infoCards": [
+    {
+      "icon": "mail",
+      "label": "Email",
+      "value": "hello@albertoclocks.com",
+      "href": "mailto:hello@albertoclocks.com"
+    },
+    {
+      "icon": "phone",
+      "label": "Phone",
+      "value": "+234 801 234 5678",
+      "href": "tel:+2348012345678"
+    },
+    {
+      "icon": "map-pin",
+      "label": "Address",
+      "value": "12 Marina Road, Lagos Island, Lagos"
+    },
+    {
+      "icon": "clock",
+      "label": "Opening hours",
+      "value": "Mon – Sat · 9:00 – 19:00"
+    }
+  ],
+  "image": "/images/photos/watch-on-wrist.jpg",
+  "form": {
+    "title": "Send a message",
+    "fields": [
+      {
+        "name": "fullName",
+        "label": "Full name",
+        "type": "text",
+        "placeholder": "e.g. Ada Okafor",
+        "required": true,
+        "minLength": 2,
+        "error": "Please enter your name."
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "placeholder": "you@example.com",
+        "required": true,
+        "error": "Please enter a valid email address."
+      },
+      {
+        "name": "phone",
+        "label": "Phone",
+        "type": "tel",
+        "placeholder": "+234 …",
+        "required": false,
+        "pattern": "^\\+?[0-9 ]{7,15}$",
+        "error": "Use digits only, e.g. +234 801 234 5678."
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "select",
+        "placeholder": "Repair, appraisal, purchase…",
+        "options": [
+          "Repair",
+          "Appraisal",
+          "Purchase",
+          "Warranty",
+          "Other"
+        ],
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "placeholder": "Tell us about your watch — brand, model and what you need.",
+        "required": true,
+        "minLength": 10,
+        "error": "Your message needs at least 10 characters."
+      }
+    ],
+    "submitLabel": "Send message",
+    "privacyNote": "We never share your details.",
+    "successMessage": "Thanks — we'll reply within one working day.",
+    "backend": "None — show the success toast and clear the form."
+  }
+}

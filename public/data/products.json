@@ -1,0 +1,2008 @@
+{
+  "currency": {
+    "code": "NGN",
+    "symbol": "₦",
+    "rateNote": "Converted at ₦1,550 = US$1",
+    "note": "Prices in Nigerian naira, VAT included."
+  },
+  "products": [
+    {
+      "id": "rolex-datejust-41",
+      "brand": "Rolex",
+      "name": "Datejust 41 — Yellow Gold",
+      "fullName": "Rolex Datejust 41 — Yellow Gold",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 19920000,
+      "priceDisplay": "₦19,920,000",
+      "currency": "NGN",
+      "reference": "126333",
+      "image": "/images/photos/gold-watch.jpg",
+      "thumbnails": [
+        "/images/photos/gold-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A modern classic with a champagne sunburst dial, fluted gold bezel and Jubilee bracelet. Serviced and certified in the Alberto workshop.",
+      "specs": {
+        "case": "41 mm",
+        "material": "18k yellow gold & Oystersteel",
+        "movement": "Calibre 3235 · automatic",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "70 hours",
+        "strap": "Jubilee, folding Oysterclasp",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "41 mm · 18k yellow gold & Oystersteel"
+        },
+        {
+          "label": "Movement",
+          "value": "Calibre 3235 · automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "70 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Jubilee, folding Oysterclasp"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Date at 3 o'clock with Cyclops lens",
+        "Fluted 18k gold bezel",
+        "Sapphire crystal",
+        "Superlative Chronometer certified"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "alberto-royale-rose-gold",
+      "brand": "Alberto",
+      "name": "Royale — Rose Gold",
+      "fullName": "Alberto Royale — Rose Gold",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 38600000,
+      "priceDisplay": "₦38,600,000",
+      "currency": "NGN",
+      "reference": "AC-RY-42RG",
+      "image": "/images/photos/rose-gold-watch.jpg",
+      "thumbnails": [
+        "/images/photos/rose-gold-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Our flagship piece: an open-worked flying tourbillon in a hand-polished rose gold case, assembled and timed in the Alberto workshop.",
+      "specs": {
+        "case": "42 mm",
+        "material": "18k rose gold",
+        "movement": "Flying tourbillon · automatic",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "80 hours",
+        "strap": "18k rose gold bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "42 mm · 18k rose gold"
+        },
+        {
+          "label": "Movement",
+          "value": "Flying tourbillon · automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "80 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "18k rose gold bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "tourbillon",
+      "features": [
+        "Flying tourbillon at 6 o'clock",
+        "Skeletonised dial",
+        "Exhibition case back",
+        "Limited to 50 pieces"
+      ],
+      "featuredOrder": 1,
+      "isNew": true,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "rolex-submariner-date",
+      "brand": "Rolex",
+      "name": "Submariner Date — Oystersteel",
+      "fullName": "Rolex Submariner Date — Oystersteel",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 20460000,
+      "priceDisplay": "₦20,460,000",
+      "currency": "NGN",
+      "reference": "126610LN",
+      "image": "/images/photos/steel-diver-watch.jpg",
+      "thumbnails": [
+        "/images/photos/steel-diver-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "The reference dive watch: unidirectional Cerachrom bezel, luminous Chromalight display and a bracelet you can extend over a wetsuit.",
+      "specs": {
+        "case": "41 mm",
+        "material": "Oystersteel",
+        "movement": "Calibre 3235 · automatic",
+        "waterResistance": "300 m / 1,000 ft",
+        "powerReserve": "70 hours",
+        "strap": "Oyster bracelet with Glidelock",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "41 mm · Oystersteel"
+        },
+        {
+          "label": "Movement",
+          "value": "Calibre 3235 · automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "300 m / 1,000 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "70 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Oyster bracelet with Glidelock"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Unidirectional rotatable bezel",
+        "Chromalight luminescent hands & markers",
+        "Triplock winding crown",
+        "Glidelock extension system"
+      ],
+      "featuredOrder": 4,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "alberto-noir-chronograph",
+      "brand": "Alberto",
+      "name": "Noir Chronograph — Black",
+      "fullName": "Alberto Noir Chronograph — Black",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 5350000,
+      "priceDisplay": "₦5,350,000",
+      "currency": "NGN",
+      "reference": "AC-NC-43BK",
+      "image": "/images/photos/black-watch.jpg",
+      "thumbnails": [
+        "/images/photos/black-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A stealthy everyday chronograph in black DLC steel with gold accents — the Alberto house style in its boldest form.",
+      "specs": {
+        "case": "43 mm",
+        "material": "Black DLC-coated steel",
+        "movement": "Automatic chronograph",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "48 hours",
+        "strap": "Black steel bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "43 mm · Black DLC-coated steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Automatic chronograph"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "48 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Black steel bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Chronograph with 30-minute counter",
+        "Scratch-resistant DLC coating",
+        "Sapphire crystal",
+        "Screw-down crown"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "citizen-eco-drive-classic",
+      "brand": "Citizen",
+      "name": "Eco-Drive Classic — Leather",
+      "fullName": "Citizen Eco-Drive Classic — Leather",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 3720000,
+      "priceDisplay": "₦3,720,000",
+      "currency": "NGN",
+      "reference": "BM7108-22A",
+      "image": "/images/photos/leather-strap-detail.jpg",
+      "thumbnails": [
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Citizen's light-powered movement charges from any light source — no battery changes, ever. Clean white dial and a soft calfskin strap.",
+      "specs": {
+        "case": "40 mm",
+        "material": "Stainless steel",
+        "movement": "Eco-Drive · light-powered",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "6+ months in total darkness",
+        "strap": "Brown calfskin leather",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "40 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Eco-Drive · light-powered"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "6+ months in total darkness"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Brown calfskin leather"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "eco-drive",
+      "features": [
+        "Never needs a battery",
+        "Power-reserve indicator",
+        "Date window",
+        "Anti-reflective crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "bulova-lunar-pilot",
+      "brand": "Bulova",
+      "name": "Lunar Pilot Chronograph",
+      "fullName": "Bulova Lunar Pilot Chronograph",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 1390000,
+      "priceDisplay": "₦1,390,000",
+      "currency": "NGN",
+      "reference": "96B251",
+      "image": "/images/photos/watch-on-wrist.jpg",
+      "thumbnails": [
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A re-edition of the chronograph worn on the Moon in 1971, with Bulova's ultra-precise 262 kHz quartz movement.",
+      "specs": {
+        "case": "45 mm",
+        "material": "Stainless steel",
+        "movement": "High-performance quartz (262 kHz)",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "Battery · approx. 3 years",
+        "strap": "Black leather strap + spare NATO",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "45 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "High-performance quartz (262 kHz)"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 3 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Black leather strap + spare NATO"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "1/1000-second chronograph",
+        "Accuracy ±10 seconds a year",
+        "Sapphire crystal",
+        "Two straps included"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "seiko-presage-cocktail-time",
+      "brand": "Seiko",
+      "name": "Presage Cocktail Time",
+      "fullName": "Seiko Presage Cocktail Time",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 891000,
+      "priceDisplay": "₦891,000",
+      "currency": "NGN",
+      "reference": "SRPB41",
+      "image": "/images/photos/vintage-watch.jpg",
+      "thumbnails": [
+        "/images/photos/vintage-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Inspired by Tokyo cocktail bars: a textured sunburst dial that changes colour with the light, on an automatic Seiko movement.",
+      "specs": {
+        "case": "40.5 mm",
+        "material": "Stainless steel",
+        "movement": "Calibre 4R35 · automatic",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "41 hours",
+        "strap": "Steel bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "40.5 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Calibre 4R35 · automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "41 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Steel bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Textured sunburst dial",
+        "Hand-winding and hacking",
+        "Exhibition case back",
+        "Domed crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "alberto-heritage-1987-pocket",
+      "brand": "Alberto",
+      "name": "Heritage 1987 Pocket Chronometer",
+      "fullName": "Alberto Heritage 1987 Pocket Chronometer",
+      "lineups": [
+        "vintage",
+        "luxury"
+      ],
+      "primaryLineup": "vintage",
+      "price": 2930000,
+      "priceDisplay": "₦2,930,000",
+      "currency": "NGN",
+      "reference": "AC-HP-50",
+      "image": "/images/photos/pocket-watch.jpg",
+      "thumbnails": [
+        "/images/photos/pocket-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Made to celebrate the year Alberto Clocks opened: a hand-wound pocket chronometer with Roman numerals and a hinged hunter case.",
+      "specs": {
+        "case": "50 mm",
+        "material": "Brass with nickel finish",
+        "movement": "Hand-wound mechanical",
+        "waterResistance": "Not water resistant",
+        "powerReserve": "40 hours",
+        "strap": "Double Albert chain",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "50 mm · Brass with nickel finish"
+        },
+        {
+          "label": "Movement",
+          "value": "Hand-wound mechanical"
+        },
+        {
+          "label": "Water resistance",
+          "value": "Not water resistant"
+        },
+        {
+          "label": "Power reserve",
+          "value": "40 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Double Albert chain"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "hand-wound",
+      "features": [
+        "Hinged hunter case",
+        "Roman numeral enamel dial",
+        "Small seconds sub-dial",
+        "Engravable case back"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "michael-kors-lexington",
+      "brand": "Michael Kors",
+      "name": "Lexington — Gold-tone",
+      "fullName": "Michael Kors Lexington — Gold-tone",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 581000,
+      "priceDisplay": "₦581,000",
+      "currency": "NGN",
+      "reference": "MK8281",
+      "image": "/images/photos/gold-watch.jpg",
+      "thumbnails": [
+        "/images/photos/gold-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A bold gold-tone chronograph with a three-register dial — fashion-forward and easy to wear every day.",
+      "specs": {
+        "case": "44 mm",
+        "material": "Gold-tone stainless steel",
+        "movement": "Quartz chronograph",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "Battery · approx. 2 years",
+        "strap": "Gold-tone bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "44 mm · Gold-tone stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Quartz chronograph"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 2 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Gold-tone bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Chronograph with three sub-dials",
+        "Date window",
+        "Mineral crystal",
+        "Fold-over clasp"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "alberto-chronograph-42",
+      "brand": "Alberto",
+      "name": "Chronograph 42 — Rose Gold",
+      "fullName": "Alberto Chronograph 42 — Rose Gold",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "price": 7520000,
+      "priceDisplay": "₦7,520,000",
+      "currency": "NGN",
+      "reference": "AC-CH-42RG",
+      "image": "/images/photos/gold-watch.jpg",
+      "thumbnails": [
+        "/images/photos/gold-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "The watch on our homepage: a two-register chronograph with a silver guilloché dial and rose-gold tachymeter bezel.",
+      "specs": {
+        "case": "42 mm",
+        "material": "Rose gold PVD steel",
+        "movement": "Automatic chronograph",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "48 hours",
+        "strap": "Brown alligator-print leather",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "42 mm · Rose gold PVD steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Automatic chronograph"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "48 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Brown alligator-print leather"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Guilloché dial",
+        "Tachymeter bezel",
+        "Date at 4 o'clock",
+        "Sapphire crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "bulova-classic-1950-reissue",
+      "brand": "Bulova",
+      "name": "Classic 1950 Reissue",
+      "fullName": "Bulova Classic 1950 Reissue",
+      "lineups": [
+        "vintage"
+      ],
+      "primaryLineup": "vintage",
+      "price": 1940000,
+      "priceDisplay": "₦1,940,000",
+      "currency": "NGN",
+      "reference": "96A251",
+      "image": "/images/photos/vintage-watch.jpg",
+      "thumbnails": [
+        "/images/photos/vintage-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A faithful reissue of a 1950s Bulova dress watch — cream dial, dauphine hands and a domed crystal.",
+      "specs": {
+        "case": "38 mm",
+        "material": "Stainless steel",
+        "movement": "Hand-wound mechanical",
+        "waterResistance": "30 m / 100 ft",
+        "powerReserve": "42 hours",
+        "strap": "Brown leather strap",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "38 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Hand-wound mechanical"
+        },
+        {
+          "label": "Water resistance",
+          "value": "30 m / 100 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "42 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Brown leather strap"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "hand-wound",
+      "features": [
+        "Cream dial with applied markers",
+        "Domed crystal",
+        "Hand-wound movement",
+        "Vintage-style leather strap"
+      ],
+      "featuredOrder": 2,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "men"
+    },
+    {
+      "id": "alberto-smart-s2-graphite",
+      "brand": "Alberto",
+      "name": "Smart S2 — Graphite",
+      "fullName": "Alberto Smart S2 — Graphite",
+      "lineups": [
+        "smart-watches"
+      ],
+      "primaryLineup": "smart-watches",
+      "price": 851000,
+      "priceDisplay": "₦851,000",
+      "currency": "NGN",
+      "reference": "AC-S2-GR",
+      "image": "/images/photos/smart-watch.jpg",
+      "thumbnails": [
+        "/images/photos/smart-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Our own smart watch: heart rate, GPS, notifications and contactless payment, with Alberto watch faces built in.",
+      "specs": {
+        "case": "44 mm",
+        "material": "Graphite aluminium",
+        "movement": "Smart · Wear OS",
+        "waterResistance": "5 ATM / 50 m",
+        "powerReserve": "Battery · up to 2 days",
+        "strap": "Graphite sport band",
+        "warranty": "2 years Alberto"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "44 mm · Graphite aluminium"
+        },
+        {
+          "label": "Movement",
+          "value": "Smart · Wear OS"
+        },
+        {
+          "label": "Water resistance",
+          "value": "5 ATM / 50 m"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · up to 2 days"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Graphite sport band"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto"
+        }
+      ],
+      "movementType": "smart",
+      "features": [
+        "Heart-rate & sleep tracking",
+        "Built-in GPS",
+        "NFC contactless payment",
+        "Always-on AMOLED display"
+      ],
+      "featuredOrder": 3,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "michael-kors-gen-6-bradshaw",
+      "brand": "Michael Kors",
+      "name": "Gen 6 Bradshaw Smartwatch",
+      "fullName": "Michael Kors Gen 6 Bradshaw Smartwatch",
+      "lineups": [
+        "smart-watches"
+      ],
+      "primaryLineup": "smart-watches",
+      "price": 541000,
+      "priceDisplay": "₦541,000",
+      "currency": "NGN",
+      "reference": "MKT5139",
+      "image": "/images/photos/smart-watch.jpg",
+      "thumbnails": [
+        "/images/photos/smart-watch.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A dressy smartwatch with a gold-tone case, fitness tracking and fast charging.",
+      "specs": {
+        "case": "44 mm",
+        "material": "Gold-tone stainless steel",
+        "movement": "Smart · Wear OS",
+        "waterResistance": "3 ATM / 30 m",
+        "powerReserve": "Battery · up to 24 hours",
+        "strap": "Gold-tone bracelet",
+        "warranty": "2 years manufacturer"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "44 mm · Gold-tone stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Smart · Wear OS"
+        },
+        {
+          "label": "Water resistance",
+          "value": "3 ATM / 30 m"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · up to 24 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Gold-tone bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years manufacturer"
+        }
+      ],
+      "movementType": "smart",
+      "features": [
+        "Heart-rate & SpO2 tracking",
+        "Fast charging",
+        "Google Assistant",
+        "Swappable bracelet"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "citizen-cz-smart",
+      "brand": "Citizen",
+      "name": "CZ Smart Hybrid",
+      "fullName": "Citizen CZ Smart Hybrid",
+      "lineups": [
+        "smart-watches"
+      ],
+      "primaryLineup": "smart-watches",
+      "price": 612000,
+      "priceDisplay": "₦612,000",
+      "currency": "NGN",
+      "reference": "BX1001-89E",
+      "image": "/images/photos/watch-on-wrist.jpg",
+      "thumbnails": [
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "Real watch hands with smart features underneath: activity tracking and phone notifications with two weeks of battery.",
+      "specs": {
+        "case": "43 mm",
+        "material": "Stainless steel",
+        "movement": "Hybrid smart · quartz",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "Battery · up to 15 days",
+        "strap": "Steel bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "43 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Hybrid smart · quartz"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · up to 15 days"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Steel bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "smart",
+      "features": [
+        "Real analogue hands",
+        "Activity & sleep tracking",
+        "Notifications",
+        "15-day battery"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "alberto-station-wall-clock",
+      "brand": "Alberto",
+      "name": "Station Wall Clock",
+      "fullName": "Alberto Station Wall Clock",
+      "lineups": [
+        "clocks"
+      ],
+      "primaryLineup": "clocks",
+      "price": 341000,
+      "priceDisplay": "₦341,000",
+      "currency": "NGN",
+      "reference": "AC-WC-40",
+      "image": "/images/photos/wall-clock.jpg",
+      "thumbnails": [
+        "/images/photos/wall-clock.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A railway-station classic in walnut with a silent sweep second hand — no ticking.",
+      "specs": {
+        "case": "40 cm diameter",
+        "material": "Walnut frame, glass front",
+        "movement": "Silent quartz sweep",
+        "waterResistance": "Indoor use",
+        "powerReserve": "AA battery · approx. 1 year",
+        "strap": "Wall mount",
+        "warranty": "2 years Alberto"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "40 cm diameter · Walnut frame, glass front"
+        },
+        {
+          "label": "Movement",
+          "value": "Silent quartz sweep"
+        },
+        {
+          "label": "Water resistance",
+          "value": "Indoor use"
+        },
+        {
+          "label": "Power reserve",
+          "value": "AA battery · approx. 1 year"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Wall mount"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Silent sweep movement",
+        "Solid walnut frame",
+        "Easy-read Roman numerals",
+        "Ready to hang"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "alberto-bracket-mantel-clock",
+      "brand": "Alberto",
+      "name": "Bracket Mantel Clock",
+      "fullName": "Alberto Bracket Mantel Clock",
+      "lineups": [
+        "clocks"
+      ],
+      "primaryLineup": "clocks",
+      "price": 1780000,
+      "priceDisplay": "₦1,780,000",
+      "currency": "NGN",
+      "reference": "AC-MC-32",
+      "image": "/images/photos/table-clock.jpg",
+      "thumbnails": [
+        "/images/photos/table-clock.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "An ornate gilded bracket clock with an 8-day mechanical movement and Westminster chime on the hour.",
+      "specs": {
+        "case": "32 cm tall",
+        "material": "Gilded brass",
+        "movement": "8-day mechanical, Westminster chime",
+        "waterResistance": "Indoor use",
+        "powerReserve": "8 days per wind",
+        "strap": "Table / mantel",
+        "warranty": "2 years Alberto"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "32 cm tall · Gilded brass"
+        },
+        {
+          "label": "Movement",
+          "value": "8-day mechanical, Westminster chime"
+        },
+        {
+          "label": "Water resistance",
+          "value": "Indoor use"
+        },
+        {
+          "label": "Power reserve",
+          "value": "8 days per wind"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Table / mantel"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto"
+        }
+      ],
+      "movementType": "mechanical",
+      "features": [
+        "8-day mechanical movement",
+        "Westminster chime",
+        "Hand-gilded case",
+        "Key-wound"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "alberto-atelier-pendulum-clock",
+      "brand": "Alberto",
+      "name": "Atelier Pendulum Wall Clock",
+      "fullName": "Alberto Atelier Pendulum Wall Clock",
+      "lineups": [
+        "clocks"
+      ],
+      "primaryLineup": "clocks",
+      "price": 1050000,
+      "priceDisplay": "₦1,050,000",
+      "currency": "NGN",
+      "reference": "AC-PW-60",
+      "image": "/images/photos/wall-clock.jpg",
+      "thumbnails": [
+        "/images/photos/wall-clock.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A tall oak pendulum clock with a visible brass pendulum, built for hallways and studies.",
+      "specs": {
+        "case": "60 cm tall",
+        "material": "Oak case",
+        "movement": "Mechanical pendulum",
+        "waterResistance": "Indoor use",
+        "powerReserve": "8 days per wind",
+        "strap": "Wall mount",
+        "warranty": "2 years Alberto"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "60 cm tall · Oak case"
+        },
+        {
+          "label": "Movement",
+          "value": "Mechanical pendulum"
+        },
+        {
+          "label": "Water resistance",
+          "value": "Indoor use"
+        },
+        {
+          "label": "Power reserve",
+          "value": "8 days per wind"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Wall mount"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto"
+        }
+      ],
+      "movementType": "mechanical",
+      "features": [
+        "Swinging brass pendulum",
+        "Oak case",
+        "Hour strike",
+        "Key-wound"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ],
+      "gender": "unisex"
+    },
+    {
+      "id": "rolex-lady-datejust-28",
+      "brand": "Rolex",
+      "name": "Lady-Datejust 28 — Everose",
+      "fullName": "Rolex Lady-Datejust 28 — Everose",
+      "lineups": [
+        "women",
+        "luxury"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 21620000,
+      "priceDisplay": "₦21,620,000",
+      "currency": "NGN",
+      "reference": "279171",
+      "image": "/images/photos/women-rose-gold.jpg",
+      "thumbnails": [
+        "/images/photos/women-rose-gold.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A smaller Datejust with a warm Everose gold bezel and Jubilee bracelet — the classic ladies' dress watch.",
+      "specs": {
+        "case": "28 mm",
+        "material": "Everose gold & Oystersteel",
+        "movement": "Calibre 2236 · automatic",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "55 hours",
+        "strap": "Jubilee bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "28 mm · Everose gold & Oystersteel"
+        },
+        {
+          "label": "Movement",
+          "value": "Calibre 2236 · automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "55 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Jubilee bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Fluted Everose bezel",
+        "Date with Cyclops lens",
+        "Sapphire crystal",
+        "Concealed Crownclasp"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-lady-pearl-32",
+      "brand": "Alberto",
+      "name": "Lady Pearl 32 — Mother-of-pearl",
+      "fullName": "Alberto Lady Pearl 32 — Mother-of-pearl",
+      "lineups": [
+        "women",
+        "luxury"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 1940000,
+      "priceDisplay": "₦1,940,000",
+      "currency": "NGN",
+      "reference": "AC-LP-32",
+      "image": "/images/photos/hero/hero-05-ladies.png",
+      "thumbnails": [
+        "/images/photos/hero/hero-05-ladies.png",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A mother-of-pearl dial framed in rose gold, on a soft white leather strap. Our best-selling ladies' watch.",
+      "specs": {
+        "case": "32 mm",
+        "material": "Rose gold PVD steel",
+        "movement": "Swiss quartz",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "Battery · approx. 3 years",
+        "strap": "White calfskin leather",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "32 mm · Rose gold PVD steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Swiss quartz"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 3 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "White calfskin leather"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Mother-of-pearl dial",
+        "Rose gold PVD case",
+        "Sapphire crystal",
+        "Quick-release strap"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "michael-kors-darci-rose",
+      "brand": "Michael Kors",
+      "name": "Darci — Rose Gold Pavé",
+      "fullName": "Michael Kors Darci — Rose Gold Pavé",
+      "lineups": [
+        "women"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 457000,
+      "priceDisplay": "₦457,000",
+      "currency": "NGN",
+      "reference": "MK3192",
+      "image": "/images/photos/women-rose-gold.jpg",
+      "thumbnails": [
+        "/images/photos/women-rose-gold.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A glamorous rose gold-tone watch with a pavé crystal bezel.",
+      "specs": {
+        "case": "39 mm",
+        "material": "Rose gold-tone steel",
+        "movement": "Quartz",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "Battery · approx. 2 years",
+        "strap": "Rose gold-tone bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "39 mm · Rose gold-tone steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Quartz"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 2 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Rose gold-tone bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Pavé crystal bezel",
+        "Sunray dial",
+        "Mineral crystal",
+        "Fold-over clasp"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "citizen-silhouette-crystal",
+      "brand": "Citizen",
+      "name": "Eco-Drive Silhouette Crystal",
+      "fullName": "Citizen Eco-Drive Silhouette Crystal",
+      "lineups": [
+        "women"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 659000,
+      "priceDisplay": "₦659,000",
+      "currency": "NGN",
+      "reference": "EX1484-57D",
+      "image": "/images/photos/women-bracelet.jpg",
+      "thumbnails": [
+        "/images/photos/women-bracelet.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A slim, light-powered bracelet watch with Swarovski crystal markers — no battery changes, ever.",
+      "specs": {
+        "case": "30 mm",
+        "material": "Two-tone stainless steel",
+        "movement": "Eco-Drive · light-powered",
+        "waterResistance": "30 m / 100 ft",
+        "powerReserve": "6+ months in total darkness",
+        "strap": "Two-tone bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "30 mm · Two-tone stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Eco-Drive · light-powered"
+        },
+        {
+          "label": "Water resistance",
+          "value": "30 m / 100 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "6+ months in total darkness"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Two-tone bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "eco-drive",
+      "features": [
+        "Never needs a battery",
+        "Crystal hour markers",
+        "Slim bracelet",
+        "Mineral crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "bulova-crystal-rose-32",
+      "brand": "Bulova",
+      "name": "Crystal Rose Gold 32",
+      "fullName": "Bulova Crystal Rose Gold 32",
+      "lineups": [
+        "women"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 612000,
+      "priceDisplay": "₦612,000",
+      "currency": "NGN",
+      "reference": "98L230",
+      "image": "/images/photos/women-bracelet.jpg",
+      "thumbnails": [
+        "/images/photos/women-bracelet.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A delicate mesh-bracelet watch with a crystal-set bezel and mother-of-pearl dial.",
+      "specs": {
+        "case": "32 mm",
+        "material": "Rose gold-tone steel",
+        "movement": "Quartz",
+        "waterResistance": "30 m / 100 ft",
+        "powerReserve": "Battery · approx. 3 years",
+        "strap": "Mesh bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "32 mm · Rose gold-tone steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Quartz"
+        },
+        {
+          "label": "Water resistance",
+          "value": "30 m / 100 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 3 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Mesh bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Crystal-set bezel",
+        "Mother-of-pearl dial",
+        "Adjustable mesh bracelet",
+        "Mineral crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-petite-heritage-28",
+      "brand": "Alberto",
+      "name": "Petite Heritage 28",
+      "fullName": "Alberto Petite Heritage 28",
+      "lineups": [
+        "women",
+        "vintage"
+      ],
+      "primaryLineup": "women",
+      "gender": "women",
+      "price": 1070000,
+      "priceDisplay": "₦1,070,000",
+      "currency": "NGN",
+      "reference": "AC-PH-28",
+      "image": "/images/photos/women-on-wrist.jpg",
+      "thumbnails": [
+        "/images/photos/women-on-wrist.jpg",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A petite vintage-style watch with a cream dial — small enough for every day, smart enough for evenings.",
+      "specs": {
+        "case": "28 mm",
+        "material": "Gold PVD steel",
+        "movement": "Swiss quartz",
+        "waterResistance": "30 m / 100 ft",
+        "powerReserve": "Battery · approx. 3 years",
+        "strap": "Brown leather strap",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "28 mm · Gold PVD steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Swiss quartz"
+        },
+        {
+          "label": "Water resistance",
+          "value": "30 m / 100 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 3 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Brown leather strap"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Cream dial",
+        "Domed crystal",
+        "Vintage-style leather strap",
+        "Gift box included"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-self-winding-skeleton",
+      "brand": "Alberto",
+      "name": "Self-winding Skeleton",
+      "fullName": "Alberto Self-winding Skeleton",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "gender": "men",
+      "price": 2250000,
+      "priceDisplay": "₦2,250,000",
+      "currency": "NGN",
+      "reference": "AL-SK-42",
+      "image": "/images/photos/hero/hero-01-skeleton.png",
+      "thumbnails": [
+        "/images/photos/hero/hero-01-skeleton.png",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "An open-worked automatic that shows its balance wheel and gear train through the dial and case back.",
+      "specs": {
+        "case": "42 mm",
+        "material": "Stainless steel",
+        "movement": "Self-winding automatic, open-worked",
+        "waterResistance": "50 m / 165 ft",
+        "powerReserve": "42 hours",
+        "strap": "Black calfskin leather",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "42 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Self-winding automatic, open-worked"
+        },
+        {
+          "label": "Water resistance",
+          "value": "50 m / 165 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "42 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Black calfskin leather"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Skeleton dial",
+        "Exhibition case back",
+        "Sapphire crystal",
+        "Hand-finished bridges"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-rose-chronograph-42",
+      "brand": "Alberto",
+      "name": "Rose Gold Chronograph 42",
+      "fullName": "Alberto Rose Gold Chronograph 42",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "gender": "men",
+      "price": 3070000,
+      "priceDisplay": "₦3,070,000",
+      "currency": "NGN",
+      "reference": "AL-RC-42",
+      "image": "/images/photos/hero/hero-02-rose-gold.png",
+      "thumbnails": [
+        "/images/photos/hero/hero-02-rose-gold.png",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A black-dial chronograph with rose-gold hands and three sub-dials.",
+      "specs": {
+        "case": "42 mm",
+        "material": "Rose gold PVD steel",
+        "movement": "Quartz chronograph",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "Battery · approx. 3 years",
+        "strap": "Black alligator-print leather",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "42 mm · Rose gold PVD steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Quartz chronograph"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "Battery · approx. 3 years"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Black alligator-print leather"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "quartz",
+      "features": [
+        "Three-register chronograph",
+        "Tachymeter scale",
+        "Date window",
+        "Sapphire crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-ocean-diver-300",
+      "brand": "Alberto",
+      "name": "Ocean Diver 300",
+      "fullName": "Alberto Ocean Diver 300",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "gender": "men",
+      "price": 3490000,
+      "priceDisplay": "₦3,490,000",
+      "currency": "NGN",
+      "reference": "AL-OD-300",
+      "image": "/images/photos/hero/hero-03-diver.png",
+      "thumbnails": [
+        "/images/photos/hero/hero-03-diver.png",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A professional dive watch with a unidirectional bezel and luminous markers, rated to 300 metres.",
+      "specs": {
+        "case": "42 mm",
+        "material": "Stainless steel",
+        "movement": "Automatic",
+        "waterResistance": "300 m / 1,000 ft",
+        "powerReserve": "42 hours",
+        "strap": "Oyster-style steel bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "42 mm · Stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Automatic"
+        },
+        {
+          "label": "Water resistance",
+          "value": "300 m / 1,000 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "42 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Oyster-style steel bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Unidirectional bezel",
+        "Screw-down crown",
+        "Luminous markers",
+        "Diver's extension clasp"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    },
+    {
+      "id": "alberto-sport-chrono-blue",
+      "brand": "Alberto",
+      "name": "Sport Chronograph — Blue",
+      "fullName": "Alberto Sport Chronograph — Blue",
+      "lineups": [
+        "luxury"
+      ],
+      "primaryLineup": "luxury",
+      "gender": "men",
+      "price": 4880000,
+      "priceDisplay": "₦4,880,000",
+      "currency": "NGN",
+      "reference": "AL-SC-44B",
+      "image": "/images/photos/hero/hero-04-chronograph.png",
+      "thumbnails": [
+        "/images/photos/hero/hero-04-chronograph.png",
+        "/images/photos/watch-on-wrist.jpg",
+        "/images/photos/leather-strap-detail.jpg",
+        "/images/photos/watch-movement.jpg"
+      ],
+      "description": "A sporty integrated-bracelet chronograph with a deep blue dial and exposed screws on the bezel.",
+      "specs": {
+        "case": "44 mm",
+        "material": "Brushed stainless steel",
+        "movement": "Automatic chronograph",
+        "waterResistance": "100 m / 330 ft",
+        "powerReserve": "48 hours",
+        "strap": "Integrated steel bracelet",
+        "warranty": "2 years Alberto + manufacturer warranty"
+      },
+      "specsDisplayed": [
+        {
+          "label": "Case",
+          "value": "44 mm · Brushed stainless steel"
+        },
+        {
+          "label": "Movement",
+          "value": "Automatic chronograph"
+        },
+        {
+          "label": "Water resistance",
+          "value": "100 m / 330 ft"
+        },
+        {
+          "label": "Power reserve",
+          "value": "48 hours"
+        },
+        {
+          "label": "Bracelet / strap",
+          "value": "Integrated steel bracelet"
+        },
+        {
+          "label": "Warranty",
+          "value": "2 years Alberto + manufacturer warranty"
+        }
+      ],
+      "movementType": "automatic",
+      "features": [
+        "Integrated bracelet",
+        "Blue sunray dial",
+        "Chronograph",
+        "Sapphire crystal"
+      ],
+      "featuredOrder": null,
+      "isNew": false,
+      "inStock": true,
+      "availableAt": [
+        "lagos-island",
+        "lekki",
+        "ikeja"
+      ]
+    }
+  ],
+  "sortOptions": [
+    {
+      "id": "price-desc",
+      "label": "Price, high → low",
+      "default": true
+    },
+    {
+      "id": "price-asc",
+      "label": "Price, low → high"
+    },
+    {
+      "id": "newest",
+      "label": "Newest"
+    }
+  ],
+  "cardFields": [
+    "image",
+    "primaryLineup (badge)",
+    "brand",
+    "name",
+    "priceDisplay",
+    "'View details →'"
+  ]
+}

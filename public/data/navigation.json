@@ -1,0 +1,148 @@
+{
+  "mainMenu": [
+    {
+      "id": "home",
+      "label": "Home",
+      "route": "/",
+      "screen": "D-01"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "route": "/products/luxury",
+      "screen": "D-02"
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "route": "/technology",
+      "screen": "D-04"
+    },
+    {
+      "id": "prices",
+      "label": "Price List",
+      "route": "/prices",
+      "screen": "D-05"
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery",
+      "route": "/gallery",
+      "screen": "D-06"
+    },
+    {
+      "id": "store-locator",
+      "label": "Store Locator",
+      "route": "/store-locator",
+      "screen": "D-07"
+    },
+    {
+      "id": "support",
+      "label": "Support",
+      "route": "/support",
+      "screen": "D-08"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "route": "/about",
+      "screen": "D-09"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "route": "/contact",
+      "screen": "D-10"
+    }
+  ],
+  "menuStates": {
+    "default": "text/secondary",
+    "hover": "accent/gold-hover + faint underline",
+    "active": "accent/gold + 2px underline (current section)"
+  },
+  "footer": {
+    "explore": {
+      "title": "Explore",
+      "links": [
+        {
+          "label": "Products",
+          "route": "/products/luxury"
+        },
+        {
+          "label": "Women",
+          "route": "/products/women"
+        },
+        {
+          "label": "Technology",
+          "route": "/technology"
+        },
+        {
+          "label": "Price List",
+          "route": "/prices"
+        },
+        {
+          "label": "Gallery",
+          "route": "/gallery"
+        }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About Us",
+          "route": "/about"
+        },
+        {
+          "label": "Contact Us",
+          "route": "/contact"
+        },
+        {
+          "label": "Store Locator",
+          "route": "/store-locator"
+        },
+        {
+          "label": "Support",
+          "route": "/support"
+        },
+        {
+          "label": "Site Map",
+          "route": "/sitemap"
+        }
+      ]
+    },
+    "visitUs": {
+      "title": "Visit us",
+      "items": [
+        {
+          "icon": "map-pin",
+          "text": "12 Marina Road, Lagos Island, Lagos"
+        },
+        {
+          "icon": "phone",
+          "text": "+234 801 234 5678"
+        },
+        {
+          "icon": "mail",
+          "text": "hello@albertoclocks.com"
+        },
+        {
+          "icon": "clock",
+          "text": "Mon – Sat · 9:00 – 19:00"
+        }
+      ]
+    }
+  },
+  "mobileMenu": [
+    "Home",
+    "Products",
+    "Technology",
+    "Price List",
+    "Gallery",
+    "Store Locator",
+    "Support",
+    "About Us",
+    "Contact Us"
+  ],
+  "router": "HashRouter — routes look like #/products/luxury"
+}

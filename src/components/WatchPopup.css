@@ -1,0 +1,231 @@
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.popup__scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-scrim);
+  opacity: 0;
+  transition: opacity var(--popup-ms);
+}
+
+.popup__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 40px;
+  width: min(1080px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding: 40px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-popup);
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  transition:
+    opacity var(--popup-ms),
+    transform var(--popup-ms);
+}
+
+.popup.is-visible .popup__scrim {
+  opacity: 1;
+}
+
+.popup.is-visible .popup__panel {
+  opacity: 1;
+  transform: none;
+}
+
+.popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background: var(--bg-page);
+  transition:
+    color var(--hover-ms),
+    border-color var(--hover-ms);
+}
+
+.popup__close:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+.popup__main {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--bg-elevated);
+}
+
+.popup__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: page-in var(--fade-in) ease both;
+}
+
+.popup__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.popup__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.popup__thumb {
+  aspect-ratio: 1;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: var(--radius-card);
+  background: var(--bg-elevated);
+  opacity: 0.65;
+  transition:
+    opacity var(--hover-ms),
+    border-color var(--hover-ms);
+}
+
+.popup__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup__thumb:hover {
+  opacity: 1;
+}
+
+.popup__thumb.is-active {
+  border-color: var(--accent-gold);
+  opacity: 1;
+}
+
+.popup__brand {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.popup__name {
+  margin: 8px 0 6px;
+  font-size: clamp(28px, 3vw, 36px);
+  padding-right: 40px;
+}
+
+.popup__ref {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.popup__price {
+  margin: 18px 0 8px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.popup__stock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.dot--ok {
+  background: var(--status-success);
+}
+
+.popup__new {
+  margin-left: 8px;
+}
+
+.popup__desc {
+  margin: 18px 0 22px;
+  color: var(--text-secondary);
+}
+
+.popup__specs {
+  margin: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.popup__spec {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 14px;
+}
+
+.popup__spec dt {
+  color: var(--text-muted);
+}
+
+.popup__spec dd {
+  margin: 0;
+}
+
+.popup__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* bottom sheet on phones */
+@media (max-width: 860px) {
+  .popup {
+    padding: 0;
+    place-items: end stretch;
+  }
+  .popup__panel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-height: 92vh;
+    padding: 24px 20px calc(24px + var(--ticker-h));
+    border-radius: 16px 16px 0 0;
+    transform: translateY(40px);
+  }
+  .popup__main {
+    aspect-ratio: 4 / 3;
+  }
+  .popup__spec {
+    grid-template-columns: 120px 1fr;
+  }
+  .popup__actions .btn {
+    flex: 1 1 100%;
+  }
+}

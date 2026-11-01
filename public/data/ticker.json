@@ -1,0 +1,45 @@
+{
+  "liveLabel": "Live",
+  "position": "Fixed to the bottom of the viewport; add padding-bottom: 44px to <body>",
+  "scroll": {
+    "direction": "right-to-left",
+    "durationSeconds": 40,
+    "repeat": "infinite",
+    "pauseOnHover": true
+  },
+  "items": [
+    {
+      "type": "date",
+      "icon": "calendar",
+      "format": "dddd, D MMMM YYYY",
+      "example": "Tuesday, 27 October 2026",
+      "update": "every second"
+    },
+    {
+      "type": "time",
+      "icon": "clock",
+      "format": "HH:mm:ss + timezone",
+      "example": "14:32:05 WAT",
+      "update": "every second"
+    },
+    {
+      "type": "location",
+      "icon": "map-pin",
+      "source": "navigator.geolocation + reverse geocoding (city, country)",
+      "example": "Lagos, Nigeria · 6.52° N, 3.37° E",
+      "fallback": "Location unavailable"
+    },
+    {
+      "type": "promo",
+      "icon": "wrench",
+      "text": "Free watch appraisal every Saturday"
+    },
+    {
+      "type": "promo",
+      "icon": "gem",
+      "text": "New in: Alberto Royale Tourbillon",
+      "productId": "alberto-royale-rose-gold"
+    }
+  ],
+  "separator": "◆"
+}

@@ -1,0 +1,110 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "id": "watches",
+      "label": "Watches"
+    },
+    {
+      "id": "workshop",
+      "label": "Workshop"
+    },
+    {
+      "id": "boutique",
+      "label": "Boutique"
+    },
+    {
+      "id": "clocks",
+      "label": "Clocks"
+    }
+  ],
+  "items": [
+    {
+      "id": "g1",
+      "src": "/images/photos/gold-watch.jpg",
+      "caption": "Alberto Chronograph 42",
+      "category": "watches",
+      "column": 1,
+      "designHeight": 520
+    },
+    {
+      "id": "g2",
+      "src": "/images/photos/watchmaker-at-work.jpg",
+      "caption": "Our workshop, Lagos Island",
+      "category": "workshop",
+      "column": 1,
+      "designHeight": 320
+    },
+    {
+      "id": "g3",
+      "src": "/images/photos/pocket-watch.jpg",
+      "caption": "Heritage pocket chronometer",
+      "category": "watches",
+      "column": 1,
+      "designHeight": 360
+    },
+    {
+      "id": "g4",
+      "src": "/images/photos/boutique-interior.jpg",
+      "caption": "The boutique",
+      "category": "boutique",
+      "column": 2,
+      "designHeight": 340
+    },
+    {
+      "id": "g5",
+      "src": "/images/photos/rose-gold-watch.jpg",
+      "caption": "Royale, rose gold",
+      "category": "watches",
+      "column": 2,
+      "designHeight": 420
+    },
+    {
+      "id": "g6",
+      "src": "/images/photos/wall-clock.jpg",
+      "caption": "Station wall clock",
+      "category": "clocks",
+      "column": 2,
+      "designHeight": 440
+    },
+    {
+      "id": "g7",
+      "src": "/images/photos/watch-on-wrist.jpg",
+      "caption": "Worn every day",
+      "category": "watches",
+      "column": 3,
+      "designHeight": 420
+    },
+    {
+      "id": "g8",
+      "src": "/images/photos/watch-movement.jpg",
+      "caption": "Hand-finished movement",
+      "category": "workshop",
+      "column": 3,
+      "designHeight": 300
+    },
+    {
+      "id": "g9",
+      "src": "/images/photos/table-clock.jpg",
+      "caption": "Bracket mantel clock",
+      "category": "clocks",
+      "column": 3,
+      "designHeight": 480
+    }
+  ],
+  "lightbox": {
+    "controls": [
+      "previous",
+      "next",
+      "close"
+    ],
+    "keyboard": {
+      "ArrowLeft": "previous",
+      "ArrowRight": "next",
+      "Escape": "close"
+    }
+  }
+}

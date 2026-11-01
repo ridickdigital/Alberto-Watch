@@ -1,0 +1,251 @@
+{
+  "colors": [
+    {
+      "token": "bg/page",
+      "cssVar": "--bg-page",
+      "dark": "#0E0D0B",
+      "light": "#F7F3EC",
+      "use": "Page background"
+    },
+    {
+      "token": "bg/surface",
+      "cssVar": "--bg-surface",
+      "dark": "#171512",
+      "light": "#FFFFFF",
+      "use": "Cards, header, panels"
+    },
+    {
+      "token": "bg/elevated",
+      "cssVar": "--bg-elevated",
+      "dark": "#221F1A",
+      "light": "#EFE8DC",
+      "use": "Raised areas, image wells, inputs"
+    },
+    {
+      "token": "text/primary",
+      "cssVar": "--text-primary",
+      "dark": "#F3EDE2",
+      "light": "#1A1712",
+      "use": "Headings and main copy"
+    },
+    {
+      "token": "text/secondary",
+      "cssVar": "--text-secondary",
+      "dark": "#A79F91",
+      "light": "#5E564A",
+      "use": "Supporting copy"
+    },
+    {
+      "token": "text/muted",
+      "cssVar": "--text-muted",
+      "dark": "#6E675C",
+      "light": "#8C8475",
+      "use": "Captions, placeholders"
+    },
+    {
+      "token": "accent/gold",
+      "cssVar": "--accent-gold",
+      "dark": "#C9A45C",
+      "light": "#9E7A2E",
+      "use": "Brand gold: active menu, prices, primary buttons"
+    },
+    {
+      "token": "accent/gold-hover",
+      "cssVar": "--accent-gold-hover",
+      "dark": "#E0BF7A",
+      "light": "#7F6123",
+      "use": "Hover state of gold elements"
+    },
+    {
+      "token": "accent/gold-soft",
+      "cssVar": "--accent-gold-soft",
+      "dark": "#2A2418",
+      "light": "#F1E6CC",
+      "use": "Tinted gold backgrounds, badges"
+    },
+    {
+      "token": "accent/on-gold",
+      "cssVar": "--accent-on-gold",
+      "dark": "#0E0D0B",
+      "light": "#FFFFFF",
+      "use": "Text/icons placed on gold"
+    },
+    {
+      "token": "border/subtle",
+      "cssVar": "--border-subtle",
+      "dark": "#2C2822",
+      "light": "#E2D9C9",
+      "use": "Dividers, card outlines"
+    },
+    {
+      "token": "border/strong",
+      "cssVar": "--border-strong",
+      "dark": "#4A443A",
+      "light": "#C9BDA8",
+      "use": "Inputs, secondary buttons"
+    },
+    {
+      "token": "ticker/bg",
+      "cssVar": "--ticker-bg",
+      "dark": "#C9A45C",
+      "light": "#1A1712",
+      "use": "Bottom scrolling ticker background"
+    },
+    {
+      "token": "ticker/text",
+      "cssVar": "--ticker-text",
+      "dark": "#0E0D0B",
+      "light": "#F3EDE2",
+      "use": "Ticker text"
+    },
+    {
+      "token": "overlay/scrim",
+      "cssVar": "--overlay-scrim",
+      "dark": "rgba(0,0,0,0.70)",
+      "light": "rgba(26,23,18,0.60)",
+      "use": "Dimmed backdrop behind popups / lightbox"
+    },
+    {
+      "token": "status/success",
+      "cssVar": "--status-success",
+      "dark": "#5CBF85",
+      "light": "#2E7D46",
+      "use": "Open now, form success"
+    }
+  ],
+  "fonts": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "weights": [
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "google": "https://fonts.google.com/specimen/Cormorant+Garamond"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "google": "https://fonts.google.com/specimen/Manrope"
+    }
+  },
+  "typeScale": [
+    {
+      "name": "Display/XL",
+      "font": "Cormorant Garamond 600",
+      "size": 80,
+      "lineHeight": "100%",
+      "letterSpacing": "-1%"
+    },
+    {
+      "name": "Display/L",
+      "font": "Cormorant Garamond 600",
+      "size": 60,
+      "lineHeight": "105%",
+      "letterSpacing": "-0.5%"
+    },
+    {
+      "name": "Heading/H2",
+      "font": "Cormorant Garamond 600",
+      "size": 44,
+      "lineHeight": "110%"
+    },
+    {
+      "name": "Heading/H3",
+      "font": "Cormorant Garamond 600",
+      "size": 30,
+      "lineHeight": "115%"
+    },
+    {
+      "name": "Heading/Card Title",
+      "font": "Cormorant Garamond 600",
+      "size": 24,
+      "lineHeight": "115%"
+    },
+    {
+      "name": "Heading/H4",
+      "font": "Manrope 600",
+      "size": 20,
+      "lineHeight": "130%"
+    },
+    {
+      "name": "Body/L",
+      "font": "Manrope 400",
+      "size": 18,
+      "lineHeight": "160%"
+    },
+    {
+      "name": "Body/M",
+      "font": "Manrope 400",
+      "size": 16,
+      "lineHeight": "160%"
+    },
+    {
+      "name": "Body/S",
+      "font": "Manrope 400",
+      "size": 14,
+      "lineHeight": "150%"
+    },
+    {
+      "name": "Label/M",
+      "font": "Manrope 600",
+      "size": 13,
+      "lineHeight": "120%",
+      "letterSpacing": "12%",
+      "textTransform": "uppercase"
+    },
+    {
+      "name": "Label/S",
+      "font": "Manrope 600",
+      "size": 11,
+      "lineHeight": "120%",
+      "letterSpacing": "14%",
+      "textTransform": "uppercase"
+    },
+    {
+      "name": "Price/L",
+      "font": "Cormorant Garamond 600",
+      "size": 28,
+      "lineHeight": "110%"
+    },
+    {
+      "name": "Price/M",
+      "font": "Manrope 700",
+      "size": 16,
+      "lineHeight": "120%"
+    },
+    {
+      "name": "Quote",
+      "font": "Cormorant Garamond italic",
+      "size": 26,
+      "lineHeight": "140%"
+    }
+  ],
+  "radius": {
+    "button": 2,
+    "card": 4,
+    "pill": 999,
+    "sheetTop": 16
+  },
+  "shadows": {
+    "card": "0 12px 32px rgba(0,0,0,0.18)",
+    "popup": "0 24px 64px rgba(0,0,0,0.35)"
+  },
+  "layout": {
+    "desktopWidth": 1440,
+    "contentPadding": 64,
+    "gridGap": 32,
+    "cardWidth": 304,
+    "headerHeight": 88,
+    "tickerHeight": 44,
+    "mobileWidth": 390,
+    "mobilePadding": 20,
+    "mobileBreakpoint": 768
+  }
+}

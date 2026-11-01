@@ -1,0 +1,149 @@
+{
+  "stores": [
+    {
+      "id": "lagos-island",
+      "name": "Flagship · Lagos Island",
+      "flagship": true,
+      "address": "12 Marina Road, Lagos Island, Lagos",
+      "city": "Lagos",
+      "phone": "+234 801 234 5678",
+      "hoursLabel": "Mon – Sat · 9:00 – 19:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "sun": null
+      },
+      "lat": 6.4541,
+      "lng": 3.3947,
+      "image": "/images/photos/boutique-interior.jpg",
+      "services": [
+        "Retail",
+        "Repairs & servicing workshop",
+        "Free Saturday appraisals"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=12+Marina+Road+Lagos+Island"
+    },
+    {
+      "id": "lekki",
+      "name": "Lekki",
+      "flagship": false,
+      "address": "Admiralty Way, Lekki Phase 1, Lagos",
+      "city": "Lagos",
+      "phone": "+234 802 345 6789",
+      "hoursLabel": "Mon – Sat · 10:00 – 20:00",
+      "hours": {
+        "mon": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "tue": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "wed": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "thu": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "fri": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "sat": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "sun": null
+      },
+      "lat": 6.4474,
+      "lng": 3.4723,
+      "image": null,
+      "services": [
+        "Retail",
+        "Battery & strap service"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Admiralty+Way+Lekki+Phase+1"
+    },
+    {
+      "id": "ikeja",
+      "name": "Ikeja",
+      "flagship": false,
+      "address": "14 Allen Avenue, Ikeja, Lagos",
+      "city": "Lagos",
+      "phone": "+234 803 456 7890",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 6.6018,
+      "lng": 3.3515,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs drop-off"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=14+Allen+Avenue+Ikeja+Lagos"
+    }
+  ],
+  "map": {
+    "provider": "Google Maps embed (iframe)",
+    "defaultCenter": {
+      "lat": 6.4541,
+      "lng": 3.3947
+    },
+    "defaultZoom": 12
+  },
+  "statusLabels": {
+    "open": "Open now",
+    "closed": "Closed"
+  }
+}

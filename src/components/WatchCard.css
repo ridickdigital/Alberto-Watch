@@ -1,0 +1,125 @@
+.watch-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-elevated);
+  color: #f3ede2; /* always light: the text sits on a dark photo shade */
+  text-align: left;
+  transition:
+    border-color var(--hover-ms),
+    transform var(--hover-ms),
+    box-shadow var(--hover-ms);
+}
+
+.watch-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.watch-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.watch-card:hover .watch-card__img {
+  transform: scale(1.05);
+}
+
+.watch-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.watch-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.watch-card__new {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.watch-card__body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 4px;
+  padding: 20px;
+}
+
+.watch-card__brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e0bf7a;
+}
+
+.watch-card__name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.watch-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.watch-card__price {
+  font-weight: 700;
+}
+
+.watch-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e0bf7a;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity var(--hover-ms),
+    transform var(--hover-ms);
+}
+
+.watch-card:hover .watch-card__more,
+.watch-card:focus-visible .watch-card__more {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .watch-card__more {
+    opacity: 1;
+    transform: none;
+  }
+}

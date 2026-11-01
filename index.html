@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alberto Clocks — Luxury watches, repairs &amp; appraisals in Lagos</title>
+    <meta name="description" content="Shop Rolex, Citizen Eco-Drive, Bulova, Michael Kors and the Alberto collection. Full-service watch repair, free Saturday appraisals and three stores across Lagos." />
+    <meta name="theme-color" content="#0E0D0B" />
+    <link rel="icon" type="image/png" href="./images/brand/logo-mark@4x.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // apply the saved theme before React loads, so there is no flash
+      try {
+        var t = localStorage.getItem('alberto_theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Please enable JavaScript to view the Alberto Clocks website.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

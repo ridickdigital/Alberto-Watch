@@ -1,0 +1,87 @@
+/* Design tokens — copied from public/data/theme.json (Figma colour styles).
+   Dark values on :root, light values on [data-theme="light"].
+   Use these variables everywhere instead of hard-coded colours. */
+
+:root {
+  --bg-page: #0e0d0b;
+  --bg-surface: #171512;
+  --bg-elevated: #221f1a;
+  --text-primary: #f3ede2;
+  --text-secondary: #a79f91;
+  --text-muted: #6e675c;
+  --accent-gold: #c9a45c;
+  --accent-gold-hover: #e0bf7a;
+  --accent-gold-soft: #2a2418;
+  --accent-on-gold: #0e0d0b;
+  --border-subtle: #2c2822;
+  --border-strong: #4a443a;
+  --ticker-bg: #c9a45c;
+  --ticker-text: #0e0d0b;
+  --overlay-scrim: rgba(0, 0, 0, 0.7);
+  --status-success: #5cbf85;
+  --status-error: #e07a6a;
+  --hero-glow: rgba(201, 164, 92, 0.16);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-hero: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+
+  --radius-button: 2px;
+  --radius-card: 4px;
+  --radius-pill: 999px;
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.18);
+  --shadow-popup: 0 24px 64px rgba(0, 0, 0, 0.35);
+
+  --content-max: 1312px;
+  --gutter: 64px;
+  --grid-gap: 32px;
+  --header-h: 88px;
+  --ticker-h: 44px;
+
+  --fade-out: 200ms;
+  --fade-in: 300ms;
+  --popup-ms: 250ms;
+  --hover-ms: 200ms;
+
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg-page: #f7f3ec;
+  --bg-surface: #ffffff;
+  --bg-elevated: #efe8dc;
+  --text-primary: #1a1712;
+  --text-secondary: #5e564a;
+  --text-muted: #8c8475;
+  --accent-gold: #9e7a2e;
+  --accent-gold-hover: #7f6123;
+  --accent-gold-soft: #f1e6cc;
+  --accent-on-gold: #ffffff;
+  --border-subtle: #e2d9c9;
+  --border-strong: #c9bda8;
+  --ticker-bg: #1a1712;
+  --ticker-text: #f3ede2;
+  --overlay-scrim: rgba(26, 23, 18, 0.6);
+  --status-success: #2e7d46;
+  --status-error: #b44a3a;
+  --hero-glow: rgba(201, 164, 92, 0.22);
+  --shadow-card: 0 12px 32px rgba(60, 45, 20, 0.1);
+
+  color-scheme: light;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --gutter: 32px;
+    --grid-gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gutter: 20px;
+    --grid-gap: 16px;
+    --header-h: 64px;
+    --ticker-h: 40px;
+  }
+}
