@@ -339,54 +339,54 @@
       "height": 674
     },
     {
-      "file": "/images/photos/hero/hero-01-skeleton.jpg",
-      "description": "Skeleton automatic on dark (hero slide 1, Self-Winding Skeleton)",
+      "file": "/images/photos/hero/hero-01-skeleton.png",
+      "description": "Skeleton automatic (transparent cut-out) (hero slide 1, Self-Winding Skeleton)",
       "usedIn": [
         "home.json",
         "products.json"
       ],
-      "width": 1350,
-      "height": 900
+      "width": 866,
+      "height": 1000
     },
     {
-      "file": "/images/photos/hero/hero-03-diver.jpg",
-      "description": "Diver watch on dark (hero slide 3, Ocean Diver 300)",
+      "file": "/images/photos/hero/hero-03-diver.png",
+      "description": "Diver watch (transparent cut-out) (hero slide 3, Ocean Diver 300)",
       "usedIn": [
         "home.json",
         "products.json"
       ],
-      "width": 1350,
-      "height": 900
+      "width": 1076,
+      "height": 717
     },
     {
-      "file": "/images/photos/hero/hero-04-chronograph.jpg",
-      "description": "Blue-dial chronograph on dark (hero slide 4, Blue Sport Chrono)",
+      "file": "/images/photos/hero/hero-04-chronograph.png",
+      "description": "Blue-dial chronograph (transparent cut-out) (hero slide 4, Blue Sport Chrono)",
       "usedIn": [
         "home.json",
         "products.json"
       ],
-      "width": 1350,
-      "height": 900
+      "width": 654,
+      "height": 1000
     },
     {
-      "file": "/images/photos/hero/hero-05-ladies.jpg",
-      "description": "Ladies' leather-strap watch on dark (hero slide 5, Lady Pearl 32)",
+      "file": "/images/photos/hero/hero-05-ladies.png",
+      "description": "Ladies' leather-strap watch (transparent cut-out) (hero slide 5, Lady Pearl 32)",
       "usedIn": [
         "home.json",
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 950,
+      "height": 436
     },
     {
-      "file": "/images/photos/hero/hero-06-smart.jpg",
-      "description": "Smartwatch on dark fabric (hero slide 6, Smart S2)",
+      "file": "/images/photos/hero/hero-06-smart.png",
+      "description": "Smartwatch (transparent cut-out) fabric (hero slide 6, Smart S2)",
       "usedIn": [
         "home.json",
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 1400,
+      "height": 857
     }
   ],
   "brand": [

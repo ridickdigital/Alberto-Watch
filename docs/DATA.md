@@ -114,5 +114,5 @@ Brand names (Rolex, Citizen, Bulova, Michael Kors, Seiko) are retailers' stock l
 - **Prices are in Nigerian naira (₦).** They were converted from USD at ₦1,550 = $1, rounded to the nearest ₦10,000 from ₦1,000,000 up and to the nearest ₦1,000 below that.
 - **All stores are in Lagos:** Lagos Island (flagship), Lekki and Ikeja (14 Allen Avenue).
 - **New Women line-up** (`women`) with 6 ladies' watches.
-- **Home hero carousel:** `home.json → hero.carousel` holds 6 slides. Each slide's watch is a 3:2 photo on a dark background in `images/photos/hero/` (at least 1200×800, never enlarged), and its button ("View details") opens the watch popup.
+- **Home hero carousel:** `home.json → hero.carousel` holds 6 slides. Each slide's watch is a transparent PNG cut-out in `images/photos/hero/` (cut from large photos, never enlarged), and its button ("View details") opens the watch popup.
 - `women-on-wrist.jpg`, `women-rose-gold.jpg` and `women-bracelet.jpg` are temporary copies of other photos. Replace them with the Figma women photos (same file names).
