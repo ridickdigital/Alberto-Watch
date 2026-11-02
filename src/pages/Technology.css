@@ -1,3 +1,140 @@
-/* Technology page styles — owned by Dev C (feature/technology).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.tech-feature {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.tech-feature__image img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.tech-feature__text h2 {
+  margin: 8px 0 16px;
+  font-size: clamp(32px, 4vw, 44px);
+}
+
+.tech-feature__text > p {
+  color: var(--text-secondary);
+}
+
+.tech-feature__facts {
+  display: grid;
+  gap: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tech-feature__facts div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tech-feature__facts dt {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.tech-feature__facts dd {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.movement-card {
+  padding: 32px 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-page);
+  transition:
+    border-color var(--hover-ms),
+    transform var(--hover-ms),
+    opacity 600ms ease;
+}
+
+.movement-card:hover {
+  border-color: var(--accent-gold);
+}
+
+.movement-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: var(--accent-gold-soft);
+  color: var(--accent-gold);
+}
+
+.movement-card h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.movement-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.movement-card__found {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.movement-card__found span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.material-card {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+}
+
+.material-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.material-card:hover img {
+  transform: scale(1.04);
+}
+
+.material-card__body {
+  padding: 24px;
+}
+
+.material-card h3 {
+  margin-bottom: 8px;
+  font-size: 26px;
+}
+
+.material-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .tech-feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

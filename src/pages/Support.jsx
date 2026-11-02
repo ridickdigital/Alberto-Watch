@@ -1,26 +1,21 @@
-import { useData } from '../lib/data.js';
+import { useState } from 'react';
+import { asset, useData } from '../lib/data.js';
+import { href } from '../lib/router.js';
 import PageHeader from '../components/PageHeader.jsx';
-import TaskList from '../components/TaskList.jsx';
+import Icon from '../components/Icon.jsx';
+import Reveal from '../components/Reveal.jsx';
 import './Support.css';
 
-/*
-  SUPPORT PAGE
-  Owner:   Dev D
-  Branch:  feature/support
-  Figma:   D-08 Support · M-08
-  Data:    public/data/ support.json, pages.json → support
-  Tasks:   docs/TASKS.md → Support
-
-  Only edit this file and Support.css on your branch.
-  Shared pieces you can use (do not edit them; ask the lead):
-    useData('file')           load public/data/file.json
-    asset('/images/…')        image path that works everywhere
-    href('/route')            "#/route" for <a href>
-    <PageHeader>, <Reveal>, <Icon>, <WatchCard>, useWatchPopup()
-*/
+// #/support — services, FAQ accordion (one open at a time) and a booking banner
 export default function Support() {
   const page = useData('pages');
-  if (!page) return <div className="loading">Loading…</div>;
+  const support = useData('support');
+  const [openFaq, setOpenFaq] = useState(null);
+  if (!page || !support) return <div className="loading">Loading…</div>;
+
+  const defaultOpen = support.faqs.findIndex((f) => f.openByDefault);
+  const openIndex = openFaq ?? defaultOpen;
+  const { faqSection, ctaBanner } = support;
 
   return (
     <>
@@ -29,18 +24,73 @@ export default function Support() {
         title={page.support.title}
         intro={page.support.intro}
       />
-      <TaskList
-        owner="Dev D"
-        branch="feature/support"
-        figma="D-08 Support · M-08"
-        data="support.json, pages.json → support"
-        tasks={[
-          '3 service cards (photo, title, text, price label).',
-          'FAQ accordion: one question open at a time; the one with openByDefault starts open; smooth open / close.',
-          'FAQ intro column with the "Contact us" button.',
-          '"Book a repair" banner linking to #/contact.',
-        ]}
-      />
+
+      <section className="section">
+        <div className="container grid grid--3">
+          {support.services.map((s, i) => (
+            <Reveal key={s.id} delay={i * 100} className="service-card">
+              <img src={asset(s.image)} alt="" loading="lazy" />
+              <div className="service-card__body">
+                <h2>{s.title}</h2>
+                <p>{s.text}</p>
+                <span className="service-card__price">{s.priceLabel}</span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--alt">
+        <div className="container faq">
+          <Reveal className="section-head section-head--left faq__head">
+            <p className="eyebrow">{faqSection.eyebrow}</p>
+            <h2>{faqSection.title}</h2>
+            <p>{faqSection.subtitle}</p>
+            <a className="btn btn--ghost" href={href(faqSection.cta.route)}>
+              {faqSection.cta.label}
+            </a>
+          </Reveal>
+
+          <div className="faq__list">
+            {support.faqs.map((f, i) => {
+              const open = i === openIndex;
+              return (
+                <div key={f.q} className={`faq__item ${open ? 'is-open' : ''}`}>
+                  <button
+                    type="button"
+                    className="faq__q"
+                    aria-expanded={open}
+                    onClick={() => setOpenFaq(open ? -1 : i)}
+                  >
+                    {f.q}
+                    <span className="faq__sign" aria-hidden="true" />
+                  </button>
+                  <div className="faq__a" role="region">
+                    <div>
+                      <p>{f.a}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <Reveal className="container">
+          <div className="cta-banner">
+            <Icon name="wrench" size={32} />
+            <div>
+              <h2>{ctaBanner.title}</h2>
+              <p>{ctaBanner.text}</p>
+            </div>
+            <a className="btn" href={href(ctaBanner.cta.route)}>
+              {ctaBanner.cta.label}
+            </a>
+          </div>
+        </Reveal>
+      </section>
     </>
   );
 }

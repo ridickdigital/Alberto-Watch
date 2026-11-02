@@ -1,3 +1,179 @@
-/* Gallery page styles — owned by Dev C (feature/gallery).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.gallery {
+  padding-top: 40px;
+}
+
+.gallery__tabs {
+  margin-bottom: 32px;
+}
+
+/* 3 columns desktop, 2 tablet, 1 phone */
+.gallery__grid {
+  columns: 3;
+  column-gap: var(--grid-gap);
+}
+
+.gallery__item {
+  break-inside: avoid;
+  margin-bottom: var(--grid-gap);
+}
+
+.gallery__item button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--bg-elevated);
+}
+
+.gallery__item img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.gallery__caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 18px 16px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+  color: #f3ede2;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  opacity: 0;
+  transition: opacity var(--hover-ms);
+}
+
+.gallery__item button:hover img {
+  transform: scale(1.05);
+}
+
+.gallery__item button:hover .gallery__caption,
+.gallery__item button:focus-visible .gallery__caption {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .gallery__caption {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery__grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__grid {
+    columns: 1;
+  }
+}
+
+/* lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 64px 88px;
+}
+
+.lightbox__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  animation: page-in var(--fade-in) both;
+}
+
+.lightbox__figure {
+  position: relative;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  animation: page-in var(--fade-in) both;
+}
+
+.lightbox__figure img {
+  max-height: calc(100vh - 180px);
+  width: auto;
+  margin: 0 auto;
+  border-radius: var(--radius-card);
+}
+
+.lightbox__figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  color: #f3ede2;
+  font-size: 15px;
+}
+
+.lightbox__figure figcaption span {
+  color: #a79f91;
+}
+
+.lightbox__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #f3ede2;
+  transition:
+    border-color var(--hover-ms),
+    color var(--hover-ms);
+}
+
+.lightbox__btn:hover {
+  border-color: #c9a45c;
+  color: #e0bf7a;
+}
+
+.lightbox__close {
+  top: 20px;
+  right: 20px;
+}
+
+.lightbox__prev {
+  left: 20px;
+  top: 50%;
+}
+
+.lightbox__prev .icon {
+  transform: rotate(180deg);
+}
+
+.lightbox__next {
+  right: 20px;
+  top: 50%;
+}
+
+@media (max-width: 768px) {
+  .lightbox {
+    padding: 72px 16px 96px;
+  }
+  .lightbox__prev,
+  .lightbox__next {
+    top: auto;
+    bottom: calc(var(--ticker-h) + 16px);
+  }
+  .lightbox__prev {
+    left: calc(50% - 60px);
+  }
+  .lightbox__next {
+    right: calc(50% - 60px);
+  }
+}

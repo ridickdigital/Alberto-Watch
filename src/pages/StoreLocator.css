@@ -1,3 +1,180 @@
-/* Store Locator page styles — owned by Dev D (feature/store-locator).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.stores {
+  padding-top: 40px;
+}
+
+.stores__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.stores__list {
+  display: grid;
+  gap: 16px;
+}
+
+.stores__tools {
+  display: flex;
+  gap: 12px;
+}
+
+.stores__search {
+  position: relative;
+  flex: 1;
+}
+
+.stores__search .icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.stores__search .input {
+  padding-left: 40px;
+}
+
+.stores__status {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.store-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+  text-align: left;
+  transition:
+    border-color var(--hover-ms),
+    box-shadow var(--hover-ms);
+}
+
+.store-card:not(:has(img)) {
+  grid-template-columns: 1fr;
+}
+
+.store-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.store-card:hover {
+  border-color: var(--border-strong);
+}
+
+.store-card.is-selected {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 1px var(--accent-gold);
+}
+
+.store-card__body {
+  display: grid;
+  gap: 6px;
+}
+
+.store-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.store-card__top strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+
+.store-card__status {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.store-card__status.is-open {
+  color: var(--status-success);
+}
+
+.store-card__line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.store-card__line .icon {
+  color: var(--accent-gold);
+}
+
+.store-card__services {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.store-card__services em {
+  font-style: normal;
+  color: var(--accent-gold);
+}
+
+.stores__map {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.stores__map iframe {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  filter: grayscale(0.3);
+}
+
+[data-theme='dark'] .stores__map iframe {
+  filter: grayscale(0.4) invert(0.9) hue-rotate(180deg);
+}
+
+.stores__directions {
+  margin-top: 14px;
+}
+
+@media (max-width: 960px) {
+  .stores__grid {
+    grid-template-columns: 1fr;
+  }
+  .stores__map {
+    position: static;
+    order: -1;
+  }
+  .stores__map iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 520px) {
+  .stores__tools {
+    flex-direction: column;
+  }
+  .store-card {
+    grid-template-columns: 1fr;
+  }
+  .store-card img {
+    height: 140px;
+  }
+}

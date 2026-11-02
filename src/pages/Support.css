@@ -1,3 +1,174 @@
-/* Support page styles — owned by Dev D (feature/support).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.service-card {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+  transition:
+    border-color var(--hover-ms),
+    opacity 600ms ease,
+    transform 600ms ease;
+}
+
+.service-card:hover {
+  border-color: var(--accent-gold);
+}
+
+.service-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.service-card__body {
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+}
+
+.service-card h2 {
+  font-size: 28px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.service-card__price {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* FAQ accordion */
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.faq__head .btn {
+  margin-top: 24px;
+}
+
+.faq__list {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 22px 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  transition: color var(--hover-ms);
+}
+
+.faq__q:hover,
+.faq__item.is-open .faq__q {
+  color: var(--accent-gold);
+}
+
+.faq__sign {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.faq__sign::before,
+.faq__sign::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
+  transition: transform var(--hover-ms);
+}
+
+.faq__sign::after {
+  transform: rotate(90deg);
+}
+
+.faq__item.is-open .faq__sign::after {
+  transform: rotate(0);
+}
+
+/* smooth open/close with grid rows */
+.faq__a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--fade-in) ease;
+}
+
+.faq__a > div {
+  overflow: hidden;
+}
+
+.faq__a p {
+  padding-bottom: 22px;
+  color: var(--text-secondary);
+}
+
+.faq__item.is-open .faq__a {
+  grid-template-rows: 1fr;
+}
+
+/* CTA banner */
+.cta-banner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 48px;
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-card);
+  background: radial-gradient(ellipse at 0% 0%, var(--accent-gold-soft), transparent 70%), var(--bg-surface);
+}
+
+.cta-banner > .icon {
+  color: var(--accent-gold);
+}
+
+.cta-banner h2 {
+  font-size: clamp(28px, 3vw, 36px);
+}
+
+.cta-banner p {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.cta-banner .btn {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+  }
+  .cta-banner .btn {
+    margin-left: 0;
+  }
+}

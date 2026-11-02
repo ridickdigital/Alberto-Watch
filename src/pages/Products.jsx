@@ -1,49 +1,99 @@
+import { useMemo, useState } from 'react';
 import { useData } from '../lib/data.js';
+import { href, navigate } from '../lib/router.js';
 import PageHeader from '../components/PageHeader.jsx';
-import TaskList from '../components/TaskList.jsx';
+import WatchCard from '../components/WatchCard.jsx';
+import Reveal from '../components/Reveal.jsx';
 import './Products.css';
 
-/*
-  PRODUCTS PAGE
-  Owner:   Dev B
-  Branch:  feature/products
-  Figma:   D-02 Products · D-02W Women · M-02
-  Data:    public/data/ products.json, lineups.json, pages.json → products
-  Tasks:   docs/TASKS.md → Products
+const sorters = {
+  'price-desc': (a, b) => b.price - a.price,
+  'price-asc': (a, b) => a.price - b.price,
+  newest: (a, b) => Number(b.isNew) - Number(a.isNew) || b.price - a.price,
+};
 
-  Only edit this file and Products.css on your branch.
-  Shared pieces you can use (do not edit them; ask the lead):
-    useData('file')           load public/data/file.json
-    asset('/images/…')        image path that works everywhere
-    href('/route')            "#/route" for <a href>
-    <PageHeader>, <Reveal>, <Icon>, <WatchCard>, useWatchPopup()
-*/
+// #/products/:lineup  — every watch in the chosen line-up; click a card for the popup
 export default function Products({ param }) {
   const page = useData('pages');
-  if (!page) return <div className="loading">Loading…</div>;
+  const catalogue = useData('products');
+  const lineupData = useData('lineups');
+  const [sort, setSort] = useState('price-desc');
+
+  const lineups = lineupData?.lineups ?? [];
+  const current = lineups.find((l) => l.id === param) ?? lineups.find((l) => l.id === lineupData?.defaultLineup);
+
+  const watches = useMemo(() => {
+    if (!catalogue || !current) return [];
+    const list =
+      current.id === 'all' ? catalogue.products : catalogue.products.filter((p) => p.lineups.includes(current.id));
+    return [...list].sort(sorters[sort]);
+  }, [catalogue, current, sort]);
+
+  if (!page || !catalogue || !current) return <div className="loading">Loading…</div>;
+  const info = page.products;
+  const nameOf = (id) => lineups.find((l) => l.id === id)?.name ?? id;
 
   return (
     <>
       <PageHeader
-        crumbs={[{ label: 'Home', route: '/' }, { label: 'Products' }]}
-        title={page.products.title}
-        intro={page.products.intro}
+        crumbs={[{ label: 'Home', route: '/' }, { label: 'Products', route: '/products/all' }, { label: current.name }]}
+        title={current.heading}
+        intro={current.description || info.intro}
       />
-      <TaskList
-        owner="Dev B"
-        branch="feature/products"
-        figma="D-02 Products · D-02W Women · M-02"
-        data="products.json, lineups.json, pages.json → products"
-        tasks={[
-          'Read the line-up from the URL: the page receives it as the `param` prop (#/products/luxury → "luxury"). Unknown or empty → lineups.json defaultLineup.',
-          'Line-up tabs from lineups.json (All, Women, Vintage, Luxury, Smart Watches, Clocks) as links to #/products/<id>; the active tab is gold.',
-          'Filter products.json: product.lineups includes the line-up id ("all" shows everything). Title + description come from the line-up.',
-          'Results line from pages.json resultsLabel, e.g. "6 Luxury watches".',
-          'Sort dropdown from products.json sortOptions (price high → low by default).',
-          'Grid of <WatchCard watch={…} lineupName={…} /> — 4 / 2 / 1 columns. Clicking a card already opens the popup.',
-          'Empty state with a link to #/products/all.',
-        ]}
-      />
+
+      <section className="section products">
+        <div className="container">
+          <div className="products__bar">
+            <div className="tabs" role="tablist" aria-label="Product line-ups">
+              {lineups.map((l) => (
+                <a
+                  key={l.id}
+                  role="tab"
+                  aria-selected={l.id === current.id}
+                  href={href(l.route)}
+                  className={`tab ${l.id === current.id ? 'is-active' : ''}`}
+                >
+                  {l.name}
+                </a>
+              ))}
+            </div>
+            <label className="products__sort">
+              <span>Sort by</span>
+              <select className="input" value={sort} onChange={(e) => setSort(e.target.value)}>
+                {catalogue.sortOptions.map((o) => (
+                  <option key={o.id} value={o.id}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <p className="products__count">
+            {info.resultsLabel
+              .replace('{count}', watches.length)
+              .replace('{lineup}', current.id === 'all' ? '' : current.name)
+              .replace(/\s+/g, ' ')}
+          </p>
+
+          {watches.length ? (
+            <div className="grid grid--4" key={current.id}>
+              {watches.map((w, i) => (
+                <Reveal key={w.id} delay={(i % 4) * 70}>
+                  <WatchCard watch={w} lineupName={nameOf(current.id === 'all' ? w.primaryLineup : current.id)} />
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <div className="products__empty">
+              <p>No watches in this line-up yet.</p>
+              <button type="button" className="btn btn--ghost" onClick={() => navigate('/products/all')}>
+                See all watches
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
     </>
   );
 }

@@ -15,7 +15,7 @@ Work on one branch per page, open a pull request into `main`, and tick the boxes
 **Only 4 developers?** Dev A also takes Site Map, and Dev E keeps About + Contact.
 
 Files you own for a page: `src/pages/<Page>.jsx` and `src/pages/<Page>.css`. Nothing else.
-When a page is finished, remove the `<TaskList />` placeholder from it.
+All pages are built. Use the checklists below to review and test your page, and fix anything that is missing.
 
 ## Home
 

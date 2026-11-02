@@ -1,3 +1,51 @@
-/* Products page styles — owned by Dev B (feature/products).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.products {
+  padding-top: 40px;
+}
+
+.products__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.products__sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.products__sort .input {
+  width: auto;
+  min-height: 40px;
+  padding: 8px 12px;
+}
+
+.products__count {
+  margin: 24px 0;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.products__empty {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 64px 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .products__bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .products__sort {
+    justify-content: flex-end;
+  }
+}

@@ -1,3 +1,174 @@
-/* About Us page styles — owned by Dev E (feature/about).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-story__image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.about-story__lead {
+  margin: 16px 0 28px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.about-story blockquote {
+  margin: 0 0 28px;
+  padding-left: 24px;
+  border-left: 2px solid var(--accent-gold);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.25;
+}
+
+.about-story cite {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.about-story__brands {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.about-story__brands strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* timeline */
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.timeline__item {
+  position: relative;
+  padding-top: 48px;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  background: var(--bg-surface);
+}
+
+.timeline__year {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.timeline__item h3 {
+  margin: 6px 0 8px;
+  font-family: var(--font-body);
+  font-size: 17px;
+}
+
+.timeline__item p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* info cards (also used on the Contact page) */
+.info-card {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  height: 100%;
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+  transition: border-color var(--hover-ms);
+}
+
+a.info-card:hover {
+  border-color: var(--accent-gold);
+}
+
+.info-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold-soft);
+  color: var(--accent-gold);
+}
+
+.info-card__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.info-card__value {
+  font-size: 17px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-story__image img {
+    aspect-ratio: 16 / 10;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+  .timeline__item {
+    padding: 0 0 0 36px;
+  }
+  .timeline__item::before {
+    top: 10px;
+  }
+}

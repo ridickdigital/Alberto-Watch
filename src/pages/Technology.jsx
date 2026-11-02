@@ -1,26 +1,15 @@
-import { useData } from '../lib/data.js';
+import { asset, useData } from '../lib/data.js';
 import PageHeader from '../components/PageHeader.jsx';
-import TaskList from '../components/TaskList.jsx';
+import Icon from '../components/Icon.jsx';
+import Reveal from '../components/Reveal.jsx';
 import './Technology.css';
 
-/*
-  TECHNOLOGY PAGE
-  Owner:   Dev C
-  Branch:  feature/technology
-  Figma:   D-04 Technology · M-04
-  Data:    public/data/ technology.json, pages.json → technology
-  Tasks:   docs/TASKS.md → Technology
-
-  Only edit this file and Technology.css on your branch.
-  Shared pieces you can use (do not edit them; ask the lead):
-    useData('file')           load public/data/file.json
-    asset('/images/…')        image path that works everywhere
-    href('/route')            "#/route" for <a href>
-    <PageHeader>, <Reveal>, <Icon>, <WatchCard>, useWatchPopup()
-*/
+// #/technology — movements and materials used in the watches
 export default function Technology() {
   const page = useData('pages');
-  if (!page) return <div className="loading">Loading…</div>;
+  const tech = useData('technology');
+  if (!page || !tech) return <div className="loading">Loading…</div>;
+  const { feature, typesSection, movementTypes, materials } = tech;
 
   return (
     <>
@@ -29,19 +18,72 @@ export default function Technology() {
         title={page.technology.title}
         intro={page.technology.intro}
       />
-      <TaskList
-        owner="Dev C"
-        branch="feature/technology"
-        figma="D-04 Technology · M-04"
-        data="technology.json, pages.json → technology"
-        tasks={[
-          'Feature block: movement photo, eyebrow, title, text and the facts list (technology.json → feature).',
-          '"Four ways to keep time": 4 movement-type cards with their icon (<Icon name={m.icon} />), text and "Found in" line.',
-          'Materials: 3 cards with photo, title and text.',
-          'Cards fade up one after another (<Reveal delay={i * 100}>).',
-          'Responsive: 4 → 2 → 1 columns.',
-        ]}
-      />
+
+      <section className="section">
+        <div className="container tech-feature">
+          <Reveal className="tech-feature__image">
+            <img src={asset(feature.image)} alt="Inside a mechanical watch movement" loading="lazy" />
+          </Reveal>
+          <Reveal className="tech-feature__text" delay={120}>
+            <p className="eyebrow">{feature.eyebrow}</p>
+            <h2>{feature.title}</h2>
+            <p>{feature.text}</p>
+            <dl className="tech-feature__facts">
+              {feature.facts.map((f) => (
+                <div key={f.label}>
+                  <dt>{f.label}</dt>
+                  <dd>{f.text}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--alt">
+        <div className="container">
+          <Reveal className="section-head">
+            <p className="eyebrow">{typesSection.eyebrow}</p>
+            <h2>{typesSection.title}</h2>
+            <p>{typesSection.subtitle}</p>
+          </Reveal>
+          <div className="grid grid--4">
+            {movementTypes.map((m, i) => (
+              <Reveal key={m.id} delay={i * 100} className="movement-card">
+                <span className="movement-card__icon">
+                  <Icon name={m.icon} size={22} />
+                </span>
+                <h3>{m.title}</h3>
+                <p>{m.text}</p>
+                <p className="movement-card__found">
+                  <span>Found in</span>
+                  {m.foundInLabel}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal className="section-head">
+            <p className="eyebrow">Materials</p>
+            <h2>What our watches are made of</h2>
+          </Reveal>
+          <div className="grid grid--3">
+            {materials.map((m, i) => (
+              <Reveal key={m.id} delay={i * 100} className="material-card">
+                <img src={asset(m.image)} alt="" loading="lazy" />
+                <div className="material-card__body">
+                  <h3>{m.title}</h3>
+                  <p>{m.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

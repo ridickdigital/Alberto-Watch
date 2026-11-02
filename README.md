@@ -6,7 +6,7 @@ Team repository for the **Alberto Clocks** eProject: a single-page, responsive w
 - **No frameworks:** no Next.js, no Bootstrap, no Tailwind, no router library. Routing is a small hash router in `src/lib/router.js`.
 - **Data store:** JSON files in `public/data/` (as the brief asks), loaded with `fetch`.
 
-The shell is already built and working: header, menu, visitor count, light/dark mode, scrolling ticker, footer, routing, section fade, watch popup and all data and images. Each **page** is a placeholder showing its owner and a checklist. Your job is to build your pages.
+The shell is already built and working: header, menu, visitor count, light/dark mode, scrolling ticker, footer, routing, section fade, watch popup and all data and images. All pages are now fully built too. [docs/TASKS.md](docs/TASKS.md) shows who owns each page: improve, test and fix your own pages there.
 
 ---
 
@@ -69,7 +69,7 @@ src/
     router.js      useRoute(), href('/prices'), navigate('/prices')
     hooks.js       useTheme, useVisitorCount, useNow, useLocation, useReveal, useScrollLock
     format.js      formatNaira, formatDate, formatTime, distanceKm
-  components/      Header, Footer, Ticker, WatchCard, WatchPopup, PageHeader, Icon, Reveal, TaskList
+  components/      Header, Footer, Ticker, WatchCard, WatchPopup, PageHeader, Icon, Reveal
   pages/           ← YOUR WORK: one .jsx + one .css per page
   styles/
     tokens.css     colours (dark + light), fonts, spacing: always use these variables

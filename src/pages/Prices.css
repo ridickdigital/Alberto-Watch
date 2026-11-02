@@ -1,3 +1,169 @@
-/* Price List page styles — owned by Dev B (feature/prices).
-   Use the variables from src/styles/tokens.css (var(--accent-gold), var(--bg-surface)…)
-   and the shared classes from src/styles/base.css (.container, .section, .grid, .btn, .tab…). */
+.prices {
+  padding-top: 40px;
+}
+
+.prices__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.prices__search {
+  position: relative;
+  flex: 0 1 320px;
+}
+
+.prices__search .icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.prices__search .input {
+  padding-left: 40px;
+}
+
+.prices__table-wrap {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.prices__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.prices__table th {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.prices__table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.prices__table tbody tr {
+  cursor: pointer;
+  transition: background-color var(--hover-ms);
+}
+
+.prices__table tbody tr:hover,
+.prices__table tbody tr:focus-visible {
+  background: var(--accent-gold-soft);
+  outline: none;
+}
+
+.prices__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.prices__watch {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.prices__watch img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.prices__watch small {
+  display: block;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.prices__num {
+  text-align: right !important;
+  white-space: nowrap;
+}
+
+.prices__price {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+.prices__sort {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.prices__sort:hover {
+  color: var(--accent-gold);
+}
+
+.prices__empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.prices__foot {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* phones: each row becomes a small card */
+@media (max-width: 860px) {
+  .prices__bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .prices__search {
+    flex-basis: auto;
+  }
+  .prices__table thead {
+    display: none;
+  }
+  .prices__table,
+  .prices__table tbody,
+  .prices__table tr,
+  .prices__table td {
+    display: block;
+  }
+  .prices__table tr {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .prices__table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 0;
+    border: 0;
+  }
+  .prices__table td:first-child {
+    margin-bottom: 8px;
+  }
+  .prices__table td[data-label]::before {
+    content: attr(data-label);
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+}
