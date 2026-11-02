@@ -62,7 +62,7 @@
           "reference": "Ref. AL-SK-42 · Stainless steel · 42 mm",
           "price": 2250000,
           "priceDisplay": "₦2,250,000",
-          "image": "/images/photos/hero/hero-01-skeleton.png",
+          "image": "/images/photos/hero/hero-01-skeleton.jpg",
           "cta": {
             "label": "View details",
             "action": "open-watch-popup",
@@ -258,7 +258,7 @@
           "reference": "Ref. AL-OD-300 · Stainless steel · 42 mm",
           "price": 3490000,
           "priceDisplay": "₦3,490,000",
-          "image": "/images/photos/hero/hero-03-diver.png",
+          "image": "/images/photos/hero/hero-03-diver.jpg",
           "cta": {
             "label": "View details",
             "action": "open-watch-popup",
@@ -356,7 +356,7 @@
           "reference": "Ref. AL-SC-44B · Brushed stainless steel · 44 mm",
           "price": 4880000,
           "priceDisplay": "₦4,880,000",
-          "image": "/images/photos/hero/hero-04-chronograph.png",
+          "image": "/images/photos/hero/hero-04-chronograph.jpg",
           "cta": {
             "label": "View details",
             "action": "open-watch-popup",
@@ -454,7 +454,7 @@
           "reference": "Ref. AC-LP-32 · Rose gold PVD steel · 32 mm",
           "price": 1940000,
           "priceDisplay": "₦1,940,000",
-          "image": "/images/photos/hero/hero-05-ladies.png",
+          "image": "/images/photos/hero/hero-05-ladies.jpg",
           "cta": {
             "label": "View details",
             "action": "open-watch-popup",
@@ -552,7 +552,7 @@
           "reference": "Ref. AC-S2-GR · Graphite aluminium · 44 mm",
           "price": 851000,
           "priceDisplay": "₦851,000",
-          "image": "/images/photos/hero/hero-06-smart.png",
+          "image": "/images/photos/hero/hero-06-smart.jpg",
           "cta": {
             "label": "View details",
             "action": "open-watch-popup",

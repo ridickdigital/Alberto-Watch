@@ -139,7 +139,15 @@
   position: fixed;
   inset: 0;
   z-index: 100;
+  visibility: hidden;
   pointer-events: none;
+  transition: visibility 0s var(--fade-in);
+}
+
+@media (min-width: 1101px) {
+  .drawer {
+    display: none;
+  }
 }
 
 .drawer__scrim {
@@ -165,7 +173,9 @@
 }
 
 .drawer.is-open {
+  visibility: visible;
   pointer-events: auto;
+  transition: none;
 }
 
 .drawer.is-open .drawer__scrim {

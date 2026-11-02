@@ -13,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip; /* nothing can make the page scroll sideways */
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-primary);

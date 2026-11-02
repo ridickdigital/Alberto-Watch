@@ -76,7 +76,6 @@ function Hero({ hero }) {
   };
 
   const tabs = slide.specifications?.tabs ?? [];
-  const tab = tabs[specTab];
   const chipLeft = slide.chips?.find((c) => c.position === 'left');
   const chipRight = slide.chips?.find((c) => c.position === 'right');
 
@@ -99,15 +98,23 @@ function Hero({ hero }) {
       </div>
 
       <div className="container hero__grid">
-        <div className="hero__text" key={`t-${index}`}>
-          <p className="eyebrow">{slide.eyebrow}</p>
-          <h1 className="hero__title">{slide.title}</h1>
-          <p className="hero__ref">{slide.reference}</p>
-          <p className="hero__price">{slide.priceDisplay}</p>
-          <button type="button" className="btn btn--ghost" onClick={() => openWatch(slide.cta.productId)}>
-            {slide.cta.label} <Icon name="arrow-right" size={14} />
-          </button>
-          <p className="hero__intro-mobile">{hero.mobileIntro}</p>
+        {/* every slide sits in the same cell, so the hero keeps the height of the tallest one */}
+        <div className="hero__stack">
+          {slides.map((s, i) => {
+            const Title = i === index ? 'h1' : 'p';
+            return (
+              <div key={s.slide} className={`hero__text ${i === index ? 'is-active' : ''}`} aria-hidden={i !== index}>
+                <p className="eyebrow">{s.eyebrow}</p>
+                <Title className="hero__title">{s.title}</Title>
+                <p className="hero__ref">{s.reference}</p>
+                <p className="hero__price">{s.priceDisplay}</p>
+                <button type="button" className="btn btn--ghost" onClick={() => openWatch(s.cta.productId)}>
+                  {s.cta.label} <Icon name="arrow-right" size={14} />
+                </button>
+                <p className="hero__intro-mobile">{hero.mobileIntro}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="hero__watch">
@@ -121,7 +128,7 @@ function Hero({ hero }) {
             <img src={asset(hero.taglineImage)} alt="" width="96" height="72" loading="lazy" />
           </div>
           {tabs.length > 0 && (
-            <div className="hero__specs" key={`s-${index}`}>
+            <div className="hero__specs">
               <h2>Specifications</h2>
               <div className="hero__spec-tabs" role="tablist">
                 {tabs.map((t, i) => (
@@ -137,30 +144,41 @@ function Hero({ hero }) {
                   </button>
                 ))}
               </div>
-              {tab?.groups.map((g) => (
-                <div key={g.title} className="hero__spec-group">
-                  <h3>{g.title}</h3>
-                  {g.items ? (
-                    <dl>
-                      {g.items.map((it) => (
-                        <div key={it.label}>
-                          <dt>{it.label}</dt>
-                          <dd>{it.value}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  ) : (
-                    <p>{g.text}</p>
-                  )}
-                </div>
-              ))}
+              <div className="hero__stack">
+                {slides.flatMap((s, i) =>
+                  (s.specifications?.tabs ?? []).map((t, j) => {
+                    const active = i === index && j === specTab;
+                    return (
+                      <div key={`${s.slide}-${t.id}`} className={active ? 'is-active' : ''} aria-hidden={!active}>
+                        {t.groups.map((g) => (
+                          <div key={g.title} className="hero__spec-group">
+                            <h3>{g.title}</h3>
+                            {g.items ? (
+                              <dl>
+                                {g.items.map((it) => (
+                                  <div key={it.label}>
+                                    <dt>{it.label}</dt>
+                                    <dd>{it.value}</dd>
+                                  </div>
+                                ))}
+                              </dl>
+                            ) : (
+                              <p>{g.text}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })
+                )}
+              </div>
             </div>
           )}
         </aside>
       </div>
 
       <div className="container hero__bar">
-        {chipLeft && <span className="hero__chip">◆ {chipLeft.label}</span>}
+        {chipLeft && <span className="hero__chip hero__chip--left">◆ {chipLeft.label}</span>}
         <div className="hero__slider">
           <button
             type="button"
@@ -186,7 +204,7 @@ function Hero({ hero }) {
             <Icon name="arrow-right" size={14} />
           </button>
         </div>
-        {chipRight && <span className="hero__chip">{chipRight.label} ◆</span>}
+        {chipRight && <span className="hero__chip hero__chip--right">{chipRight.label} ◆</span>}
       </div>
 
       {autoplay && !paused && (

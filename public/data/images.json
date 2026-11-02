@@ -157,6 +157,236 @@
       ],
       "width": 1600,
       "height": 1066
+    },
+    {
+      "file": "/images/photos/citizen-eco-drive.jpg",
+      "description": "Citizen Eco-Drive dial (Eco-Drive Classic)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/pilot-chronograph.jpg",
+      "description": "Steel pilot chronograph (Lunar Pilot)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/cocktail-dial.jpg",
+      "description": "Dress watch dial in coloured light (Presage Cocktail Time)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/gold-dress-watch.jpg",
+      "description": "Gold chronograph on the wrist (Lexington)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/steel-chronograph.jpg",
+      "description": "Steel chronograph on a bracelet (Chronograph 42)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 798
+    },
+    {
+      "file": "/images/photos/smart-black.jpg",
+      "description": "Smartwatch on blue (Gen 6 Bradshaw)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 2135
+    },
+    {
+      "file": "/images/photos/smart-marble.jpg",
+      "description": "Smartwatch on the wrist (CZ Smart)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/smart-heart-rate.jpg",
+      "description": "Smartwatch showing heart rate (Smart Watches tile, smart thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/smart-desk.jpg",
+      "description": "Smartwatch on a desk (smart thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/pendulum-clock.jpg",
+      "description": "Wooden pendulum wall clock (Atelier Pendulum)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1797
+    },
+    {
+      "file": "/images/photos/clock-mechanism.jpg",
+      "description": "Clock gears behind glass (clock thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/clock-brass.jpg",
+      "description": "Brass mantel clock (clock thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/women-rose-gold.jpg",
+      "description": "Rose-gold ladies' watch on the wrist (Lady-Datejust 28)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/women-rose-box.jpg",
+      "description": "Rose-gold watch on its box (Darci)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1735
+    },
+    {
+      "file": "/images/photos/women-bracelet.jpg",
+      "description": "Silver mesh ladies' watch on a stand (Silhouette Crystal)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "file": "/images/photos/women-rose-bracelet.jpg",
+      "description": "Rose-gold bracelet watch in a box (Crystal Rose 32)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/women-petite-leather.jpg",
+      "description": "Small leather-strap watch on the wrist (Petite Heritage 28)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "file": "/images/photos/women-on-wrist.jpg",
+      "description": "Woman wearing a watch (Women tile, For Her)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/women-pearls.jpg",
+      "description": "Ladies' watch with pearls (women thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "file": "/images/photos/vintage-dial.jpg",
+      "description": "Vintage dial with Roman numerals (vintage thumbnails)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 674
+    },
+    {
+      "file": "/images/photos/hero/hero-01-skeleton.jpg",
+      "description": "Skeleton automatic on dark (hero slide 1, Self-Winding Skeleton)",
+      "usedIn": [
+        "home.json",
+        "products.json"
+      ],
+      "width": 1350,
+      "height": 900
+    },
+    {
+      "file": "/images/photos/hero/hero-03-diver.jpg",
+      "description": "Diver watch on dark (hero slide 3, Ocean Diver 300)",
+      "usedIn": [
+        "home.json",
+        "products.json"
+      ],
+      "width": 1350,
+      "height": 900
+    },
+    {
+      "file": "/images/photos/hero/hero-04-chronograph.jpg",
+      "description": "Blue-dial chronograph on dark (hero slide 4, Blue Sport Chrono)",
+      "usedIn": [
+        "home.json",
+        "products.json"
+      ],
+      "width": 1350,
+      "height": 900
+    },
+    {
+      "file": "/images/photos/hero/hero-05-ladies.jpg",
+      "description": "Ladies' leather-strap watch on dark (hero slide 5, Lady Pearl 32)",
+      "usedIn": [
+        "home.json",
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "file": "/images/photos/hero/hero-06-smart.jpg",
+      "description": "Smartwatch on dark fabric (hero slide 6, Smart S2)",
+      "usedIn": [
+        "home.json",
+        "products.json"
+      ],
+      "width": 1200,
+      "height": 800
     }
   ],
   "brand": [

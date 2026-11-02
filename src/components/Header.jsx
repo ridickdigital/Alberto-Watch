@@ -43,45 +43,47 @@ export default function Header({ section }) {
   );
 
   return (
-    <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
-      <div className="header__inner container">
-        <a className="header__logo" href={href('/')} aria-label="Alberto Clocks home">
-          {logo && <img src={asset(logo)} alt="Alberto Clocks" width="170" height="40" />}
-        </a>
+    <>
+      <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
+        <div className="header__inner container">
+          <a className="header__logo" href={href('/')} aria-label="Alberto Clocks home">
+            {logo && <img src={asset(logo)} alt="Alberto Clocks" width="170" height="40" />}
+          </a>
 
-        <nav className="header__nav" aria-label="Main menu">
-          {menu.map((item) => (
-            <a
-              key={item.id}
-              href={href(item.route)}
-              className={`nav-link ${section === item.id ? 'is-active' : ''}`}
-              aria-current={section === item.id ? 'page' : undefined}
+          <nav className="header__nav" aria-label="Main menu">
+            {menu.map((item) => (
+              <a
+                key={item.id}
+                href={href(item.route)}
+                className={`nav-link ${section === item.id ? 'is-active' : ''}`}
+                aria-current={section === item.id ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="header__tools">
+            <span className="visitors" title="Visitor count">
+              <Icon name="eye" size={14} />
+              <span className="visitors__label">{counter?.label ?? 'Visitors'}</span>
+              <strong>{visitors ? formatVisitors(visitors, counter?.padLength) : '—'}</strong>
+            </span>
+            <ThemeButton className="header__theme" />
+            <button
+              type="button"
+              className="header__icon-btn header__burger"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
             >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="header__tools">
-          <span className="visitors" title="Visitor count">
-            <Icon name="eye" size={14} />
-            <span className="visitors__label">{counter?.label ?? 'Visitors'}</span>
-            <strong>{visitors ? formatVisitors(visitors, counter?.padLength) : '—'}</strong>
-          </span>
-          <ThemeButton className="header__theme" />
-          <button
-            type="button"
-            className="header__icon-btn header__burger"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-            aria-expanded={menuOpen}
-          >
-            <Icon name="menu" />
-          </button>
+              <Icon name="menu" />
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* mobile drawer */}
+      {/* mobile drawer: outside the header so its blur doesn't trap the fixed panel */}
       <div className={`drawer ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
         <div className="drawer__scrim" onClick={() => setMenuOpen(false)} />
         <div className="drawer__panel" role="dialog" aria-label="Menu">
@@ -116,6 +118,6 @@ export default function Header({ section }) {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
