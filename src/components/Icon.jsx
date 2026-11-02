@@ -9,8 +9,8 @@ export default function Icon({ name, size = 18, className = '' }) {
       aria-hidden="true"
       style={{
         '--icon-url': `url("${asset(`/images/icons/${name}.svg`)}")`,
-        width: size,
-        height: size,
+        width: `${size / 16}rem`, // rem so icons grow with the text on big screens
+        height: `${size / 16}rem`,
       }}
     />
   );

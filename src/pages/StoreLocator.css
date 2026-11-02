@@ -1,5 +1,5 @@
 .stores {
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .stores__grid {
@@ -11,12 +11,12 @@
 
 .stores__list {
   display: grid;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .stores__tools {
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .stores__search {
@@ -26,26 +26,26 @@
 
 .stores__search .icon {
   position: absolute;
-  left: 14px;
+  left: 0.875rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
 }
 
 .stores__search .input {
-  padding-left: 40px;
+  padding-left: 2.5rem;
 }
 
 .stores__status {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
 }
 
 .store-card {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 18px;
-  padding: 14px;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1.125rem;
+  padding: 0.875rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   background: var(--bg-surface);
@@ -62,7 +62,7 @@
 .store-card img {
   width: 100%;
   height: 100%;
-  min-height: 120px;
+  min-height: 7.5rem;
   object-fit: cover;
   border-radius: var(--radius-card);
 }
@@ -78,24 +78,24 @@
 
 .store-card__body {
   display: grid;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .store-card__top {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: baseline;
 }
 
 .store-card__top strong {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .store-card__status {
   flex-shrink: 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -108,9 +108,9 @@
 
 .store-card__line {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
@@ -121,9 +121,9 @@
 .store-card__services {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
-  margin-top: 4px;
-  font-size: 12px;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
@@ -134,13 +134,13 @@
 
 .stores__map {
   position: sticky;
-  top: calc(var(--header-h) + 24px);
+  top: calc(var(--header-h) + 1.5rem);
 }
 
 .stores__map iframe {
   display: block;
   width: 100%;
-  height: 520px;
+  height: 32.5rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   filter: grayscale(0.3);
@@ -151,7 +151,7 @@
 }
 
 .stores__directions {
-  margin-top: 14px;
+  margin-top: 0.875rem;
 }
 
 @media (max-width: 960px) {
@@ -163,7 +163,7 @@
     order: -1;
   }
   .stores__map iframe {
-    height: 320px;
+    height: 20rem;
   }
 }
 
@@ -175,6 +175,6 @@
     grid-template-columns: 1fr;
   }
   .store-card img {
-    height: 140px;
+    height: 8.75rem;
   }
 }

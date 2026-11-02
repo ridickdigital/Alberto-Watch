@@ -1,9 +1,9 @@
 .gallery {
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .gallery__tabs {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 /* 3 columns desktop, 2 tablet, 1 phone */
@@ -39,11 +39,11 @@
   inset: auto 0 0 0;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 40px 18px 16px;
+  gap: 0.5rem;
+  padding: 2.5rem 1.125rem 1rem;
   background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
   color: #f3ede2;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-align: left;
   opacity: 0;
@@ -84,7 +84,7 @@
   z-index: 200;
   display: grid;
   place-items: center;
-  padding: 64px 88px;
+  padding: 4rem 5.5rem;
 }
 
 .lightbox__scrim {
@@ -103,7 +103,7 @@
 }
 
 .lightbox__figure img {
-  max-height: calc(100vh - 180px);
+  max-height: calc(100vh - 11.25rem);
   width: auto;
   margin: 0 auto;
   border-radius: var(--radius-card);
@@ -112,10 +112,10 @@
 .lightbox__figure figcaption {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
-  margin-top: 14px;
+  gap: 1rem;
+  margin-top: 0.875rem;
   color: #f3ede2;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .lightbox__figure figcaption span {
@@ -126,8 +126,8 @@
   position: absolute;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.4);
@@ -143,12 +143,12 @@
 }
 
 .lightbox__close {
-  top: 20px;
-  right: 20px;
+  top: 1.25rem;
+  right: 1.25rem;
 }
 
 .lightbox__prev {
-  left: 20px;
+  left: 1.25rem;
   top: 50%;
 }
 
@@ -157,23 +157,23 @@
 }
 
 .lightbox__next {
-  right: 20px;
+  right: 1.25rem;
   top: 50%;
 }
 
 @media (max-width: 768px) {
   .lightbox {
-    padding: 72px 16px 96px;
+    padding: 4.5rem 1rem 6rem;
   }
   .lightbox__prev,
   .lightbox__next {
     top: auto;
-    bottom: calc(var(--ticker-h) + 16px);
+    bottom: calc(var(--ticker-h) + 1rem);
   }
   .lightbox__prev {
-    left: calc(50% - 60px);
+    left: calc(50% - 3.75rem);
   }
   .lightbox__next {
-    right: calc(50% - 60px);
+    right: calc(50% - 3.75rem);
   }
 }

@@ -39,7 +39,8 @@ Labels and eyebrows are uppercase with letter spacing: use `.eyebrow`.
 
 ## Layout
 
-- Content width 1312 px + 64 px side padding (`.container`). Padding drops to 32 px at 1024 px and 20 px at 768 px.
+- **Sizes are in `rem`, not `px`** (1rem = 16px). The root font size is 16px up to a 1440px-wide screen and then grows with the screen (up to 24px), so the whole site scales up on big monitors. Only 1px hairlines and `@media` breakpoints stay in px.
+- Content width 82rem (1312px at normal size) + 4rem side padding (`.container`). Padding drops to 2rem at 1024px and 1.25rem at 768px.
 - Grid gap 32 px (`.grid`, `.grid--2/3/4`, which already collapse on smaller screens).
 - Breakpoints: **1100** (header turns into the burger menu), **1024**, **768** (phone), **480**.
 - Sections: `.section` gives 96 px top/bottom (64 px on phones). `.section--alt` uses the surface colour.

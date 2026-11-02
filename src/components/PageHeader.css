@@ -1,5 +1,5 @@
 .page-header {
-  padding: 56px 0 40px;
+  padding: 3.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border-subtle);
   background: radial-gradient(ellipse at 80% 0%, var(--hero-glow), transparent 60%);
 }
@@ -7,16 +7,16 @@
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-  font-size: 13px;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
 }
 
 .breadcrumb__item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .breadcrumb a {
@@ -32,21 +32,21 @@
 }
 
 .page-header__title {
-  font-size: clamp(40px, 6vw, 60px);
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
 }
 
 .page-header__intro {
-  max-width: 640px;
-  margin-top: 12px;
+  max-width: 40rem;
+  margin-top: 0.75rem;
   color: var(--text-secondary);
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 @media (max-width: 768px) {
   .page-header {
-    padding: 32px 0 28px;
+    padding: 2rem 0 1.75rem;
   }
   .page-header__intro {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }

@@ -1,30 +1,30 @@
 .prices {
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .prices__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 28px;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .prices__search {
   position: relative;
-  flex: 0 1 320px;
+  flex: 0 1 20rem;
 }
 
 .prices__search .icon {
   position: absolute;
-  left: 14px;
+  left: 0.875rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
 }
 
 .prices__search .input {
-  padding-left: 40px;
+  padding-left: 2.5rem;
 }
 
 .prices__table-wrap {
@@ -37,13 +37,13 @@
 .prices__table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .prices__table th {
-  padding: 16px 20px;
+  padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-align: left;
@@ -52,7 +52,7 @@
 }
 
 .prices__table td {
-  padding: 14px 20px;
+  padding: 0.875rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
   color: var(--text-secondary);
 }
@@ -75,14 +75,14 @@
 .prices__watch {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 0.875rem;
   color: var(--text-primary);
   font-weight: 600;
 }
 
 .prices__watch img {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   object-fit: cover;
   border-radius: var(--radius-card);
 }
@@ -118,14 +118,14 @@
 }
 
 .prices__empty {
-  padding: 40px;
+  padding: 2.5rem;
   text-align: center;
   color: var(--text-secondary);
 }
 
 .prices__foot {
-  margin-top: 16px;
-  font-size: 13px;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
 }
 
@@ -148,22 +148,22 @@
     display: block;
   }
   .prices__table tr {
-    padding: 14px 16px;
+    padding: 0.875rem 1rem;
     border-bottom: 1px solid var(--border-subtle);
   }
   .prices__table td {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
-    padding: 4px 0;
+    gap: 0.75rem;
+    padding: 0.25rem 0;
     border: 0;
   }
   .prices__table td:first-child {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
   .prices__table td[data-label]::before {
     content: attr(data-label);
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }

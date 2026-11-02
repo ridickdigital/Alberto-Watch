@@ -1,32 +1,32 @@
 .products {
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .products__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .products__sort {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-shrink: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
 }
 
 .products__sort .input {
   width: auto;
-  min-height: 40px;
-  padding: 8px 12px;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .products__count {
-  margin: 24px 0;
-  font-size: 13px;
+  margin: 1.5rem 0;
+  font-size: 0.8125rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -35,8 +35,8 @@
 .products__empty {
   display: grid;
   justify-items: center;
-  gap: 16px;
-  padding: 64px 0;
+  gap: 1rem;
+  padding: 4rem 0;
   color: var(--text-secondary);
 }
 

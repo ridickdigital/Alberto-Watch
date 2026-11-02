@@ -26,17 +26,17 @@
   --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-hero: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 
-  --radius-button: 2px;
-  --radius-card: 4px;
-  --radius-pill: 999px;
-  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.18);
-  --shadow-popup: 0 24px 64px rgba(0, 0, 0, 0.35);
+  --radius-button: 0.125rem;
+  --radius-card: 0.25rem;
+  --radius-pill: 62.4375rem;
+  --shadow-card: 0 0.75rem 2rem rgba(0, 0, 0, 0.18);
+  --shadow-popup: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
 
-  --content-max: 1312px;
-  --gutter: 64px;
-  --grid-gap: 32px;
-  --header-h: 88px;
-  --ticker-h: 44px;
+  --content-max: 82rem;
+  --gutter: 4rem;
+  --grid-gap: 2rem;
+  --header-h: 5.5rem;
+  --ticker-h: 2.75rem;
 
   --fade-out: 200ms;
   --fade-in: 300ms;
@@ -65,23 +65,23 @@
   --status-success: #2e7d46;
   --status-error: #b44a3a;
   --hero-glow: rgba(201, 164, 92, 0.22);
-  --shadow-card: 0 12px 32px rgba(60, 45, 20, 0.1);
+  --shadow-card: 0 0.75rem 2rem rgba(60, 45, 20, 0.1);
 
   color-scheme: light;
 }
 
 @media (max-width: 1024px) {
   :root {
-    --gutter: 32px;
-    --grid-gap: 24px;
+    --gutter: 2rem;
+    --grid-gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --gutter: 20px;
-    --grid-gap: 16px;
-    --header-h: 64px;
-    --ticker-h: 40px;
+    --gutter: 1.25rem;
+    --grid-gap: 1rem;
+    --header-h: 4rem;
+    --ticker-h: 2.5rem;
   }
 }
