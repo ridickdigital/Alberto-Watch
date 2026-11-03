@@ -48,7 +48,7 @@ All pages are built. Use the checklists below to review and test your page, and 
 - [ ] Filter products.json: product.lineups includes the line-up id ("all" shows everything). Title + description come from the line-up.
 - [ ] Results line from pages.json resultsLabel, e.g. "6 Luxury watches".
 - [ ] Sort dropdown from products.json sortOptions (price high → low by default).
-- [ ] Grid of <WatchCard watch={…} lineupName={…} /> — 4 / 2 / 1 columns. Clicking a card already opens the popup.
+- [ ] Grid of <WatchCard watch={…} lineupName={…} />: 4 / 2 / 1 columns. Clicking a card already opens the popup.
 - [ ] Empty state with a link to #/products/all.
 - [ ] Works in dark and light mode, at 1440 / 1024 / 768 / 390 px, with no console errors
 

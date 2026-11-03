@@ -21,7 +21,7 @@ function validate(fields, values) {
   return errors;
 }
 
-// #/contact — email, address, phone and an enquiry form
+// #/contact: email, address, phone and an enquiry form
 export default function Contact() {
   const page = useData('pages');
   const contact = useData('contact');

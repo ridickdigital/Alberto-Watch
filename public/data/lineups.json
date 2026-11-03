@@ -42,7 +42,7 @@
       "name": "Smart Watches",
       "route": "/products/smart-watches",
       "heading": "The Smart Watches line-up",
-      "description": "Heart rate, GPS, notifications and contactless payment — on your wrist.",
+      "description": "Heart rate, GPS, notifications and contactless payment, on your wrist.",
       "tileImage": "/images/photos/smart-heart-rate.jpg",
       "designPieceCount": 12
     },

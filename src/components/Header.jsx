@@ -67,7 +67,7 @@ export default function Header({ section }) {
             <span className="visitors" title="Visitor count">
               <Icon name="eye" size={14} />
               <span className="visitors__label">{counter?.label ?? 'Visitors'}</span>
-              <strong>{visitors ? formatVisitors(visitors, counter?.padLength) : '—'}</strong>
+              <strong>{visitors ? formatVisitors(visitors, counter?.padLength) : '…'}</strong>
             </span>
             <ThemeButton className="header__theme" />
             <button

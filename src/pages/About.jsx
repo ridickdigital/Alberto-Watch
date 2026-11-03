@@ -4,7 +4,7 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './About.css';
 
-// #/about — story, timeline and the email / address / phone cards
+// #/about: story, timeline and the email / address / phone cards
 export default function About() {
   const page = useData('pages');
   const about = useData('about');
@@ -32,7 +32,7 @@ export default function About() {
             <p className="eyebrow">Since {site.brand.founded}</p>
             <p className="about-story__lead">{hero.story}</p>
             <blockquote>
-              “{hero.quote}”<cite>— {hero.quoteAuthor}</cite>
+              “{hero.quote}”<cite>{hero.quoteAuthor}</cite>
             </blockquote>
             <p className="about-story__brands">
               Brands we carry: <strong>{site.brand.brandsCarried.join(' · ')}</strong>

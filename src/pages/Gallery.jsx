@@ -6,7 +6,7 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './Gallery.css';
 
-// #/gallery — photo grid with category filter and a full-screen lightbox
+// #/gallery: photo grid with category filter and a full-screen lightbox
 export default function Gallery() {
   const page = useData('pages');
   const gallery = useData('gallery');

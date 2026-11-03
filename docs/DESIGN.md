@@ -6,9 +6,9 @@ Design file: https://www.figma.com/design/bxEaYDfUBs7fjkywWsKLmc (ask the lead f
 
 | Page in Figma | What's there |
 |---|---|
-| 01 — Start Here | Guide, foundations (colours, type), components |
-| 02 — Desktop Screens · Dark & Light | D-01 … D-11 (1440 px), each in dark and light |
-| 03 — Mobile Screens & Sitemap | M-01 … M-11 (390 px) and the sitemap |
+| 01 - Start Here | Guide, foundations (colours, type), components |
+| 02 - Desktop Screens · Dark & Light | D-01 … D-11 (1440 px), each in dark and light |
+| 03 - Mobile Screens & Sitemap | M-01 … M-11 (390 px) and the sitemap |
 
 The screen code in `docs/TASKS.md` (for example "D-06 Gallery") tells you which frame to open.
 

@@ -16,7 +16,7 @@ function safeSet(storage, key, value) {
   try {
     storage.setItem(key, value);
   } catch {
-    /* private mode — ignore */
+    /* private mode: ignore */
   }
 }
 

@@ -4,7 +4,7 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './Technology.css';
 
-// #/technology — movements and materials used in the watches
+// #/technology: movements and materials used in the watches
 export default function Technology() {
   const page = useData('pages');
   const tech = useData('technology');

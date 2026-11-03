@@ -6,7 +6,7 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './Support.css';
 
-// #/support — services, FAQ accordion (one open at a time) and a booking banner
+// #/support: services, FAQ accordion (one open at a time) and a booking banner
 export default function Support() {
   const page = useData('pages');
   const support = useData('support');

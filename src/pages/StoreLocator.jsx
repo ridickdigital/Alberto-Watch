@@ -15,7 +15,7 @@ function isOpenNow(store, now = new Date()) {
   return minutes >= toMin(today.open) && minutes < toMin(today.close);
 }
 
-// #/store-locator — store list, search, "Use my location" and a map
+// #/store-locator: store list, search, "Use my location" and a map
 export default function StoreLocator() {
   const page = useData('pages');
   const data = useData('stores');

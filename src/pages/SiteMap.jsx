@@ -5,7 +5,7 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './SiteMap.css';
 
-// #/sitemap — every section of the site in one place
+// #/sitemap: every section of the site in one place
 export default function SiteMap() {
   const page = useData('pages');
   const sitemap = useData('sitemap');

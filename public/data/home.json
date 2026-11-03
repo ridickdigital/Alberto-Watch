@@ -648,7 +648,7 @@
   "lineupSection": {
     "eyebrow": "Product line-up",
     "title": "Find your kind of time",
-    "subtitle": "From hand-wound vintage pieces to smart watches — choose a line-up to see every watch in it.",
+    "subtitle": "From hand-wound vintage pieces to smart watches. Choose a line-up to see every watch in it.",
     "mobileTitle": "Shop by line-up",
     "lineupIds": [
       "vintage",
@@ -675,12 +675,12 @@
   "workshop": {
     "eyebrow": "Our workshop",
     "title": "Repaired by hand, timed to the second",
-    "subtitle": "Certified watchmakers service every movement in-house — from a quartz battery to a full tourbillon overhaul.",
+    "subtitle": "Certified watchmakers service every movement in-house, from a quartz battery to a full tourbillon overhaul.",
     "image": "/images/photos/watchmaker-at-work.jpg",
     "points": [
       {
         "icon": "wrench",
-        "text": "Repair & servicing — from 5 working days"
+        "text": "Repair & servicing, from 5 working days"
       },
       {
         "icon": "gem",
@@ -698,7 +698,7 @@
   },
   "testimonial": {
     "rating": 5,
-    "quote": "They brought my grandfather's 1962 Bulova back to life — it keeps better time now than my phone.",
+    "quote": "They brought my grandfather's 1962 Bulova back to life. It keeps better time now than my phone.",
     "author": "Chief Adewale O.",
     "detail": "customer since 2004"
   },

@@ -15,7 +15,7 @@ const movementLabel = {
   mechanical: 'Mechanical',
 };
 
-// #/prices — price list for every watch, with line-up tabs and search
+// #/prices: price list for every watch, with line-up tabs and search
 export default function Prices() {
   const page = useData('pages');
   const catalogue = useData('products');

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// A tiny hash router — no library needed. URLs look like  #/products/luxury
+// A tiny hash router, no library needed. URLs look like  #/products/luxury
 // so the site stays a Single-Page Application and works from any static host.
 
 function readPath() {

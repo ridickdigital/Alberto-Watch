@@ -12,7 +12,7 @@ const sorters = {
   newest: (a, b) => Number(b.isNew) - Number(a.isNew) || b.price - a.price,
 };
 
-// #/products/:lineup  — every watch in the chosen line-up; click a card for the popup
+// #/products/:lineup: every watch in the chosen line-up; click a card for the popup
 export default function Products({ param }) {
   const page = useData('pages');
   const catalogue = useData('products');

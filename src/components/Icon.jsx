@@ -1,7 +1,7 @@
 import { asset } from '../lib/data.js';
 import './Icon.css';
 
-// <Icon name="phone" />  — draws public/images/icons/phone.svg in the current text colour
+// <Icon name="phone" />: draws public/images/icons/phone.svg in the current text colour
 export default function Icon({ name, size = 18, className = '' }) {
   return (
     <span

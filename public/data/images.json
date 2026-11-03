@@ -2,7 +2,7 @@
   "photos": [
     {
       "file": "/images/photos/hero-watch.png",
-      "description": "Skeleton watch, background removed (transparent PNG) — Home hero, dark and light",
+      "description": "Skeleton watch, background removed (transparent PNG), Home hero, dark and light",
       "usedIn": [
         "home.json"
       ],
@@ -11,15 +11,15 @@
     },
     {
       "file": "/images/photos/gold-watch.jpg",
-      "description": "Rose-gold chronograph close-up (hero, Datejust card, Chronograph 42, gallery)",
+      "description": "Gold bracelet watch on a wrist (Datejust card, technology, gallery)",
       "usedIn": [
         "gallery.json",
         "home.json",
         "products.json",
         "technology.json"
       ],
-      "width": 871,
-      "height": 1300
+      "width": 1333,
+      "height": 2000
     },
     {
       "file": "/images/photos/rose-gold-watch.jpg",
@@ -29,8 +29,8 @@
         "lineups.json",
         "products.json"
       ],
-      "width": 975,
-      "height": 1300
+      "width": 1500,
+      "height": 2000
     },
     {
       "file": "/images/photos/steel-diver-watch.jpg",
@@ -44,63 +44,63 @@
     },
     {
       "file": "/images/photos/black-watch.jpg",
-      "description": "Black chronograph (Noir Chronograph)",
+      "description": "Black chronograph with rose-gold hands (Noir Chronograph)",
       "usedIn": [
         "products.json"
       ],
-      "width": 869,
-      "height": 1300
+      "width": 1333,
+      "height": 2000
     },
     {
       "file": "/images/photos/vintage-watch.jpg",
-      "description": "Vintage watches in a box (Vintage tile, Classic 1950, Presage)",
+      "description": "Vintage watches in a display box (Vintage tile, Classic 1950, Presage)",
       "usedIn": [
         "lineups.json",
         "products.json"
       ],
-      "width": 1040,
-      "height": 1300
+      "width": 1600,
+      "height": 2000
     },
     {
       "file": "/images/photos/smart-watch.jpg",
-      "description": "Smart watches on wrists (Smart Watches tile, Smart S2, Gen 6)",
+      "description": "Black smartwatch (Smart Watches tile, Smart S2)",
       "usedIn": [
         "lineups.json",
         "products.json"
       ],
-      "width": 1040,
-      "height": 1300
+      "width": 1333,
+      "height": 2000
     },
     {
       "file": "/images/photos/wall-clock.jpg",
-      "description": "Wall clock on brick (Clocks tile, Station & Atelier clocks, gallery)",
+      "description": "Wooden wall clock with Roman numerals (Clocks tile, Station & Atelier clocks, gallery)",
       "usedIn": [
         "gallery.json",
         "lineups.json",
         "products.json"
       ],
-      "width": 867,
-      "height": 1300
+      "width": 1500,
+      "height": 2000
     },
     {
       "file": "/images/photos/table-clock.jpg",
-      "description": "Antique mantel clock (Bracket Mantel Clock, gallery)",
+      "description": "Ornate antique mantel clock (Bracket Mantel Clock, gallery)",
       "usedIn": [
         "gallery.json",
         "products.json"
       ],
-      "width": 867,
-      "height": 1300
+      "width": 1336,
+      "height": 2000
     },
     {
       "file": "/images/photos/pocket-watch.jpg",
-      "description": "Pocket watch (Heritage 1987, gallery)",
+      "description": "Gold pocket watch with Roman numerals (Heritage 1987, gallery)",
       "usedIn": [
         "gallery.json",
         "products.json"
       ],
-      "width": 870,
-      "height": 1300
+      "width": 1333,
+      "height": 2000
     },
     {
       "file": "/images/photos/watchmaker-at-work.jpg",
@@ -164,8 +164,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/pilot-chronograph.jpg",
@@ -173,8 +173,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/cocktail-dial.jpg",
@@ -182,8 +182,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/gold-dress-watch.jpg",
@@ -191,8 +191,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1800
+      "width": 1332,
+      "height": 2000
     },
     {
       "file": "/images/photos/steel-chronograph.jpg",
@@ -200,8 +200,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 798
+      "width": 2000,
+      "height": 1329
     },
     {
       "file": "/images/photos/smart-black.jpg",
@@ -209,8 +209,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 2135
+      "width": 1124,
+      "height": 2000
     },
     {
       "file": "/images/photos/smart-marble.jpg",
@@ -218,8 +218,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1800
+      "width": 1332,
+      "height": 2000
     },
     {
       "file": "/images/photos/smart-heart-rate.jpg",
@@ -227,8 +227,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1800
+      "width": 1332,
+      "height": 2000
     },
     {
       "file": "/images/photos/smart-desk.jpg",
@@ -236,8 +236,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1800
+      "width": 1332,
+      "height": 2000
     },
     {
       "file": "/images/photos/pendulum-clock.jpg",
@@ -245,8 +245,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1797
+      "width": 1336,
+      "height": 2000
     },
     {
       "file": "/images/photos/clock-mechanism.jpg",
@@ -254,8 +254,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1800
+      "width": 1332,
+      "height": 2000
     },
     {
       "file": "/images/photos/clock-brass.jpg",
@@ -272,8 +272,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/women-rose-box.jpg",
@@ -281,8 +281,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1735
+      "width": 1382,
+      "height": 2000
     },
     {
       "file": "/images/photos/women-bracelet.jpg",
@@ -299,8 +299,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/women-petite-leather.jpg",
@@ -308,8 +308,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1600
+      "width": 1500,
+      "height": 2000
     },
     {
       "file": "/images/photos/women-on-wrist.jpg",
@@ -317,8 +317,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 800
+      "width": 2000,
+      "height": 1333
     },
     {
       "file": "/images/photos/women-pearls.jpg",
@@ -326,8 +326,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 1600
+      "width": 1500,
+      "height": 2000
     },
     {
       "file": "/images/photos/vintage-dial.jpg",
@@ -335,8 +335,8 @@
       "usedIn": [
         "products.json"
       ],
-      "width": 1200,
-      "height": 674
+      "width": 2000,
+      "height": 1122
     },
     {
       "file": "/images/photos/hero/hero-01-skeleton.png",
@@ -387,6 +387,51 @@
       ],
       "width": 1400,
       "height": 857
+    },
+    {
+      "file": "/images/photos/skeleton-watch.jpg",
+      "description": "Skeleton watch with open dial (Self-winding Skeleton)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1332,
+      "height": 2000
+    },
+    {
+      "file": "/images/photos/rose-chronograph.jpg",
+      "description": "Rose-gold and steel chronograph (Rose Gold Chronograph 42)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1332,
+      "height": 2000
+    },
+    {
+      "file": "/images/photos/ocean-diver.jpg",
+      "description": "Diver watch on an orange strap (Ocean Diver 300)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1125,
+      "height": 2000
+    },
+    {
+      "file": "/images/photos/sport-chrono-blue.jpg",
+      "description": "Steel chronograph with blue dial (Sport Chronograph, Blue)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1600,
+      "height": 2000
+    },
+    {
+      "file": "/images/photos/lady-pearl.jpg",
+      "description": "Ladies watch with white dial and rose markers (Lady Pearl 32)",
+      "usedIn": [
+        "products.json"
+      ],
+      "width": 1280,
+      "height": 1600
     }
   ],
   "brand": [
@@ -421,5 +466,5 @@
     "/images/icons/wrench.svg",
     "/images/icons/zap.svg"
   ],
-  "credits": "Photos: Pexels (pexels.com) via the Figma Pexels plugin — free under the Pexels License (no attribution required). Replace with real Alberto product photography before launch."
+  "credits": "Photos: Pexels (pexels.com) via the Figma Pexels plugin, free under the Pexels License (no attribution required). Replace with real Alberto product photography before launch."
 }

@@ -1,4 +1,4 @@
-# Alberto Watch — Alberto Clocks website
+# Alberto Watch: Alberto Clocks website
 
 Team repository for the **Alberto Clocks** eProject: a single-page, responsive website for a watch repair, appraisal and retail company in Lagos.
 

@@ -9,8 +9,8 @@
     {
       "id": "rolex-datejust-41",
       "brand": "Rolex",
-      "name": "Datejust 41 — Yellow Gold",
-      "fullName": "Rolex Datejust 41 — Yellow Gold",
+      "name": "Datejust 41, Yellow Gold",
+      "fullName": "Rolex Datejust 41, Yellow Gold",
       "lineups": [
         "luxury"
       ],
@@ -81,8 +81,8 @@
     {
       "id": "alberto-royale-rose-gold",
       "brand": "Alberto",
-      "name": "Royale — Rose Gold",
-      "fullName": "Alberto Royale — Rose Gold",
+      "name": "Royale, Rose Gold",
+      "fullName": "Alberto Royale, Rose Gold",
       "lineups": [
         "luxury"
       ],
@@ -153,8 +153,8 @@
     {
       "id": "rolex-submariner-date",
       "brand": "Rolex",
-      "name": "Submariner Date — Oystersteel",
-      "fullName": "Rolex Submariner Date — Oystersteel",
+      "name": "Submariner Date, Oystersteel",
+      "fullName": "Rolex Submariner Date, Oystersteel",
       "lineups": [
         "luxury"
       ],
@@ -225,8 +225,8 @@
     {
       "id": "alberto-noir-chronograph",
       "brand": "Alberto",
-      "name": "Noir Chronograph — Black",
-      "fullName": "Alberto Noir Chronograph — Black",
+      "name": "Noir Chronograph, Black",
+      "fullName": "Alberto Noir Chronograph, Black",
       "lineups": [
         "luxury"
       ],
@@ -241,7 +241,7 @@
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
-      "description": "A stealthy everyday chronograph in black DLC steel with gold accents — the Alberto house style in its boldest form.",
+      "description": "A stealthy everyday chronograph in black DLC steel with gold accents, the Alberto house style in its boldest form.",
       "specs": {
         "case": "43 mm",
         "material": "Black DLC-coated steel",
@@ -297,8 +297,8 @@
     {
       "id": "citizen-eco-drive-classic",
       "brand": "Citizen",
-      "name": "Eco-Drive Classic — Leather",
-      "fullName": "Citizen Eco-Drive Classic — Leather",
+      "name": "Eco-Drive Classic, Leather",
+      "fullName": "Citizen Eco-Drive Classic, Leather",
       "lineups": [
         "luxury"
       ],
@@ -313,7 +313,7 @@
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
-      "description": "Citizen's light-powered movement charges from any light source — no battery changes, ever. Clean white dial and a soft calfskin strap.",
+      "description": "Citizen's light-powered movement charges from any light source, no battery changes, ever. Clean white dial and a soft calfskin strap.",
       "specs": {
         "case": "40 mm",
         "material": "Stainless steel",
@@ -586,8 +586,8 @@
     {
       "id": "michael-kors-lexington",
       "brand": "Michael Kors",
-      "name": "Lexington — Gold-tone",
-      "fullName": "Michael Kors Lexington — Gold-tone",
+      "name": "Lexington, Gold-tone",
+      "fullName": "Michael Kors Lexington, Gold-tone",
       "lineups": [
         "luxury"
       ],
@@ -602,7 +602,7 @@
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
-      "description": "A bold gold-tone chronograph with a three-register dial — fashion-forward and easy to wear every day.",
+      "description": "A bold gold-tone chronograph with a three-register dial, fashion-forward and easy to wear every day.",
       "specs": {
         "case": "44 mm",
         "material": "Gold-tone stainless steel",
@@ -658,8 +658,8 @@
     {
       "id": "alberto-chronograph-42",
       "brand": "Alberto",
-      "name": "Chronograph 42 — Rose Gold",
-      "fullName": "Alberto Chronograph 42 — Rose Gold",
+      "name": "Chronograph 42, Rose Gold",
+      "fullName": "Alberto Chronograph 42, Rose Gold",
       "lineups": [
         "luxury"
       ],
@@ -746,7 +746,7 @@
         "/images/photos/vintage-dial.jpg",
         "/images/photos/pocket-watch.jpg"
       ],
-      "description": "A faithful reissue of a 1950s Bulova dress watch — cream dial, dauphine hands and a domed crystal.",
+      "description": "A faithful reissue of a 1950s Bulova dress watch: cream dial, dauphine hands and a domed crystal.",
       "specs": {
         "case": "38 mm",
         "material": "Stainless steel",
@@ -802,8 +802,8 @@
     {
       "id": "alberto-smart-s2-graphite",
       "brand": "Alberto",
-      "name": "Smart S2 — Graphite",
-      "fullName": "Alberto Smart S2 — Graphite",
+      "name": "Smart S2, Graphite",
+      "fullName": "Alberto Smart S2, Graphite",
       "lineups": [
         "smart-watches"
       ],
@@ -1034,7 +1034,7 @@
         "/images/photos/clock-mechanism.jpg",
         "/images/photos/clock-brass.jpg"
       ],
-      "description": "A railway-station classic in walnut with a silent sweep second hand — no ticking.",
+      "description": "A railway-station classic in walnut with a silent sweep second hand, no ticking.",
       "specs": {
         "case": "40 cm diameter",
         "material": "Walnut frame, glass front",
@@ -1234,8 +1234,8 @@
     {
       "id": "rolex-lady-datejust-28",
       "brand": "Rolex",
-      "name": "Lady-Datejust 28 — Everose",
-      "fullName": "Rolex Lady-Datejust 28 — Everose",
+      "name": "Lady-Datejust 28, Everose",
+      "fullName": "Rolex Lady-Datejust 28, Everose",
       "lineups": [
         "women",
         "luxury"
@@ -1252,7 +1252,7 @@
         "/images/photos/women-on-wrist.jpg",
         "/images/photos/women-pearls.jpg"
       ],
-      "description": "A smaller Datejust with a warm Everose gold bezel and Jubilee bracelet — the classic ladies' dress watch.",
+      "description": "A smaller Datejust with a warm Everose gold bezel and Jubilee bracelet, the classic ladies' dress watch.",
       "specs": {
         "case": "28 mm",
         "material": "Everose gold & Oystersteel",
@@ -1307,8 +1307,8 @@
     {
       "id": "alberto-lady-pearl-32",
       "brand": "Alberto",
-      "name": "Lady Pearl 32 — Mother-of-pearl",
-      "fullName": "Alberto Lady Pearl 32 — Mother-of-pearl",
+      "name": "Lady Pearl 32, Mother-of-pearl",
+      "fullName": "Alberto Lady Pearl 32, Mother-of-pearl",
       "lineups": [
         "women",
         "luxury"
@@ -1319,9 +1319,9 @@
       "priceDisplay": "₦1,940,000",
       "currency": "NGN",
       "reference": "AC-LP-32",
-      "image": "/images/photos/hero/hero-05-ladies.png",
+      "image": "/images/photos/lady-pearl.jpg",
       "thumbnails": [
-        "/images/photos/hero/hero-05-ladies.png",
+        "/images/photos/lady-pearl.jpg",
         "/images/photos/women-on-wrist.jpg",
         "/images/photos/women-pearls.jpg"
       ],
@@ -1380,8 +1380,8 @@
     {
       "id": "michael-kors-darci-rose",
       "brand": "Michael Kors",
-      "name": "Darci — Rose Gold Pavé",
-      "fullName": "Michael Kors Darci — Rose Gold Pavé",
+      "name": "Darci, Rose Gold Pavé",
+      "fullName": "Michael Kors Darci, Rose Gold Pavé",
       "lineups": [
         "women"
       ],
@@ -1469,7 +1469,7 @@
         "/images/photos/women-on-wrist.jpg",
         "/images/photos/women-pearls.jpg"
       ],
-      "description": "A slim, light-powered bracelet watch with Swarovski crystal markers — no battery changes, ever.",
+      "description": "A slim, light-powered bracelet watch with Swarovski crystal markers, no battery changes, ever.",
       "specs": {
         "case": "30 mm",
         "material": "Two-tone stainless steel",
@@ -1614,7 +1614,7 @@
         "/images/photos/women-on-wrist.jpg",
         "/images/photos/women-pearls.jpg"
       ],
-      "description": "A petite vintage-style watch with a cream dial — small enough for every day, smart enough for evenings.",
+      "description": "A petite vintage-style watch with a cream dial, small enough for every day, smart enough for evenings.",
       "specs": {
         "case": "28 mm",
         "material": "Gold PVD steel",
@@ -1680,9 +1680,9 @@
       "priceDisplay": "₦2,250,000",
       "currency": "NGN",
       "reference": "AL-SK-42",
-      "image": "/images/photos/hero/hero-01-skeleton.png",
+      "image": "/images/photos/skeleton-watch.jpg",
       "thumbnails": [
-        "/images/photos/hero/hero-01-skeleton.png",
+        "/images/photos/skeleton-watch.jpg",
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
@@ -1752,9 +1752,9 @@
       "priceDisplay": "₦3,070,000",
       "currency": "NGN",
       "reference": "AL-RC-42",
-      "image": "/images/photos/hero/hero-02-rose-gold.png",
+      "image": "/images/photos/rose-chronograph.jpg",
       "thumbnails": [
-        "/images/photos/hero/hero-02-rose-gold.png",
+        "/images/photos/rose-chronograph.jpg",
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
@@ -1824,9 +1824,9 @@
       "priceDisplay": "₦3,490,000",
       "currency": "NGN",
       "reference": "AL-OD-300",
-      "image": "/images/photos/hero/hero-03-diver.png",
+      "image": "/images/photos/ocean-diver.jpg",
       "thumbnails": [
-        "/images/photos/hero/hero-03-diver.png",
+        "/images/photos/ocean-diver.jpg",
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],
@@ -1885,8 +1885,8 @@
     {
       "id": "alberto-sport-chrono-blue",
       "brand": "Alberto",
-      "name": "Sport Chronograph — Blue",
-      "fullName": "Alberto Sport Chronograph — Blue",
+      "name": "Sport Chronograph, Blue",
+      "fullName": "Alberto Sport Chronograph, Blue",
       "lineups": [
         "luxury"
       ],
@@ -1896,9 +1896,9 @@
       "priceDisplay": "₦4,880,000",
       "currency": "NGN",
       "reference": "AL-SC-44B",
-      "image": "/images/photos/hero/hero-04-chronograph.png",
+      "image": "/images/photos/sport-chrono-blue.jpg",
       "thumbnails": [
-        "/images/photos/hero/hero-04-chronograph.png",
+        "/images/photos/sport-chrono-blue.jpg",
         "/images/photos/watch-movement.jpg",
         "/images/photos/watch-on-wrist.jpg"
       ],

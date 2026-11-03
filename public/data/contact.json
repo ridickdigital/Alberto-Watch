@@ -71,7 +71,7 @@
         "name": "message",
         "label": "Message",
         "type": "textarea",
-        "placeholder": "Tell us about your watch — brand, model and what you need.",
+        "placeholder": "Tell us about your watch: brand, model and what you need.",
         "required": true,
         "minLength": 10,
         "error": "Your message needs at least 10 characters."
@@ -79,7 +79,7 @@
     ],
     "submitLabel": "Send message",
     "privacyNote": "We never share your details.",
-    "successMessage": "Thanks — we'll reply within one working day.",
-    "backend": "None — show the success toast and clear the form."
+    "successMessage": "Thanks, we'll reply within one working day.",
+    "backend": "None: show the success toast and clear the form."
   }
 }

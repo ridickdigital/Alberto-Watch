@@ -1,4 +1,4 @@
-# Alberto Clocks — website data & images
+# Alberto Clocks: website data & images
 
 All the content shown in the Figma design (Alberto Clocks website, desktop and mobile, dark and light), as JSON files, plus every image the site uses.
 
@@ -27,7 +27,7 @@ data/
   site.json         brand, contact details, footer, visitor counter, theme, SEO, transitions, breakpoints
   navigation.json   main menu (9 items + routes), menu hover/active states, footer link groups, mobile menu
   home.json         hero, stats, featured tag, rating chip, line-up section, featured watches, workshop band, testimonial
-  lineups.json      All / Vintage / Luxury / Smart Watches / Clocks / Women — names, routes, headings, tile images
+  lineups.json      All / Vintage / Luxury / Smart Watches / Clocks / Women: names, routes, headings, tile images
   products.json     27 products (men and women) with price, specs, photos, line-ups, stock; sort options
   pages.json        page titles, intro text, breadcrumbs and behaviour notes for every page
   technology.json   movement feature, 4 movement types, 3 materials
@@ -44,7 +44,7 @@ images/
   photos/   14 JPG photos (max 1600 px on the long side)
   brand/    logo.svg (for dark backgrounds), logo-light.svg (for light backgrounds),
             logo@2x.png, logo-mark.svg, logo-mark@4x.png (favicon)
-  icons/    23 SVG line icons — they use currentColor, so they take the text colour
+  icons/    23 SVG line icons: they use currentColor, so they take the text colour
 ```
 
 ## Data dictionary
@@ -55,8 +55,8 @@ images/
 |---|---|---|---|
 | `id` | string | `rolex-datejust-41` | Unique, used in URLs and links from other files |
 | `brand` | string | `Rolex` | Shown small above the name on cards |
-| `name` | string | `Datejust 41 — Yellow Gold` | Card title / popup title |
-| `fullName` | string | `Rolex Datejust 41 — Yellow Gold` | For search and the price list |
+| `name` | string | `Datejust 41, Yellow Gold` | Card title / popup title |
+| `fullName` | string | `Rolex Datejust 41, Yellow Gold` | For search and the price list |
 | `lineups` | string[] | `["luxury"]` | Line-up ids from lineups.json. A product can be in more than one |
 | `primaryLineup` | string | `luxury` | Shown on the gold badge |
 | `price` | number | `19920000` | Use for sorting |

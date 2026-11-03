@@ -144,5 +144,5 @@
     "About Us",
     "Contact Us"
   ],
-  "router": "HashRouter — routes look like #/products/luxury"
+  "router": "HashRouter: routes look like #/products/luxury"
 }
