@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { asset, useData } from '../lib/data.js';
 import { useScrollLock } from '../lib/hooks.js';
 import PageHeader from '../components/PageHeader.jsx';
@@ -78,44 +79,47 @@ export default function Gallery() {
         </div>
       </section>
 
-      {current && (
-        <div className="lightbox" role="dialog" aria-modal="true" aria-label={current.caption}>
-          <div className="lightbox__scrim" onClick={() => setOpenIndex(null)} />
-          <figure className="lightbox__figure" key={current.id}>
-            <img src={asset(current.src)} alt={current.caption} />
-            <figcaption>
-              {current.caption}
-              <span>
-                {openIndex + 1} / {items.length}
-              </span>
-            </figcaption>
-          </figure>
-          <button
-            type="button"
-            className="lightbox__btn lightbox__close"
-            onClick={() => setOpenIndex(null)}
-            aria-label="Close"
-          >
-            <Icon name="close" />
-          </button>
-          <button
-            type="button"
-            className="lightbox__btn lightbox__prev"
-            onClick={() => step(-1)}
-            aria-label="Previous photo"
-          >
-            <Icon name="arrow-right" />
-          </button>
-          <button
-            type="button"
-            className="lightbox__btn lightbox__next"
-            onClick={() => step(1)}
-            aria-label="Next photo"
-          >
-            <Icon name="arrow-right" />
-          </button>
-        </div>
-      )}
+      {/* rendered on <body> so the page's fade-in transform can't shrink it to the main area */}
+      {current &&
+        createPortal(
+          <div className="lightbox" role="dialog" aria-modal="true" aria-label={current.caption}>
+            <div className="lightbox__scrim" onClick={() => setOpenIndex(null)} />
+            <figure className="lightbox__figure" key={current.id}>
+              <img src={asset(current.src)} alt={current.caption} />
+              <figcaption>
+                {current.caption}
+                <span>
+                  {openIndex + 1} / {items.length}
+                </span>
+              </figcaption>
+            </figure>
+            <button
+              type="button"
+              className="lightbox__btn lightbox__close"
+              onClick={() => setOpenIndex(null)}
+              aria-label="Close"
+            >
+              <Icon name="close" />
+            </button>
+            <button
+              type="button"
+              className="lightbox__btn lightbox__prev"
+              onClick={() => step(-1)}
+              aria-label="Previous photo"
+            >
+              <Icon name="arrow-right" />
+            </button>
+            <button
+              type="button"
+              className="lightbox__btn lightbox__next"
+              onClick={() => step(1)}
+              aria-label="Next photo"
+            >
+              <Icon name="arrow-right" />
+            </button>
+          </div>,
+          document.body
+        )}
     </>
   );
 }

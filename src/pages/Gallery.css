@@ -96,6 +96,9 @@
 
 .lightbox__figure {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   max-width: 100%;
   max-height: 100%;
@@ -103,14 +106,17 @@
 }
 
 .lightbox__figure img {
-  max-height: calc(100vh - 11.25rem);
+  max-width: 100%;
+  max-height: calc(100dvh - 11.25rem);
   width: auto;
-  margin: 0 auto;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius-card);
 }
 
 .lightbox__figure figcaption {
   display: flex;
+  align-self: stretch;
   justify-content: space-between;
   gap: 1rem;
   margin-top: 0.875rem;

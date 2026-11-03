@@ -132,6 +132,319 @@
         "Repairs drop-off"
       ],
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=14+Allen+Avenue+Ikeja+Lagos"
+    },
+    {
+      "id": "victoria-island",
+      "name": "Victoria Island",
+      "flagship": false,
+      "address": "18 Adeola Odeku Street, Victoria Island, Lagos",
+      "city": "Lagos",
+      "phone": "+234 804 567 8901",
+      "hoursLabel": "Mon – Sat · 10:00 – 20:00 · Sun 12:00 – 17:00",
+      "hours": {
+        "mon": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "tue": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "wed": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "thu": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "fri": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "sat": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "sun": {
+          "open": "12:00",
+          "close": "17:00"
+        }
+      },
+      "lat": 6.4307,
+      "lng": 3.4206,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs drop-off",
+        "Private viewings"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=18+Adeola+Odeku+Street+Victoria+Island+Lagos"
+    },
+    {
+      "id": "abuja",
+      "name": "Abuja · Wuse 2",
+      "flagship": false,
+      "address": "25 Adetokunbo Ademola Crescent, Wuse 2, Abuja",
+      "city": "Abuja",
+      "phone": "+234 805 678 9012",
+      "hoursLabel": "Mon – Sat · 9:00 – 19:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "19:00"
+        },
+        "sun": null
+      },
+      "lat": 9.079,
+      "lng": 7.4703,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs & servicing workshop",
+        "Free Saturday appraisals"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=25+Adetokunbo+Ademola+Crescent+Wuse+2+Abuja"
+    },
+    {
+      "id": "port-harcourt",
+      "name": "Port Harcourt",
+      "flagship": false,
+      "address": "7 Tombia Street, GRA Phase 2, Port Harcourt, Rivers",
+      "city": "Port Harcourt",
+      "phone": "+234 806 789 0123",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 4.8236,
+      "lng": 7.0074,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs drop-off"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=7+Tombia+Street+GRA+Phase+2+Port+Harcourt+Rivers"
+    },
+    {
+      "id": "ibadan",
+      "name": "Ibadan",
+      "flagship": false,
+      "address": "Ring Road, Ibadan, Oyo",
+      "city": "Ibadan",
+      "phone": "+234 807 890 1234",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 7.3622,
+      "lng": 3.878,
+      "image": null,
+      "services": [
+        "Retail",
+        "Battery & strap service"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ring+Road+Ibadan+Oyo"
+    },
+    {
+      "id": "kano",
+      "name": "Kano",
+      "flagship": false,
+      "address": "Murtala Mohammed Way, Nassarawa GRA, Kano",
+      "city": "Kano",
+      "phone": "+234 808 901 2345",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 12.001,
+      "lng": 8.544,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs drop-off"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Murtala+Mohammed+Way+Nassarawa+GRA+Kano"
+    },
+    {
+      "id": "enugu",
+      "name": "Enugu",
+      "flagship": false,
+      "address": "Ogui Road, Enugu",
+      "city": "Enugu",
+      "phone": "+234 809 012 3456",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 6.4422,
+      "lng": 7.4955,
+      "image": null,
+      "services": [
+        "Retail",
+        "Battery & strap service"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ogui+Road+Enugu"
+    },
+    {
+      "id": "benin-city",
+      "name": "Benin City",
+      "flagship": false,
+      "address": "Airport Road, GRA, Benin City, Edo",
+      "city": "Benin City",
+      "phone": "+234 810 123 4567",
+      "hoursLabel": "Mon – Sat · 9:00 – 18:00",
+      "hours": {
+        "mon": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "tue": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "wed": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "thu": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "fri": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sat": {
+          "open": "09:00",
+          "close": "18:00"
+        },
+        "sun": null
+      },
+      "lat": 6.318,
+      "lng": 5.606,
+      "image": null,
+      "services": [
+        "Retail",
+        "Repairs drop-off"
+      ],
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Airport+Road+GRA+Benin+City+Edo"
     }
   ],
   "map": {
