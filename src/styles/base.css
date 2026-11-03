@@ -280,6 +280,8 @@ p {
     overflow-x: auto;
     padding-bottom: 0.25rem;
     scrollbar-width: none;
+    /* soft right edge hints that more tabs are a swipe away */
+    mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
   }
   .tabs::-webkit-scrollbar {
     display: none;

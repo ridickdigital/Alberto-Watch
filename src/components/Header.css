@@ -167,6 +167,10 @@
   flex-direction: column;
   width: min(22.5rem, 88vw);
   padding: 1.25rem;
+  /* short phones and landscape: the links scroll inside the panel, not the page behind */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: var(--bg-page);
   transform: translateX(100%);
   transition: transform var(--fade-in) ease;

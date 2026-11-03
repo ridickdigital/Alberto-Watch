@@ -79,7 +79,7 @@ export default function StoreLocator() {
                 />
               </label>
               <button type="button" className="btn btn--ghost" onClick={locateMe}>
-                <Icon name="map-pin" size={16} /> {info.locateMeLabel}
+                <Icon name="map-pin" size={16} /> {info.useMyLocationLabel}
               </button>
             </div>
             {locating && <p className="stores__status">{locating}</p>}
