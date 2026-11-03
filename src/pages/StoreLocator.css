@@ -55,7 +55,7 @@
     box-shadow var(--hover-ms);
 }
 
-.store-card:not(:has(img)) {
+.store-card--no-photo {
   grid-template-columns: 1fr;
 }
 

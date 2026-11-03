@@ -4,6 +4,7 @@ import { href, navigate } from '../lib/router.js';
 import PageHeader from '../components/PageHeader.jsx';
 import WatchCard from '../components/WatchCard.jsx';
 import Reveal from '../components/Reveal.jsx';
+import { lineupName, lineups } from '../lineups.js';
 import './Products.css';
 
 const sorters = {
@@ -12,33 +13,27 @@ const sorters = {
   newest: (a, b) => Number(b.isNew) - Number(a.isNew) || b.price - a.price,
 };
 
-// #/products/:lineup: every watch in the chosen line-up; click a card for the popup
 export default function Products({ param }) {
-  const page = useData('pages');
   const catalogue = useData('products');
-  const lineupData = useData('lineups');
   const [sort, setSort] = useState('price-desc');
 
-  const lineups = lineupData?.lineups ?? [];
-  const current = lineups.find((l) => l.id === param) ?? lineups.find((l) => l.id === lineupData?.defaultLineup);
+  const current = lineups.find((l) => l.id === param) ?? lineups.find((l) => l.id === 'luxury');
 
   const watches = useMemo(() => {
-    if (!catalogue || !current) return [];
+    if (!catalogue) return [];
     const list =
       current.id === 'all' ? catalogue.products : catalogue.products.filter((p) => p.lineups.includes(current.id));
     return [...list].sort(sorters[sort]);
   }, [catalogue, current, sort]);
 
-  if (!page || !catalogue || !current) return <div className="loading">Loading…</div>;
-  const info = page.products;
-  const nameOf = (id) => lineups.find((l) => l.id === id)?.name ?? id;
+  if (!catalogue) return <div className="loading">Loading…</div>;
 
   return (
     <>
       <PageHeader
         crumbs={[{ label: 'Home', route: '/' }, { label: 'Products', route: '/products/all' }, { label: current.name }]}
         title={current.heading}
-        intro={current.description || info.intro}
+        intro={current.description}
       />
 
       <section className="section products">
@@ -50,7 +45,7 @@ export default function Products({ param }) {
                   key={l.id}
                   role="tab"
                   aria-selected={l.id === current.id}
-                  href={href(l.route)}
+                  href={href(`/products/${l.id}`)}
                   className={`tab ${l.id === current.id ? 'is-active' : ''}`}
                 >
                   {l.name}
@@ -60,27 +55,22 @@ export default function Products({ param }) {
             <label className="products__sort">
               <span>Sort by</span>
               <select className="input" value={sort} onChange={(e) => setSort(e.target.value)}>
-                {catalogue.sortOptions.map((o) => (
-                  <option key={o.id} value={o.id}>
-                    {o.label}
-                  </option>
-                ))}
+                <option value="price-desc">Price, high → low</option>
+                <option value="price-asc">Price, low → high</option>
+                <option value="newest">Newest</option>
               </select>
             </label>
           </div>
 
           <p className="products__count">
-            {info.resultsLabel
-              .replace('{count}', watches.length)
-              .replace('{lineup}', current.id === 'all' ? '' : current.name)
-              .replace(/\s+/g, ' ')}
+            {watches.length} {current.id !== 'all' && current.name} watches
           </p>
 
           {watches.length ? (
             <div className="grid grid--4" key={current.id}>
               {watches.map((w, i) => (
                 <Reveal key={w.id} delay={(i % 4) * 70}>
-                  <WatchCard watch={w} lineupName={nameOf(current.id === 'all' ? w.primaryLineup : current.id)} />
+                  <WatchCard watch={w} lineupName={lineupName(current.id === 'all' ? w.primaryLineup : current.id)} />
                 </Reveal>
               ))}
             </div>

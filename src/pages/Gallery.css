@@ -107,6 +107,7 @@
 
 .lightbox__figure img {
   max-width: 100%;
+  max-height: calc(100vh - 11.25rem); /* fallback for no dvh */
   max-height: calc(100dvh - 11.25rem);
   width: auto;
   height: auto;

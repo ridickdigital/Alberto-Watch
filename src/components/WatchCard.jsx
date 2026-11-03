@@ -3,7 +3,6 @@ import { useWatchPopup } from './WatchPopup.jsx';
 import Icon from './Icon.jsx';
 import './WatchCard.css';
 
-// Product card: photo with the text on top of it. Click → Watch Details popup.
 export default function WatchCard({ watch, lineupName }) {
   const openWatch = useWatchPopup();
   return (

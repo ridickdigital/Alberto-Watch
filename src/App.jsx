@@ -6,19 +6,19 @@ import Footer from './components/Footer.jsx';
 import Ticker from './components/Ticker.jsx';
 import { WatchPopupProvider } from './components/WatchPopup.jsx';
 
-const FADE_OUT_MS = 200; // site.json → transitions.sectionFadeOutMs
+const FADE_OUT_MS = 200;
 
 export default function App() {
   const path = useRoute();
   const [shownPath, setShownPath] = useState(path);
   const [leaving, setLeaving] = useState(false);
 
-  // fade the old section out, then swap in the new one (it fades in via CSS)
+  // fade out the old page, then show the new one
   useEffect(() => {
     if (path === shownPath) return;
     const samePage = parsePath(path).section === parsePath(shownPath).section;
     if (samePage) {
-      setShownPath(path); // e.g. switching product tabs: no full-page fade
+      setShownPath(path); // just a tab change, no fade
       return;
     }
     setLeaving(true);

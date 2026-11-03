@@ -1,26 +1,35 @@
-import { useData } from '../lib/data.js';
 import { href } from '../lib/router.js';
 import PageHeader from '../components/PageHeader.jsx';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './SiteMap.css';
 
-// #/sitemap: every section of the site in one place
-export default function SiteMap() {
-  const page = useData('pages');
-  const sitemap = useData('sitemap');
-  if (!page || !sitemap) return <div className="loading">Loading…</div>;
+const groups = [
+  { name: 'Home', route: '/', links: ['Hero', 'Shop by line-up', 'Featured watches', 'Our workshop'] },
+  {
+    name: 'Products',
+    route: '/products/luxury',
+    links: ['Vintage', 'Luxury', 'Smart Watches', 'Clocks', 'Watch details popup'],
+  },
+  { name: 'Technology', route: '/technology', links: ['Quartz', 'Automatic', 'Eco-Drive', 'Smart', 'Materials'] },
+  { name: 'Price List', route: '/prices', links: ['All watches', 'Filter by line-up', 'Search'] },
+  { name: 'Gallery', route: '/gallery', links: ['Watches', 'Workshop', 'Boutique', 'Clocks'] },
+  { name: 'Store Locator', route: '/store-locator', links: ['Lagos', 'Abuja', 'Port Harcourt', 'Kano', 'Ibadan'] },
+  { name: 'Support', route: '/support', links: ['Repair & servicing', 'Battery & strap', 'Warranty', 'FAQ'] },
+  { name: 'Company', route: '/about', links: ['About Us', 'Contact Us', 'Site Map'] },
+];
 
+export default function SiteMap() {
   return (
     <>
       <PageHeader
         crumbs={[{ label: 'Home', route: '/' }, { label: 'Site Map' }]}
-        title={page.sitemap.title}
-        intro={page.sitemap.intro}
+        title="Site map"
+        intro="Every section of the Alberto Clocks website in one place."
       />
       <section className="section">
         <div className="container grid grid--4 sitemap">
-          {sitemap.siteMapPageGroups.map((g, i) => (
+          {groups.map((g, i) => (
             <Reveal key={g.name} delay={(i % 4) * 80} className="sitemap__group">
               <a className="sitemap__title" href={href(g.route)}>
                 {g.name} <Icon name="arrow-right" size={14} />

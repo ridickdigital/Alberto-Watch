@@ -5,43 +5,46 @@ import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import WatchCard from '../components/WatchCard.jsx';
 import { useWatchPopup } from '../components/WatchPopup.jsx';
+import { lineupName, lineups } from '../lineups.js';
+import { slides } from './heroSlides.js';
 import './Home.css';
 
 export default function Home() {
-  const home = useData('home');
   const catalogue = useData('products');
-  const lineupData = useData('lineups');
-  if (!home || !catalogue || !lineupData) return <div className="loading">Loading…</div>;
+  if (!catalogue) return <div className="loading">Loading…</div>;
 
-  const products = catalogue.products;
-  const byId = (id) => products.find((p) => p.id === id);
-  const lineupName = (id) => lineupData.lineups.find((l) => l.id === id)?.name ?? id;
+  const pick = (ids) => ids.map((id) => catalogue.products.find((p) => p.id === id)).filter(Boolean);
 
   return (
     <>
-      <Hero hero={home.hero} />
-      <Stats hero={home.hero} />
-      <LineupTiles section={home.lineupSection} lineups={lineupData.lineups} products={products} />
+      <Hero />
+      <Stats />
+      <LineupTiles products={catalogue.products} />
       <FeaturedWatches
-        section={home.featuredSection}
-        watches={home.featuredSection.productIds.map(byId).filter(Boolean)}
-        lineupName={lineupName}
+        watches={pick([
+          'alberto-royale-rose-gold',
+          'bulova-classic-1950-reissue',
+          'alberto-smart-s2-graphite',
+          'rolex-submariner-date',
+        ])}
       />
       <ForHer
-        section={home.forHer}
-        watches={home.forHer.productIds.map(byId).filter(Boolean)}
-        lineupName={lineupName}
+        watches={pick([
+          'rolex-lady-datejust-28',
+          'alberto-lady-pearl-32',
+          'citizen-silhouette-crystal',
+          'michael-kors-darci-rose',
+        ])}
       />
-      <Workshop section={home.workshop} />
-      <Testimonial t={home.testimonial} />
+      <Workshop />
+      <Testimonial />
     </>
   );
 }
 
-/* ---------------- hero carousel ---------------- */
+const SLIDE_MS = 6000;
 
-function Hero({ hero }) {
-  const { slides, intervalMs, autoplay } = hero.carousel;
+function Hero() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [specTab, setSpecTab] = useState(0);
@@ -58,10 +61,10 @@ function Hero({ hero }) {
   );
 
   useEffect(() => {
-    if (!autoplay || paused) return;
-    const id = setTimeout(() => go(index + 1), intervalMs);
+    if (paused) return;
+    const id = setTimeout(() => go(index + 1), SLIDE_MS);
     return () => clearTimeout(id);
-  }, [autoplay, paused, index, intervalMs, go]);
+  }, [paused, index, go]);
 
   const onKey = (e) => {
     if (e.key === 'ArrowRight') go(index + 1);
@@ -74,10 +77,6 @@ function Hero({ hero }) {
     if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
     touchX.current = null;
   };
-
-  const tabs = slide.specifications?.tabs ?? [];
-  const chipLeft = slide.chips?.find((c) => c.position === 'left');
-  const chipRight = slide.chips?.find((c) => c.position === 'right');
 
   return (
     <section
@@ -92,26 +91,26 @@ function Hero({ hero }) {
       onTouchEnd={onTouchEnd}
     >
       <div className="hero__words" aria-hidden="true">
-        {hero.backgroundWords.map((w) => (
-          <span key={w}>{w}</span>
-        ))}
+        <span>for</span>
+        <span>you</span>
+        <span>Watch</span>
       </div>
 
       <div className="container hero__grid">
-        {/* every slide sits in the same cell, so the hero keeps the height of the tallest one */}
+        {/* all slides share one grid cell so the height doesn't jump */}
         <div className="hero__stack">
           {slides.map((s, i) => {
             const Title = i === index ? 'h1' : 'p';
             return (
-              <div key={s.slide} className={`hero__text ${i === index ? 'is-active' : ''}`} aria-hidden={i !== index}>
+              <div key={s.number} className={`hero__text ${i === index ? 'is-active' : ''}`} aria-hidden={i !== index}>
                 <p className="eyebrow">{s.eyebrow}</p>
                 <Title className="hero__title">{s.title}</Title>
                 <p className="hero__ref">{s.reference}</p>
-                <p className="hero__price">{s.priceDisplay}</p>
-                <button type="button" className="btn btn--ghost" onClick={() => openWatch(s.cta.productId)}>
-                  {s.cta.label} <Icon name="arrow-right" size={14} />
+                <p className="hero__price">{s.price}</p>
+                <button type="button" className="btn btn--ghost" onClick={() => openWatch(s.watchId)}>
+                  View details <Icon name="arrow-right" size={14} />
                 </button>
-                <p className="hero__intro-mobile">{hero.mobileIntro}</p>
+                <p className="hero__intro-mobile">Luxury watches, repairs and free appraisals in Lagos.</p>
               </div>
             );
           })}
@@ -124,61 +123,59 @@ function Hero({ hero }) {
 
         <aside className="hero__side">
           <div className="hero__tagline">
-            <p>{hero.tagline}</p>
-            <img src={asset(hero.taglineImage)} alt="" width="96" height="72" loading="lazy" />
+            <p>DEFINE YOUR LEGACY. MAKE IT LUXURIOUS ©2026</p>
+            <img src={asset('/images/photos/watchmaker-at-work.jpg')} alt="" width="96" height="72" loading="lazy" />
           </div>
-          {tabs.length > 0 && (
-            <div className="hero__specs">
-              <h2>Specifications</h2>
-              <div className="hero__spec-tabs" role="tablist">
-                {tabs.map((t, i) => (
-                  <button
-                    key={t.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={i === specTab}
-                    className={i === specTab ? 'is-active' : ''}
-                    onClick={() => setSpecTab(i)}
-                  >
-                    {t.label}
-                  </button>
-                ))}
-              </div>
-              <div className="hero__stack">
-                {slides.flatMap((s, i) =>
-                  (s.specifications?.tabs ?? []).map((t, j) => {
-                    const active = i === index && j === specTab;
-                    return (
-                      <div key={`${s.slide}-${t.id}`} className={active ? 'is-active' : ''} aria-hidden={!active}>
-                        {t.groups.map((g) => (
-                          <div key={g.title} className="hero__spec-group">
-                            <h3>{g.title}</h3>
-                            {g.items ? (
-                              <dl>
-                                {g.items.map((it) => (
-                                  <div key={it.label}>
-                                    <dt>{it.label}</dt>
-                                    <dd>{it.value}</dd>
-                                  </div>
-                                ))}
-                              </dl>
-                            ) : (
-                              <p>{g.text}</p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    );
-                  })
-                )}
-              </div>
+          <div className="hero__specs">
+            <h2>Specifications</h2>
+            <div className="hero__spec-tabs" role="tablist">
+              {slide.tabs.map((t, i) => (
+                <button
+                  key={t.label}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === specTab}
+                  className={i === specTab ? 'is-active' : ''}
+                  onClick={() => setSpecTab(i)}
+                >
+                  {t.label}
+                </button>
+              ))}
             </div>
-          )}
+            <div className="hero__stack">
+              {slides.flatMap((s, i) =>
+                s.tabs.map((t, j) => {
+                  const active = i === index && j === specTab;
+                  return (
+                    <div key={`${s.number}-${t.label}`} className={active ? 'is-active' : ''} aria-hidden={!active}>
+                      {t.groups.map((g) => (
+                        <div key={g.title} className="hero__spec-group">
+                          <h3>{g.title}</h3>
+                          {g.rows ? (
+                            <dl>
+                              {g.rows.map(([label, value]) => (
+                                <div key={label}>
+                                  <dt>{label}</dt>
+                                  <dd>{value}</dd>
+                                </div>
+                              ))}
+                            </dl>
+                          ) : (
+                            <p>{g.text}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
         </aside>
       </div>
 
       <div className="container hero__bar">
-        {chipLeft && <span className="hero__chip hero__chip--left">◆ {chipLeft.label}</span>}
+        <span className="hero__chip hero__chip--left">◆ {slide.chips[0]}</span>
         <div className="hero__slider">
           <button
             type="button"
@@ -190,70 +187,72 @@ function Hero({ hero }) {
           </button>
           {slides.map((s, i) => (
             <button
-              key={s.slide}
+              key={s.number}
               type="button"
               className={`hero__dot ${i === index ? 'is-active' : ''}`}
               onClick={() => go(i)}
               aria-label={`Show ${s.title}`}
               aria-current={i === index}
             >
-              {s.slide}
+              {s.number}
             </button>
           ))}
           <button type="button" onClick={() => go(index + 1)} aria-label="Next watch" className="hero__arrow">
             <Icon name="arrow-right" size={14} />
           </button>
         </div>
-        {chipRight && <span className="hero__chip hero__chip--right">{chipRight.label} ◆</span>}
+        <span className="hero__chip hero__chip--right">{slide.chips[1]} ◆</span>
       </div>
 
-      {autoplay && !paused && (
-        <span className="hero__progress" key={`p-${index}`} style={{ animationDuration: `${intervalMs}ms` }} />
-      )}
+      {!paused && <span className="hero__progress" key={`p-${index}`} style={{ animationDuration: `${SLIDE_MS}ms` }} />}
     </section>
   );
 }
 
-function Stats({ hero }) {
+function Stats() {
   return (
     <div className="stats">
       <div className="container stats__inner">
-        {hero.stats.map((s) => (
-          <div key={s.label} className="stats__item">
-            <strong>{s.value}</strong>
-            <span>{s.label}</span>
-          </div>
-        ))}
+        <div className="stats__item">
+          <strong>38 yrs</strong>
+          <span>of craft</span>
+        </div>
+        <div className="stats__item">
+          <strong>12,000+</strong>
+          <span>watches serviced</span>
+        </div>
+        <div className="stats__item">
+          <strong>4 + 1</strong>
+          <span>brands & our own label</span>
+        </div>
         <div className="stats__item stats__rating">
           <strong>
-            <Icon name="star" size={18} /> {hero.ratingChip.rating}
+            <Icon name="star" size={18} /> 4.9
           </strong>
-          <span>{hero.ratingChip.text.split('·')[1]?.trim()}</span>
+          <span>1,200+ reviews</span>
         </div>
       </div>
     </div>
   );
 }
 
-/* ---------------- line-ups ---------------- */
-
-function LineupTiles({ section, lineups, products }) {
-  const tiles = section.lineupIds.map((id) => lineups.find((l) => l.id === id)).filter(Boolean);
+function LineupTiles({ products }) {
+  const tiles = lineups.filter((l) => ['vintage', 'luxury', 'smart-watches', 'clocks'].includes(l.id));
   return (
     <section className="section">
       <div className="container">
         <Reveal className="section-head">
-          <p className="eyebrow">{section.eyebrow}</p>
-          <h2>{section.title}</h2>
-          <p>{section.subtitle}</p>
+          <p className="eyebrow">Product line-up</p>
+          <h2>Find your kind of time</h2>
+          <p>From hand-wound vintage pieces to smart watches. Choose a line-up to see every watch in it.</p>
         </Reveal>
         <div className="grid grid--4">
           {tiles.map((l, i) => {
             const count = products.filter((p) => p.lineups.includes(l.id)).length;
             return (
               <Reveal key={l.id} delay={i * 80}>
-                <a className="lineup-tile" href={href(l.route)}>
-                  <img src={asset(l.tileImage)} alt="" loading="lazy" />
+                <a className="lineup-tile" href={href(`/products/${l.id}`)}>
+                  <img src={asset(l.tile)} alt="" loading="lazy" />
                   <span className="lineup-tile__shade" />
                   <span className="lineup-tile__body">
                     <span className="lineup-tile__name">{l.name}</span>
@@ -271,18 +270,18 @@ function LineupTiles({ section, lineups, products }) {
   );
 }
 
-function FeaturedWatches({ section, watches, lineupName }) {
+function FeaturedWatches({ watches }) {
   return (
     <section className="section section--alt">
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div>
-            <p className="eyebrow">{section.eyebrow}</p>
-            <h2>{section.title}</h2>
-            <p>{section.subtitle}</p>
+            <p className="eyebrow">Featured</p>
+            <h2>This season's pieces</h2>
+            <p>Hand-picked by our watchmakers. Click any watch to see full details.</p>
           </div>
-          <a className="link-arrow" href={href(section.cta.route)}>
-            {section.cta.label} <Icon name="arrow-right" size={14} />
+          <a className="link-arrow" href={href('/products/all')}>
+            View all products <Icon name="arrow-right" size={14} />
           </a>
         </Reveal>
         <div className="grid grid--4">
@@ -297,18 +296,18 @@ function FeaturedWatches({ section, watches, lineupName }) {
   );
 }
 
-function ForHer({ section, watches, lineupName }) {
+function ForHer({ watches }) {
   return (
     <section className="section for-her">
       <div className="container for-her__grid">
         <Reveal className="for-her__intro">
-          <img src={asset(section.image)} alt="" loading="lazy" />
+          <img src={asset('/images/photos/women-on-wrist.jpg')} alt="" loading="lazy" />
           <div className="for-her__text">
-            <p className="eyebrow">{section.eyebrow}</p>
-            <h2>{section.title}</h2>
-            <p>{section.subtitle}</p>
-            <a className="btn" href={href(section.cta.route)}>
-              {section.cta.label}
+            <p className="eyebrow">For her</p>
+            <h2>Made for her wrist</h2>
+            <p>Dress watches, bracelet watches and ladies' sizes from 28 to 34 mm.</p>
+            <a className="btn" href={href('/products/women')}>
+              Shop women's watches
             </a>
           </div>
         </Reveal>
@@ -324,27 +323,35 @@ function ForHer({ section, watches, lineupName }) {
   );
 }
 
-function Workshop({ section }) {
+function Workshop() {
   return (
     <section className="section section--alt">
       <div className="container workshop">
         <Reveal className="workshop__image">
-          <img src={asset(section.image)} alt="Watchmaker at work" loading="lazy" />
+          <img src={asset('/images/photos/watchmaker-at-work.jpg')} alt="Watchmaker at work" loading="lazy" />
         </Reveal>
         <Reveal className="workshop__text" delay={120}>
-          <p className="eyebrow">{section.eyebrow}</p>
-          <h2>{section.title}</h2>
-          <p className="workshop__sub">{section.subtitle}</p>
+          <p className="eyebrow">Our workshop</p>
+          <h2>Repaired by hand, timed to the second</h2>
+          <p className="workshop__sub">
+            Certified watchmakers service every movement in-house, from a quartz battery to a full tourbillon overhaul.
+          </p>
           <ul>
-            {section.points.map((pt) => (
-              <li key={pt.text}>
-                <Icon name={pt.icon} size={20} />
-                {pt.text}
-              </li>
-            ))}
+            <li>
+              <Icon name="wrench" size={20} />
+              Repair & servicing, from 5 working days
+            </li>
+            <li>
+              <Icon name="gem" size={20} />
+              Free appraisal every Saturday
+            </li>
+            <li>
+              <Icon name="shield" size={20} />
+              2-year Alberto warranty on every service
+            </li>
           </ul>
-          <a className="btn" href={href(section.cta.route)}>
-            {section.cta.label}
+          <a className="btn" href={href('/support')}>
+            Book a repair
           </a>
         </Reveal>
       </div>
@@ -352,18 +359,20 @@ function Workshop({ section }) {
   );
 }
 
-function Testimonial({ t }) {
+function Testimonial() {
   return (
     <section className="section">
       <Reveal className="container testimonial">
-        <div className="testimonial__stars" aria-label={`${t.rating} out of 5 stars`}>
-          {Array.from({ length: t.rating }, (_, i) => (
-            <Icon key={i} name="star" size={18} />
+        <div className="testimonial__stars" aria-label="5 out of 5 stars">
+          {[1, 2, 3, 4, 5].map((n) => (
+            <Icon key={n} name="star" size={18} />
           ))}
         </div>
-        <blockquote>“{t.quote}”</blockquote>
+        <blockquote>
+          “They brought my grandfather's 1962 Bulova back to life. It keeps better time now than my phone.”
+        </blockquote>
         <p>
-          <strong>{t.author}</strong> · {t.detail}
+          <strong>Chief Adewale O.</strong> · customer since 2004
         </p>
       </Reveal>
     </section>

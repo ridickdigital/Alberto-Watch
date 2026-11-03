@@ -1,4 +1,4 @@
-/* Reset, typography and shared building blocks used by every page */
+/* reset, type and shared pieces */
 
 *,
 *::before,
@@ -7,7 +7,7 @@
 }
 
 html {
-  /* 16px up to a 1440px-wide screen, then everything (all sizes are rem) grows with it, up to 24px */
+  /* 16px up to 1440px wide, then scales up to 24px */
   font-size: clamp(16px, 1.1111vw, 24px);
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -15,7 +15,8 @@ html {
 
 body {
   margin: 0;
-  overflow-x: clip; /* nothing can make the page scroll sideways */
+  overflow-x: hidden; /* older Safari has no clip */
+  overflow-x: clip;
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-primary);
@@ -79,7 +80,7 @@ p {
   white-space: nowrap;
 }
 
-/* ---------- layout ---------- */
+/* layout */
 
 .container {
   width: 100%;
@@ -176,7 +177,7 @@ p {
   }
 }
 
-/* ---------- buttons ---------- */
+/* buttons */
 
 .btn {
   display: inline-flex;
@@ -240,7 +241,7 @@ p {
   color: var(--accent-gold-hover);
 }
 
-/* ---------- chips, tabs, badges ---------- */
+/* chips, tabs, badges */
 
 .tabs {
   display: flex;
@@ -280,7 +281,8 @@ p {
     overflow-x: auto;
     padding-bottom: 0.25rem;
     scrollbar-width: none;
-    /* soft right edge hints that more tabs are a swipe away */
+    /* fade the right edge so it's clear the tabs scroll */
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
     mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
   }
   .tabs::-webkit-scrollbar {
@@ -300,7 +302,7 @@ p {
   text-transform: uppercase;
 }
 
-/* ---------- form fields ---------- */
+/* form fields */
 
 .field {
   display: grid;
@@ -332,7 +334,7 @@ p {
   border-color: var(--accent-gold);
 }
 
-/* ---------- animations ---------- */
+/* animations */
 
 .reveal {
   opacity: 0;

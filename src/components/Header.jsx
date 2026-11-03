@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-import { asset, useData } from '../lib/data.js';
+import { asset } from '../lib/data.js';
 import { href } from '../lib/router.js';
 import { useScrollLock, useTheme, useVisitorCount } from '../lib/hooks.js';
 import { formatVisitors } from '../lib/format.js';
+import { menu } from '../menu.js';
 import Icon from './Icon.jsx';
 import './Header.css';
 
 export default function Header({ section }) {
-  const nav = useData('navigation');
-  const site = useData('site');
   const [theme, toggleTheme] = useTheme();
   const visitors = useVisitorCount();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +15,7 @@ export default function Header({ section }) {
 
   useScrollLock(menuOpen);
 
-  // close the mobile menu whenever the page changes
+  // close the menu when the page changes
   useEffect(() => setMenuOpen(false), [section]);
 
   useEffect(() => {
@@ -26,9 +25,7 @@ export default function Header({ section }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const logo = site ? (theme === 'dark' ? site.brand.logo.onDark : site.brand.logo.onLight) : '';
-  const menu = nav?.mainMenu ?? [];
-  const counter = site?.visitorCounter;
+  const logo = theme === 'dark' ? '/images/brand/logo.svg' : '/images/brand/logo-light.svg';
 
   const ThemeButton = ({ className = '' }) => (
     <button
@@ -47,7 +44,7 @@ export default function Header({ section }) {
       <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="header__inner container">
           <a className="header__logo" href={href('/')} aria-label="Alberto Clocks home">
-            {logo && <img src={asset(logo)} alt="Alberto Clocks" width="170" height="40" />}
+            <img src={asset(logo)} alt="Alberto Clocks" width="170" height="40" />
           </a>
 
           <nav className="header__nav" aria-label="Main menu">
@@ -66,8 +63,8 @@ export default function Header({ section }) {
           <div className="header__tools">
             <span className="visitors" title="Visitor count">
               <Icon name="eye" size={14} />
-              <span className="visitors__label">{counter?.label ?? 'Visitors'}</span>
-              <strong>{visitors ? formatVisitors(visitors, counter?.padLength) : '…'}</strong>
+              <span className="visitors__label">Visitors</span>
+              <strong>{visitors ? formatVisitors(visitors) : '…'}</strong>
             </span>
             <ThemeButton className="header__theme" />
             <button
@@ -83,12 +80,12 @@ export default function Header({ section }) {
         </div>
       </header>
 
-      {/* mobile drawer: outside the header so its blur doesn't trap the fixed panel */}
+      {/* kept outside <header>: its backdrop blur would trap the fixed drawer */}
       <div className={`drawer ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
         <div className="drawer__scrim" onClick={() => setMenuOpen(false)} />
         <div className="drawer__panel" role="dialog" aria-label="Menu">
           <div className="drawer__top">
-            {logo && <img src={asset(logo)} alt="Alberto Clocks" width="140" height="33" />}
+            <img src={asset(logo)} alt="Alberto Clocks" width="140" height="33" />
             <button
               type="button"
               className="header__icon-btn"

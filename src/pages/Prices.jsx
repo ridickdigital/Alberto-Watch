@@ -3,6 +3,7 @@ import { asset, useData } from '../lib/data.js';
 import PageHeader from '../components/PageHeader.jsx';
 import Icon from '../components/Icon.jsx';
 import { useWatchPopup } from '../components/WatchPopup.jsx';
+import { lineupName, lineups } from '../lineups.js';
 import './Prices.css';
 
 const movementLabel = {
@@ -15,11 +16,8 @@ const movementLabel = {
   mechanical: 'Mechanical',
 };
 
-// #/prices: price list for every watch, with line-up tabs and search
 export default function Prices() {
-  const page = useData('pages');
   const catalogue = useData('products');
-  const lineupData = useData('lineups');
   const openWatch = useWatchPopup();
   const [lineup, setLineup] = useState('all');
   const [query, setQuery] = useState('');
@@ -34,23 +32,21 @@ export default function Prices() {
       .sort((a, b) => (sortAsc ? a.price - b.price : b.price - a.price));
   }, [catalogue, lineup, query, sortAsc]);
 
-  if (!page || !catalogue || !lineupData) return <div className="loading">Loading…</div>;
-  const info = page.prices;
-  const nameOf = (id) => lineupData.lineups.find((l) => l.id === id)?.name ?? id;
+  if (!catalogue) return <div className="loading">Loading…</div>;
 
   return (
     <>
       <PageHeader
         crumbs={[{ label: 'Home', route: '/' }, { label: 'Price List' }]}
-        title={info.title}
-        intro={info.intro}
+        title="Price list"
+        intro="Every watch and clock we stock, in one table. Prices in Nigerian naira, VAT included."
       />
 
       <section className="section prices">
         <div className="container">
           <div className="prices__bar">
             <div className="tabs" role="tablist">
-              {lineupData.lineups.map((l) => (
+              {lineups.map((l) => (
                 <button
                   key={l.id}
                   type="button"
@@ -69,7 +65,7 @@ export default function Prices() {
               <input
                 className="input"
                 type="search"
-                placeholder={info.searchPlaceholder}
+                placeholder="Search watches or brands"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -80,17 +76,15 @@ export default function Prices() {
             <table className="prices__table">
               <thead>
                 <tr>
-                  {info.columns.map((c, i) =>
-                    i === info.columns.length - 1 ? (
-                      <th key={c} className="prices__num">
-                        <button type="button" className="prices__sort" onClick={() => setSortAsc((s) => !s)}>
-                          {c} {sortAsc ? '↑' : '↓'}
-                        </button>
-                      </th>
-                    ) : (
-                      <th key={c}>{c}</th>
-                    )
-                  )}
+                  <th>Watch</th>
+                  <th>Brand</th>
+                  <th>Line-up</th>
+                  <th>Size · Movement</th>
+                  <th className="prices__num">
+                    <button type="button" className="prices__sort" onClick={() => setSortAsc((s) => !s)}>
+                      Price {sortAsc ? '↑' : '↓'}
+                    </button>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -111,7 +105,7 @@ export default function Prices() {
                       </span>
                     </td>
                     <td data-label="Brand">{p.brand}</td>
-                    <td data-label="Line-up">{nameOf(p.primaryLineup)}</td>
+                    <td data-label="Line-up">{lineupName(p.primaryLineup)}</td>
                     <td data-label="Size · Movement">
                       {p.specs.case?.split('·')[0].trim()} · {movementLabel[p.movementType] ?? p.movementType}
                     </td>
@@ -126,7 +120,8 @@ export default function Prices() {
           </div>
 
           <p className="prices__foot">
-            {rows.length} of {catalogue.products.length} pieces · {catalogue.currency.note} {info.footnote}
+            {rows.length} of {catalogue.products.length} pieces · {catalogue.currency.note} Prices may change, so please
+            confirm in store. Trade-in and instalment plans available.
           </p>
         </div>
       </section>

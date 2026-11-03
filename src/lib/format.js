@@ -1,11 +1,10 @@
-// 1284 → "01,284"
+// 1284 -> 01,284
 export function formatVisitors(n, pad = 5) {
   return String(n)
     .padStart(pad, '0')
     .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-// 2250000 → "₦2,250,000"
 export function formatNaira(n) {
   return '₦' + Math.round(n).toLocaleString('en-NG');
 }
@@ -20,7 +19,7 @@ export function formatTime(d) {
   return `${time} ${zone}`;
 }
 
-// Distance in km between two lat/lng points (store locator "Use my location")
+// haversine distance in km
 export function distanceKm(a, b) {
   const R = 6371;
   const toRad = (x) => (x * Math.PI) / 180;

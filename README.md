@@ -4,7 +4,7 @@ Team repository for the **Alberto Clocks** eProject: a single-page, responsive w
 
 - **Stack:** React 18 + plain CSS. [Vite](https://vitejs.dev) runs and bundles it.
 - **No frameworks:** no Next.js, no Bootstrap, no Tailwind, no router library. Routing is a small hash router in `src/lib/router.js`.
-- **Data store:** JSON files in `public/data/` (as the brief asks), loaded with `fetch`.
+- **Data store:** the watches and stores are JSON files in `public/data/` (as the brief asks), loaded with `fetch`. Page text is written in the components.
 
 The shell is already built and working: header, menu, visitor count, light/dark mode, scrolling ticker, footer, routing, section fade, watch popup and all data and images. All pages are now fully built too. [docs/TASKS.md](docs/TASKS.md) shows who owns each page: improve, test and fix your own pages there.
 
@@ -58,12 +58,14 @@ Then read **[CONTRIBUTING.md](CONTRIBUTING.md)** for the branch → PR workflow.
 
 ```
 public/
-  data/            ← all text, prices, products, stores… (JSON). Field guide: docs/DATA.md
+  data/            ← products.json (watches, prices) and stores.json. Field guide: docs/DATA.md
   images/          ← photos/, brand/ (logos), icons/ (SVG)
 src/
   main.jsx         entry point
   App.jsx          layout + fade between sections            (shared: lead only)
   routes.js        URL → page component                      (shared: lead only)
+  menu.js          main menu links
+  lineups.js       the six product line-ups
   lib/
     data.js        useData('products'), asset('/images/…')
     router.js      useRoute(), href('/prices'), navigate('/prices')

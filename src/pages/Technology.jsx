@@ -1,40 +1,92 @@
-import { asset, useData } from '../lib/data.js';
+import { asset } from '../lib/data.js';
 import PageHeader from '../components/PageHeader.jsx';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import './Technology.css';
 
-// #/technology: movements and materials used in the watches
-export default function Technology() {
-  const page = useData('pages');
-  const tech = useData('technology');
-  if (!page || !tech) return <div className="loading">Loading…</div>;
-  const { feature, typesSection, movementTypes, materials } = tech;
+const movements = [
+  {
+    icon: 'zap',
+    title: 'Quartz',
+    text: 'A battery makes a quartz crystal vibrate 32,768 times a second. Accurate to ±15 seconds a month.',
+    foundIn: 'Bulova Lunar Pilot · Michael Kors',
+  },
+  {
+    icon: 'rotate',
+    title: 'Automatic',
+    text: 'A weighted rotor winds the mainspring as your wrist moves. No battery needed.',
+    foundIn: 'Rolex Datejust · Alberto Noir',
+  },
+  {
+    icon: 'sun',
+    title: 'Eco-Drive',
+    text: "Citizen's light-powered movement charges from any light and runs 6+ months in the dark.",
+    foundIn: 'Citizen Eco-Drive Classic',
+  },
+  {
+    icon: 'watch',
+    title: 'Smart',
+    text: 'Heart rate, GPS, notifications and contactless payment, synced with your phone.',
+    foundIn: 'Alberto Smart S2',
+  },
+];
 
+const materials = [
+  {
+    title: '18k gold',
+    text: 'Warm, heavy and hypoallergenic, polished by hand.',
+    image: '/images/photos/gold-watch.jpg',
+  },
+  {
+    title: '904L steel',
+    text: 'Highly corrosion-resistant steel used on dive watches.',
+    image: '/images/photos/steel-diver-watch.jpg',
+  },
+  {
+    title: 'Leather & sapphire',
+    text: 'Calfskin straps and scratch-proof sapphire crystal.',
+    image: '/images/photos/leather-strap-detail.jpg',
+  },
+];
+
+export default function Technology() {
   return (
     <>
       <PageHeader
         crumbs={[{ label: 'Home', route: '/' }, { label: 'Technology' }]}
-        title={page.technology.title}
-        intro={page.technology.intro}
+        title="Technology"
+        intro="What makes each watch tick: the movements and materials behind every line-up we sell."
       />
 
       <section className="section">
         <div className="container tech-feature">
           <Reveal className="tech-feature__image">
-            <img src={asset(feature.image)} alt="Inside a mechanical watch movement" loading="lazy" />
+            <img
+              src={asset('/images/photos/watch-movement.jpg')}
+              alt="Inside a mechanical watch movement"
+              loading="lazy"
+            />
           </Reveal>
           <Reveal className="tech-feature__text" delay={120}>
-            <p className="eyebrow">{feature.eyebrow}</p>
-            <h2>{feature.title}</h2>
-            <p>{feature.text}</p>
+            <p className="eyebrow">Inside the movement</p>
+            <h2>Up to 300 parts in 3 cm</h2>
+            <p>
+              A mechanical calibre is a tiny machine of springs, gears and jewels. Our watchmakers open, clean, oil and
+              time each one.
+            </p>
             <dl className="tech-feature__facts">
-              {feature.facts.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>{f.text}</dd>
-                </div>
-              ))}
+              <div>
+                <dt>Jewels</dt>
+                <dd>Synthetic rubies reduce friction at every pivot</dd>
+              </div>
+              <div>
+                <dt>Balance wheel</dt>
+                <dd>Beats 28,800 times an hour for steady timekeeping</dd>
+              </div>
+              <div>
+                <dt>Power reserve</dt>
+                <dd>40–70 hours on a full wind</dd>
+              </div>
             </dl>
           </Reveal>
         </div>
@@ -43,13 +95,13 @@ export default function Technology() {
       <section className="section section--alt">
         <div className="container">
           <Reveal className="section-head">
-            <p className="eyebrow">{typesSection.eyebrow}</p>
-            <h2>{typesSection.title}</h2>
-            <p>{typesSection.subtitle}</p>
+            <p className="eyebrow">Movement types</p>
+            <h2>Four ways to keep time</h2>
+            <p>Every watch in our store uses one of these. Look for the label on each product card.</p>
           </Reveal>
           <div className="grid grid--4">
-            {movementTypes.map((m, i) => (
-              <Reveal key={m.id} delay={i * 100} className="movement-card">
+            {movements.map((m, i) => (
+              <Reveal key={m.title} delay={i * 100} className="movement-card">
                 <span className="movement-card__icon">
                   <Icon name={m.icon} size={22} />
                 </span>
@@ -57,7 +109,7 @@ export default function Technology() {
                 <p>{m.text}</p>
                 <p className="movement-card__found">
                   <span>Found in</span>
-                  {m.foundInLabel}
+                  {m.foundIn}
                 </p>
               </Reveal>
             ))}
@@ -73,7 +125,7 @@ export default function Technology() {
           </Reveal>
           <div className="grid grid--3">
             {materials.map((m, i) => (
-              <Reveal key={m.id} delay={i * 100} className="material-card">
+              <Reveal key={m.title} delay={i * 100} className="material-card">
                 <img src={asset(m.image)} alt="" loading="lazy" />
                 <div className="material-card__body">
                   <h3>{m.title}</h3>

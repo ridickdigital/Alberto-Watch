@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// All content lives in public/data/*.json (the brief's "JSON data store").
-// Each file is fetched once and cached for the rest of the session.
+// products.json and stores.json live in public/data. Each is fetched once.
 const cache = new Map();
 
 export function loadData(name) {
@@ -10,13 +9,12 @@ export function loadData(name) {
       if (!res.ok) throw new Error(`Could not load ${name}.json (${res.status})`);
       return res.json();
     });
-    request.catch(() => cache.delete(name)); // allow a retry after a failure
+    request.catch(() => cache.delete(name)); // so it can retry
     cache.set(name, request);
   }
   return cache.get(name);
 }
 
-// const site = useData('site')  →  null while loading, then the parsed JSON
 export function useData(name) {
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -31,7 +29,7 @@ export function useData(name) {
   return data;
 }
 
-// Paths in the JSON start with "/images/…". This makes them work from any base URL.
+// prefix image paths with the base url so the build works from any folder
 export function asset(path) {
   if (!path) return '';
   if (/^https?:/.test(path)) return path;

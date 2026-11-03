@@ -80,7 +80,7 @@
   color: var(--text-muted);
 }
 
-/* .container sets margin: 0 auto, so the gap needs the extra class */
+/* needs both classes to beat .container's margin */
 .footer__bottom.container {
   margin-top: 3.5rem;
 }

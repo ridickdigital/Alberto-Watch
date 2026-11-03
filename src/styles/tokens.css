@@ -1,4 +1,4 @@
-/* Design tokens: copied from public/data/theme.json (Figma colour styles).
+/* Design tokens: the Figma colour styles.
    Dark values on :root, light values on [data-theme="light"].
    Use these variables everywhere instead of hard-coded colours. */
 

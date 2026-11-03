@@ -8,7 +8,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   background: var(--bg-elevated);
-  color: #f3ede2; /* always light: the text sits on a dark photo shade */
+  color: #f3ede2; /* stays light, it sits on the photo */
   text-align: left;
   transition:
     border-color var(--hover-ms),

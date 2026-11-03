@@ -1,5 +1,3 @@
-// Section name (first part of the URL) → page component.
-// #/products/luxury → "products",  #/ → "home"
 import Home from './pages/Home.jsx';
 import Products from './pages/Products.jsx';
 import Technology from './pages/Technology.jsx';

@@ -2,10 +2,11 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { asset, useData } from '../lib/data.js';
 import { href } from '../lib/router.js';
 import { useScrollLock } from '../lib/hooks.js';
+import { lineupName } from '../lineups.js';
 import Icon from './Icon.jsx';
 import './WatchPopup.css';
 
-// Any component can call  const openWatch = useWatchPopup();  openWatch('rolex-datejust-41')
+// usage: const openWatch = useWatchPopup(); openWatch(watch.id)
 const WatchPopupContext = createContext(() => {});
 export const useWatchPopup = () => useContext(WatchPopupContext);
 
@@ -22,8 +23,6 @@ export function WatchPopupProvider({ children }) {
 
 function WatchPopup({ watchId, onClose }) {
   const catalogue = useData('products');
-  const lineups = useData('lineups');
-  const pages = useData('pages');
   const [activeImage, setActiveImage] = useState(0);
   const [visible, setVisible] = useState(false);
 
@@ -32,7 +31,6 @@ function WatchPopup({ watchId, onClose }) {
 
   useScrollLock(open);
 
-  // reset the gallery and play the open animation each time a watch opens
   useEffect(() => {
     if (!open) return;
     setActiveImage(0);
@@ -42,7 +40,7 @@ function WatchPopup({ watchId, onClose }) {
 
   const close = useCallback(() => {
     setVisible(false);
-    setTimeout(onClose, 250); // wait for the fade-out
+    setTimeout(onClose, 250);
   }, [onClose]);
 
   useEffect(() => {
@@ -59,8 +57,6 @@ function WatchPopup({ watchId, onClose }) {
   if (!watch) return null;
 
   const images = watch.thumbnails?.length ? watch.thumbnails : [watch.image];
-  const lineupName = lineups?.lineups.find((l) => l.id === watch.primaryLineup)?.name ?? watch.primaryLineup;
-  const ctas = pages?.watchDetails;
 
   return (
     <div
@@ -78,7 +74,7 @@ function WatchPopup({ watchId, onClose }) {
         <div className="popup__gallery">
           <div className="popup__main">
             <img key={images[activeImage]} src={asset(images[activeImage])} alt={watch.fullName} />
-            <span className="badge popup__badge">{lineupName}</span>
+            <span className="badge popup__badge">{lineupName(watch.primaryLineup)}</span>
           </div>
           <div className="popup__thumbs">
             {images.map((src, i) => (
@@ -120,10 +116,10 @@ function WatchPopup({ watchId, onClose }) {
 
           <div className="popup__actions">
             <a className="btn" href={href('/contact')} onClick={close}>
-              {ctas?.primaryCta ?? 'Book a viewing'}
+              Book a viewing
             </a>
             <a className="btn btn--ghost" href={href('/contact')} onClick={close}>
-              {ctas?.secondaryCta ?? 'Ask about this watch'}
+              Ask about this watch
             </a>
           </div>
         </div>

@@ -15,9 +15,7 @@ function isOpenNow(store, now = new Date()) {
   return minutes >= toMin(today.open) && minutes < toMin(today.close);
 }
 
-// #/store-locator: store list, search, "Use my location" and a map
 export default function StoreLocator() {
-  const page = useData('pages');
   const data = useData('stores');
   const [query, setQuery] = useState('');
   const [selectedId, setSelectedId] = useState(null);
@@ -34,8 +32,7 @@ export default function StoreLocator() {
     return list;
   }, [data, query, me]);
 
-  if (!page || !data) return <div className="loading">Loading…</div>;
-  const info = page.storeLocator;
+  if (!data) return <div className="loading">Loading…</div>;
   const selected = stores.find((s) => s.id === selectedId) ?? stores[0] ?? data.stores[0];
 
   const locateMe = () => {
@@ -59,8 +56,8 @@ export default function StoreLocator() {
     <>
       <PageHeader
         crumbs={[{ label: 'Home', route: '/' }, { label: 'Store Locator' }]}
-        title={info.title}
-        intro={info.intro}
+        title="Store locator"
+        intro="Visit us for repairs, appraisals or to try a watch on. Ten stores across Nigeria, from Lagos and Abuja to Port Harcourt and Kano."
       />
 
       <section className="section stores">
@@ -73,13 +70,13 @@ export default function StoreLocator() {
                 <input
                   className="input"
                   type="search"
-                  placeholder={info.searchPlaceholder}
+                  placeholder="Search by city or area"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                 />
               </label>
               <button type="button" className="btn btn--ghost" onClick={locateMe}>
-                <Icon name="map-pin" size={16} /> {info.useMyLocationLabel}
+                <Icon name="map-pin" size={16} /> Use my location
               </button>
             </div>
             {locating && <p className="stores__status">{locating}</p>}
@@ -90,7 +87,7 @@ export default function StoreLocator() {
                 <button
                   key={s.id}
                   type="button"
-                  className={`store-card ${selected?.id === s.id ? 'is-selected' : ''}`}
+                  className={`store-card ${s.image ? '' : 'store-card--no-photo'} ${selected?.id === s.id ? 'is-selected' : ''}`}
                   onClick={() => setSelectedId(s.id)}
                 >
                   {s.image && <img src={asset(s.image)} alt="" loading="lazy" />}
@@ -98,7 +95,7 @@ export default function StoreLocator() {
                     <span className="store-card__top">
                       <strong>{s.name}</strong>
                       <span className={`store-card__status ${open ? 'is-open' : ''}`}>
-                        {open ? data.statusLabels.open : data.statusLabels.closed}
+                        {open ? 'Open now' : 'Closed'}
                       </span>
                     </span>
                     <span className="store-card__line">

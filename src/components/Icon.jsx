@@ -1,7 +1,7 @@
 import { asset } from '../lib/data.js';
 import './Icon.css';
 
-// <Icon name="phone" />: draws public/images/icons/phone.svg in the current text colour
+// SVG icon from public/images/icons, coloured with the text colour
 export default function Icon({ name, size = 18, className = '' }) {
   return (
     <span
@@ -9,7 +9,7 @@ export default function Icon({ name, size = 18, className = '' }) {
       aria-hidden="true"
       style={{
         '--icon-url': `url("${asset(`/images/icons/${name}.svg`)}")`,
-        width: `${size / 16}rem`, // rem so icons grow with the text on big screens
+        width: `${size / 16}rem`,
         height: `${size / 16}rem`,
       }}
     />

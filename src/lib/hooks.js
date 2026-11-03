@@ -16,11 +16,10 @@ function safeSet(storage, key, value) {
   try {
     storage.setItem(key, value);
   } catch {
-    /* private mode: ignore */
+    // storage can be blocked in private mode
   }
 }
 
-// Light / dark mode, saved in localStorage and applied as <html data-theme="…">
 export function useTheme() {
   const [theme, setTheme] = useState(() => document.documentElement.getAttribute('data-theme') || 'dark');
   useEffect(() => {
@@ -34,7 +33,7 @@ export function useTheme() {
   return [theme, toggle];
 }
 
-// Visitor count: +1 once per browser session, stored in localStorage
+// counts one visit per browser session, then moves up and down a bit while the page is open
 export function useVisitorCount() {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -45,11 +44,19 @@ export function useVisitorCount() {
       safeSet(sessionStorage, COUNTED_KEY, '1');
     }
     setCount(visits);
+
+    let id;
+    const tick = () => {
+      const delta = Math.floor(Math.random() * 8) - 3; // -3 to +4
+      setCount((c) => Math.max(VISITS_START, c + delta));
+      id = setTimeout(tick, 2500 + Math.random() * 3500);
+    };
+    id = setTimeout(tick, 3000);
+    return () => clearTimeout(id);
   }, []);
   return count;
 }
 
-// Current date/time, updated every second
 export function useNow() {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
@@ -59,7 +66,7 @@ export function useNow() {
   return now;
 }
 
-// HTML5 geolocation + reverse geocoding to a city name
+// geolocation, then turn the coordinates into a city name
 export function useLocation() {
   const [location, setLocation] = useState({ status: 'loading', text: 'Finding your location…' });
   useEffect(() => {
@@ -81,7 +88,7 @@ export function useLocation() {
           const city = place.city || place.locality || place.principalSubdivision;
           if (city) setLocation({ status: 'ok', text: `${city}, ${place.countryName} · ${coordText}`, lat, lng });
         } catch {
-          /* keep the coordinates */
+          // no city name, just show the coordinates
         }
       },
       () => setLocation({ status: 'error', text: 'Location unavailable' }),
@@ -91,7 +98,6 @@ export function useLocation() {
   return location;
 }
 
-// Adds the class "is-visible" when an element scrolls into view (fade-up animations)
 export function useReveal() {
   const ref = useRef(null);
   useEffect(() => {
@@ -116,7 +122,6 @@ export function useReveal() {
   return ref;
 }
 
-// Stop the page scrolling behind popups / menus
 export function useScrollLock(locked) {
   useEffect(() => {
     if (!locked) return;

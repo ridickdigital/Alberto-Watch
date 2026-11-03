@@ -2,8 +2,7 @@ import { href } from '../lib/router.js';
 import Icon from './Icon.jsx';
 import './PageHeader.css';
 
-// Breadcrumb + title + intro used at the top of every inner page.
-// crumbs: [{ label, route }]  (the last crumb is the current page and has no route)
+// the last crumb is the current page, so it has no route
 export default function PageHeader({ crumbs = [], title, intro, children }) {
   return (
     <header className="page-header">

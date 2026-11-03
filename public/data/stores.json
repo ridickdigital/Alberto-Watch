@@ -446,17 +446,5 @@
       ],
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Airport+Road+GRA+Benin+City+Edo"
     }
-  ],
-  "map": {
-    "provider": "Google Maps embed (iframe)",
-    "defaultCenter": {
-      "lat": 6.4541,
-      "lng": 3.3947
-    },
-    "defaultZoom": 12
-  },
-  "statusLabels": {
-    "open": "Open now",
-    "closed": "Closed"
-  }
+  ]
 }
