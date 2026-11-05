@@ -282,7 +282,7 @@ function FeaturedWatches({ watches }) {
             <p>Hand-picked by our watchmakers. Click any watch to see full details.</p>
           </div>
           <a className="link-arrow" href={href('/products/all')}>
-            View all products <Icon name="arrow-right" size={14} />
+            View all <Icon name="arrow-right" size={14} />
           </a>
         </Reveal>
         <div className="grid grid--4">

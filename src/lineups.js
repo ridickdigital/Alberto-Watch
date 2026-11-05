@@ -9,7 +9,7 @@ export const lineups = [
   {
     id: 'women',
     name: 'Women',
-    heading: 'For her',
+    heading: 'Women\'s Watches',
     description: "Dress watches, bracelet watches and ladies' sizes from 28 to 34 mm.",
     tile: '/images/photos/women-on-wrist.jpg',
   },

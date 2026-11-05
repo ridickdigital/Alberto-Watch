@@ -71,8 +71,6 @@ export default function Footer() {
         <span>© 2026 Alberto Clocks. All rights reserved.</span>
         <span className="footer__legal">
           <a href={href('/sitemap')}>Site Map</a>
-          <a href={href('/privacy')}>Privacy</a>
-          <a href={href('/terms')}>Terms</a>
         </span>
       </div>
     </footer>
