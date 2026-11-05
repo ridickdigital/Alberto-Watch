@@ -82,6 +82,10 @@ p {
 
 /* layout */
 
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+}
+
 .container {
   width: 100%;
   max-width: calc(var(--content-max) + var(--gutter) * 2);

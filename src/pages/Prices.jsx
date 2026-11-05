@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { asset, useData } from '../lib/data.js';
 import PageHeader from '../components/PageHeader.jsx';
 import Icon from '../components/Icon.jsx';
@@ -16,10 +16,15 @@ const movementLabel = {
   mechanical: 'Mechanical',
 };
 
-export default function Prices() {
+export default function Prices({ param }) {
   const catalogue = useData('products');
   const openWatch = useWatchPopup();
   const [lineup, setLineup] = useState('all');
+
+  // #/prices/luxury opens on that line-up
+  useEffect(() => {
+    if (lineups.some((l) => l.id === param)) setLineup(param);
+  }, [param]);
   const [query, setQuery] = useState('');
   const [sortAsc, setSortAsc] = useState(false);
 

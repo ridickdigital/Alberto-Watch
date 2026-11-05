@@ -8,18 +8,21 @@ import './Support.css';
 
 const services = [
   {
+    id: 'repair',
     title: 'Repair & servicing',
     text: 'Full movement service, cleaning, oiling and timing.',
     price: 'From ₦186,000 · 5–10 days',
     image: '/images/photos/watchmaker-at-work.jpg',
   },
   {
+    id: 'battery-strap',
     title: 'Battery & strap',
     text: 'Battery swap, strap and bracelet sizing while you wait.',
     price: 'From ₦23,000 · 20 minutes',
     image: '/images/photos/leather-strap-detail.jpg',
   },
   {
+    id: 'warranty',
     title: 'Warranty claims',
     text: 'We handle Rolex, Citizen, Bulova and Michael Kors warranties.',
     price: 'Free · with receipt',
@@ -55,10 +58,10 @@ export default function Support() {
         intro="Repairs, servicing, warranty and answers to common questions."
       />
 
-      <section className="section">
+      <section id="services" className="section">
         <div className="container grid grid--3">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 100} className="service-card">
+            <Reveal key={s.title} id={s.id} delay={i * 100} className="service-card">
               <img src={asset(s.image)} alt="" loading="lazy" />
               <div className="service-card__body">
                 <h2>{s.title}</h2>
@@ -70,7 +73,7 @@ export default function Support() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section id="faq" className="section section--alt">
         <div className="container faq">
           <Reveal className="section-head section-head--left faq__head">
             <p className="eyebrow">FAQ</p>
@@ -107,7 +110,7 @@ export default function Support() {
         </div>
       </section>
 
-      <section className="section">
+      <section id="book-a-repair" className="section">
         <Reveal className="container">
           <div className="cta-banner">
             <Icon name="wrench" size={32} />

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { asset, useData } from '../lib/data.js';
 import { distanceKm } from '../lib/format.js';
 import PageHeader from '../components/PageHeader.jsx';
@@ -15,12 +15,17 @@ function isOpenNow(store, now = new Date()) {
   return minutes >= toMin(today.open) && minutes < toMin(today.close);
 }
 
-export default function StoreLocator() {
+export default function StoreLocator({ param }) {
   const data = useData('stores');
   const [query, setQuery] = useState('');
   const [selectedId, setSelectedId] = useState(null);
   const [me, setMe] = useState(null);
   const [locating, setLocating] = useState('');
+
+  // #/store-locator/abuja selects that store
+  useEffect(() => {
+    if (param) setSelectedId(param);
+  }, [param]);
 
   const stores = useMemo(() => {
     if (!data) return [];
@@ -86,6 +91,7 @@ export default function StoreLocator() {
               return (
                 <button
                   key={s.id}
+                  id={s.id}
                   type="button"
                   className={`store-card ${s.image ? '' : 'store-card--no-photo'} ${selected?.id === s.id ? 'is-selected' : ''}`}
                   onClick={() => setSelectedId(s.id)}

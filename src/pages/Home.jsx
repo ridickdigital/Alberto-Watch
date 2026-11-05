@@ -80,6 +80,7 @@ function Hero() {
 
   return (
     <section
+      id="hero"
       className="hero"
       aria-roledescription="carousel"
       aria-label="Featured watches"
@@ -239,7 +240,7 @@ function Stats() {
 function LineupTiles({ products }) {
   const tiles = lineups.filter((l) => ['vintage', 'luxury', 'smart-watches', 'clocks'].includes(l.id));
   return (
-    <section className="section">
+    <section id="lineups" className="section">
       <div className="container">
         <Reveal className="section-head">
           <p className="eyebrow">Product line-up</p>
@@ -272,7 +273,7 @@ function LineupTiles({ products }) {
 
 function FeaturedWatches({ watches }) {
   return (
-    <section className="section section--alt">
+    <section id="featured" className="section section--alt">
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div>
@@ -298,7 +299,7 @@ function FeaturedWatches({ watches }) {
 
 function ForHer({ watches }) {
   return (
-    <section className="section for-her">
+    <section id="for-her" className="section for-her">
       <div className="container for-her__grid">
         <Reveal className="for-her__intro">
           <img src={asset('/images/photos/women-on-wrist.jpg')} alt="" loading="lazy" />
@@ -325,7 +326,7 @@ function ForHer({ watches }) {
 
 function Workshop() {
   return (
-    <section className="section section--alt">
+    <section id="workshop" className="section section--alt">
       <div className="container workshop">
         <Reveal className="workshop__image">
           <img src={asset('/images/photos/watchmaker-at-work.jpg')} alt="Watchmaker at work" loading="lazy" />
@@ -361,7 +362,7 @@ function Workshop() {
 
 function Testimonial() {
   return (
-    <section className="section">
+    <section id="reviews" className="section">
       <Reveal className="container testimonial">
         <div className="testimonial__stars" aria-label="5 out of 5 stars">
           {[1, 2, 3, 4, 5].map((n) => (

@@ -70,7 +70,7 @@ export default function Contact() {
         intro="Questions about a watch, a repair or an appraisal? Send us a message and we reply within one working day."
       />
 
-      <section className="section">
+      <section id="contact-details" className="section">
         <div className="container">
           <div className="grid grid--4 contact__cards">
             <Reveal>
@@ -116,7 +116,7 @@ export default function Contact() {
               <img src={asset('/images/photos/watch-on-wrist.jpg')} alt="" loading="lazy" />
             </Reveal>
 
-            <Reveal as="form" className="contact__form" noValidate onSubmit={onSubmit} delay={120}>
+            <Reveal as="form" id="enquiry" className="contact__form" noValidate onSubmit={onSubmit} delay={120}>
               <h2>Send a message</h2>
 
               <div className="field">

@@ -33,11 +33,16 @@ const photos = [
   { src: '/images/photos/table-clock.jpg', caption: 'Bracket mantel clock', category: 'clocks', height: 480 },
 ];
 
-export default function Gallery() {
-  const [category, setCategory] = useState('all');
+export default function Gallery({ param }) {
+  const [category, setCategory] = useState(param || 'all');
   const [openIndex, setOpenIndex] = useState(null);
 
   const items = useMemo(() => photos.filter((p) => category === 'all' || p.category === category), [category]);
+
+  // #/gallery/workshop opens on that category
+  useEffect(() => {
+    if (categories.some((c) => c.id === param)) setCategory(param);
+  }, [param]);
 
   useScrollLock(openIndex !== null);
 

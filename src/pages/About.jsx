@@ -27,7 +27,7 @@ export default function About() {
         title="Three generations of keeping time"
       />
 
-      <section className="section">
+      <section id="story" className="section">
         <div className="container about-story">
           <Reveal className="about-story__image">
             <img src={asset('/images/photos/boutique-interior.jpg')} alt="Inside the Alberto boutique" loading="lazy" />
@@ -48,7 +48,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section id="timeline" className="section section--alt">
         <div className="container">
           <Reveal className="section-head">
             <p className="eyebrow">Our story</p>
@@ -66,7 +66,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section id="get-in-touch" className="section">
         <div className="container">
           <Reveal className="section-head">
             <p className="eyebrow">Get in touch</p>

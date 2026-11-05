@@ -30,6 +30,19 @@ export default function App() {
     return () => clearTimeout(id);
   }, [path, shownPath]);
 
+  // links like #/technology/quartz scroll to the part of the page with that id
+  useEffect(() => {
+    const { param } = parsePath(shownPath);
+    if (!param) return;
+    let tries = 0;
+    const id = setInterval(() => {
+      const target = document.getElementById(param);
+      if (target || ++tries > 20) clearInterval(id);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+    return () => clearInterval(id);
+  }, [shownPath]);
+
   const { section, param } = parsePath(shownPath);
   const Page = pageFor(section);
 

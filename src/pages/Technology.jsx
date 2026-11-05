@@ -7,24 +7,28 @@ import './Technology.css';
 const movements = [
   {
     icon: 'zap',
+    id: 'quartz',
     title: 'Quartz',
     text: 'A battery makes a quartz crystal vibrate 32,768 times a second. Accurate to ±15 seconds a month.',
     foundIn: 'Bulova Lunar Pilot · Michael Kors',
   },
   {
     icon: 'rotate',
+    id: 'automatic',
     title: 'Automatic',
     text: 'A weighted rotor winds the mainspring as your wrist moves. No battery needed.',
     foundIn: 'Rolex Datejust · Alberto Noir',
   },
   {
     icon: 'sun',
+    id: 'eco-drive',
     title: 'Eco-Drive',
     text: "Citizen's light-powered movement charges from any light and runs 6+ months in the dark.",
     foundIn: 'Citizen Eco-Drive Classic',
   },
   {
     icon: 'watch',
+    id: 'smart',
     title: 'Smart',
     text: 'Heart rate, GPS, notifications and contactless payment, synced with your phone.',
     foundIn: 'Alberto Smart S2',
@@ -58,7 +62,7 @@ export default function Technology() {
         intro="What makes each watch tick: the movements and materials behind every line-up we sell."
       />
 
-      <section className="section">
+      <section id="movement" className="section">
         <div className="container tech-feature">
           <Reveal className="tech-feature__image">
             <img
@@ -92,7 +96,7 @@ export default function Technology() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section id="movements" className="section section--alt">
         <div className="container">
           <Reveal className="section-head">
             <p className="eyebrow">Movement types</p>
@@ -101,7 +105,7 @@ export default function Technology() {
           </Reveal>
           <div className="grid grid--4">
             {movements.map((m, i) => (
-              <Reveal key={m.title} delay={i * 100} className="movement-card">
+              <Reveal key={m.title} id={m.id} delay={i * 100} className="movement-card">
                 <span className="movement-card__icon">
                   <Icon name={m.icon} size={22} />
                 </span>
@@ -117,7 +121,7 @@ export default function Technology() {
         </div>
       </section>
 
-      <section className="section">
+      <section id="materials" className="section">
         <div className="container">
           <Reveal className="section-head">
             <p className="eyebrow">Materials</p>
