@@ -144,7 +144,7 @@ export default function Contact() {
               <div className="field">
                 <label htmlFor="field-subject">Subject</label>
                 <select {...field('subject')}>
-                  <option value="">Repair, appraisal, purchase…</option>
+                  <option value="">Choose a subject</option>
                   <option>Repair</option>
                   <option>Appraisal</option>
                   <option>Purchase</option>
