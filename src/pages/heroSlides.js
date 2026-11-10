@@ -250,7 +250,7 @@ export const slides = [
           },
           {
             title: 'Bracelet',
-            text: 'Soft white calfskin leather strap.',
+            text: 'Soft blush-pink calfskin leather strap.',
           },
         ],
       },
@@ -307,7 +307,7 @@ export const slides = [
           },
           {
             title: 'Bracelet',
-            text: 'Braided graphite sport band.',
+            text: 'Graphite sport band.',
           },
         ],
       },
